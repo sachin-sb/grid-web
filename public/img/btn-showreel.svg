@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="201" height="102" viewBox="0 0 201 102">
+  <g id="Group_10215" data-name="Group 10215" transform="translate(-875 -699)">
+    <g id="Group_82" data-name="Group 82" transform="translate(-13.5 -31.5)">
+      <path id="Path_13" data-name="Path 13" d="M2191,9628.561v-37.383H2091v100h99.966V9653.3" transform="translate(-1201.501 -8859.678)" fill="none" stroke="#939393" stroke-width="2"/>
+    </g>
+    <text id="Play_Showreel" data-name="Play Showreel" transform="translate(949 754)" fill="#f8f8f8" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Play Showreel</tspan></text>
+    <path id="Icon_ionic-ios-play" data-name="Icon ionic-ios-play" d="M9,7.542V36.507a.746.746,0,0,0,1.117.687l22.96-14.483a.821.821,0,0,0,0-1.365L10.117,6.864A.739.739,0,0,0,9,7.542Z" transform="translate(904.5 725.248)" fill="#f8f8f8" opacity="0.866"/>
+  </g>
+</svg>
