@@ -10,6 +10,9 @@ import Services2 from "../../components/Services2";
 import SkillsCircle from "../../components/Skills-circle";
 import VideoWithTestimonials from "../../components/Video-with-testimonials";
 import DarkTheme from "../../layouts/Dark";
+import BlogDark from "../blog/blog-dark";
+import BlogLight from "../blog/blog-light";
+import WhoWeAre from "../whoWeAre/who-we-are";
 
 const Homepage2 = () => {
   const navbarRef = React.useRef(null);
@@ -37,12 +40,15 @@ const Homepage2 = () => {
       <HeroSection />
       <BlcSec />
       <Services2 />
-      <VideoWithTestimonials />
+      <WhoWeAre/>
+      <BlogLight />
+      {/* <VideoWithTestimonials />
       <SkillsCircle theme="dark" subBG />
       <PortfolioCustomColumn column={3} filterPosition="center" />
       <Clients1 theme="dark" subBG />
       <CallToAction />
-      <Footer />
+       */}
+       <Footer />
     </DarkTheme>
   );
 };

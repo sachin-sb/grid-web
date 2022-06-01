@@ -1,26 +1,51 @@
 [
   {
     "id": 1,
-    "title": { "first": "Hoodie", "second": "Jacket" },
-    "image": "/img/portfolio/full/1.jpg",
-    "sub": "Design"
+    "title": { "first": "HEALTHCARE ", "second": "Using better UX to improve healthcare delivery" },
+    "image": "/img/clients/dr-ready.svg"
   },
   {
     "id": 2,
-    "title": { "first": "Eminem", "second": "Style" },
-    "image": "/img/portfolio/full/4.jpg",
-    "sub": "Design"
+    "title": { "first": "Edtech", "second": "Levelling up the end-user learning experience" },
+    "image": "/img/clients/questt.svg"
   },
   {
     "id": 3,
-    "title": { "first": "Black", "second": "Panther" },
-    "image": "/img/portfolio/full/5.jpg",
-    "sub": "Design"
+    "title": { "first": "Entertainment", "second": "Redefining entertainment biz with next-level UX." },
+    "image": "/img/clients/pvr.svg",
+    "className" : "icon-md"
   },
   {
     "id": 4,
-    "title": { "first": "Secret", "second": "Office" },
-    "image": "/img/portfolio/full/6.jpg",
+    "title": { "first": "Fintech", "second": "Simplifying user experience for fintech products" },
+    "image": "/img/clients/elevation.svg"
+  },
+  {
+    "id": 5,
+    "title": { "first": "Sports", "second": "Bringing digital solutions to the world of sports" },
+    "image": "/img/clients/hudle.svg",
+    "className" : "icon-md"
+  },
+  {
+    "id": 6,
+    "title": { "first": "Enterprise", "second": "Humanising Enterprise Solutions through Design" },
+    "image": "/img/clients/value-360.svg"
+  },
+  {
+    "id": 7,
+    "title": { "first": "Real Estate", "second": "Uplifting Real Estate to the highly digital world" },
+    "image": "/img/clients/damac.svg"
+  },
+  {
+    "id": 8,
+    "title": { "first": "Media", "second": "Creating a better experience for new age Media" },
+    "image": "/img/clients/the-better-india.svg",
+    "className" : "icon-md"
+  },
+  {
+    "id": 9,
+    "title": { "first": "E-Commerce", "second": "Using design for better e-shopping satisfaction" },
+    "image": "/img/clients/jubilent.svg",
     "sub": "Design"
   }
 ]
