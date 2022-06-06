@@ -281,6 +281,7 @@ section.team.section-padding {
 // Our Client Section
 .our-client-section {
   margin-left: 50px;
+  padding-bottom: 100px;
 
   .swiper-slide {
 
@@ -346,15 +347,30 @@ section.team.section-padding {
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
 
+    .img {
+      overflow: hidden;
+      margin-bottom: 30px;
+
+      img {
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+
     .item {
 
       &:nth-child(odd) {
         margin-top: -70px;
       }
-    }
 
-    .img {
-      margin-bottom: 30px;
+      &:hover {
+
+        .img {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
     }
 
     .date {
@@ -377,6 +393,30 @@ section.team.section-padding {
 
   .read-more {
     color: #FF5531;
+    display: flex;
+
+    span {
+      background-color: $white;
+      display: block;
+      position: relative;
+      z-index: 1;
+      padding: 0 10px 0 0;
+    }
+
+    img {
+      width: 35px;
+      margin-left: 10px;
+      left: -30px;
+      position: relative;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+
+      img {
+        left: -20px;
+      }
+    }
   }
 
   .info-msg {
@@ -398,6 +438,10 @@ section.team.section-padding {
       border-radius: 0;
     }
   }
+
+  .description {
+    color: $text-6a;
+  }
 }
 
 // who-we-are-style
@@ -417,47 +461,122 @@ section.team.section-padding {
   }
 }
 
-// btn-red
-.btn-red {
-  background: #FF5531;
-  border: 1px solid #FF5531;
-  height: 50px;
-  padding: 10px 40px;
-  color: white;
-  min-width: 206px;
-  position: relative;
-  transition: all .3s ease;
+.button-section {
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background: $white;
-    width: 0%;
+  // btn-red
+  .btn-red {
+    background: $theme-primary;
+    border: none;
     height: 50px;
-    transition: all .3s ease;
-  }
-
-  span {
+    padding: 10px 40px;
+    color: white;
+    min-width: 206px;
     position: relative;
-  }
+    transition: all .3s ease;
 
-  &:hover {
-    color: $theme-secondary;
+    .img-style {
+      position: absolute;
+      width: 50px;
+      right: -10px;
+      top: 17px;
+      opacity: 0;
+      transition: all .3s ease;
+    }
 
     &:before {
-      width: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: $white;
+      width: 0%;
+      height: 50px;
+      transition: all .3s ease;
+    }
+
+    span {
+      position: relative;
+    }
+
+    &:hover {
+      color: $theme-secondary;
+
+      &:before {
+        width: 100%;
+      }
+
+      .img-style {
+        right: -30px;
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
   }
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
+  .btn-outline {
+    border: 1px solid $theme-secondary;
+    background: $white;
+    border: none;
+    height: 50px;
+    padding: 10px 40px;
+    color: $theme-secondary;
+    min-width: 206px;
+    position: relative;
+    transition: all .3s ease;
 
+    .img-style {
+      position: absolute;
+      width: 50px;
+      right: -10px;
+      top: 17px;
+      opacity: 0;
+      transition: all .3s ease;
+      filter: brightness(0) contrast(100);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-color: $theme-primary;
+      width: 0%;
+      height: 50px;
+      transition: all .3s ease;
+    }
+
+    span {
+      position: relative;
+    }
+
+    &:hover {
+      color: $white;
+      border-color: $theme-primary;
+      background-color: $theme-primary;
+
+      &:before {
+        width: 100%;
+      }
+
+      .img-style {
+        right: -30px;
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+}
 
 // Footer Section Style
 .footer-section {
@@ -807,5 +926,46 @@ section.team.section-padding {
   .position {
     color: #939393;
     font-size: 16px;
+  }
+}
+
+// our-services-component
+.our-services-component {
+  position: relative;
+  min-height: 100vh;
+
+  .h1 {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 74px;
+  }
+
+  .content-img {
+    position:absolute;
+    width: 400px;
+    top: 0;
+    opacity: 0;
+    left: 100px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .link {
+    display: block;
+    margin: 25px 0;
+
+    &:hover {
+
+      .content-img {
+        opacity: 1;
+      }
+        
+    }
+  }
+
+  
+  .typo-grid {
+    display: flex;
+    flex-direction: column;
   }
 }

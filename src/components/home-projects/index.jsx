@@ -29,7 +29,7 @@ const HomeProjects = () => {
     })
       .setPin("#pinContainer")
       .setTween(wipeAnimation)
-      .addIndicators() // add indicators (requires plugin)
+      // .addIndicators()
       .addTo(controller);
 
   }, [])

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import ButtonOutline from "../../common/buttonOutline";
 
 
 const blogCards = [
@@ -37,7 +38,8 @@ const BlogStanderd = () => {
               Through our print magazine Wrap, the products we make, and the online content we publish…
             </p>
             <Link href="/blog-details/blog-details-dark">
-              <a className="read-more mt-20">Read More</a>
+              <a className="read-more mt-20"> <span>Read More</span> 
+              <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
             </Link>
           </div>
         </div>
@@ -48,7 +50,7 @@ const BlogStanderd = () => {
           Love reading? <br /> We’ve got more.
         </h4>
 
-        <button className="btn btn-outline">View our services</button>
+        <ButtonOutline buttonText="View our services"/>
       </div>
     </section>
   );

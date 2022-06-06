@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import ButtonPrimary from "../../common/buttonPrimary";
 
 const Footer = () => {
   const [textChange, setTextChange] = useState(true)
@@ -49,9 +50,8 @@ const Footer = () => {
                 }
               </button>
               <p className="text-light">Let’s create a Kick-ass digital experience together!</p>
-              <button className="btn-red">
-                <span>Connect with us</span>
-              </button>
+
+              <ButtonPrimary buttonText="Connect with us" />
             </div>
           </div>
         </div>

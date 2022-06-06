@@ -5,6 +5,7 @@ import HeroSection from "../../components/hero-section";
 import HomeProjects from "../../components/home-projects";
 import LetsHearCard from "../../components/lets-hear";
 import Navbar from "../../components/Navbar";
+import OurServicesComponent from "../../components/our-services";
 import Services2 from "../../components/Services2";
 import DarkTheme from "../../layouts/Dark";
 import BlogLight from "../blog/blog-light";
@@ -36,6 +37,7 @@ const Homepage2 = () => {
       <HeroSection />
       <BlcSec />
       <Services2 />
+      <OurServicesComponent />
       <WhoWeAre />
       <HomeProjects />
       <LetsHearCard />
