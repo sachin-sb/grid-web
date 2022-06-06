@@ -258,7 +258,11 @@ section.team.section-padding {
 
 // text-theme
 .text-theme {
-  color: $theme-primary;
+  background: $theme-primary;
+  width: 7px;
+  height: 7px;
+  display: block;
+  position: relative;
 }
 
 .blc-sec {
@@ -420,6 +424,38 @@ section.team.section-padding {
   height: 50px;
   padding: 10px 40px;
   color: white;
+  min-width: 206px;
+  position: relative;
+  transition: all .3s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: $white;
+    width: 0%;
+    height: 50px;
+    transition: all .3s ease;
+  }
+
+  span {
+    position: relative;
+  }
+
+  &:hover {
+    color: $theme-secondary;
+
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 
@@ -581,5 +617,195 @@ section.team.section-padding {
       color: $gray-bc;
       font-size: 22px;
     }
+  }
+}
+
+
+// Home Project Section
+
+.project-slide-section {
+
+  &#pinContainer {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    perspective: 1000;
+  }
+
+  #slideContainer {
+    width: 400%;
+    /* to contain 4 panels, each with 100% of window width */
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .panel {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    /* relative to parent -> 25% of 400% = 100% of window width */
+
+    .title3 {
+      font-weight: 300;
+      color: #BCBCBC;
+    }
+
+    .footer-section {
+
+      .title4 {
+        font-size: 24px;
+      }
+
+      .subtext {
+        font-size: 18px;
+        opacity: 0.5;
+      }
+    }
+
+    .img-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .img-box {
+      height: 78vh;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .footer-section {
+      height: 100px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      bottom: 10px;
+      position: absolute;
+    }
+
+
+    &.first {
+
+      .content-sec {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img-section {
+        width: 65%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .img-box {
+        width: 100%;
+        position: relative;
+      }
+
+      .footer-section {
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+// lets-hear-section
+.lets-hear-section {
+  padding-top: 150px;
+
+  .head {
+    margin-bottom: 80px;
+  }
+
+  .title3 {
+    font-size: 30px;
+    color: #939393;
+  }
+
+  .img-box {
+    min-width: 100px;
+    height: 100px;
+    margin-right: 37px;
+    position: relative;
+    background-color: $theme-primary;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .media-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(#707070, 0.6);
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      .img-box {
+
+        img {
+          opacity: 1;
+          filter: grayscale(1);
+        }
+      }
+    }
+  }
+
+  .text-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 25px;
+    line-height: 37.5px;
+    font-weight: 200;
+    color: #F8F8F8;
+    max-width: 85%;
+  }
+
+  .name {
+    color: $theme-primary;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .position {
+    color: #939393;
+    font-size: 16px;
   }
 }

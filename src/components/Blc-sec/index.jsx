@@ -11,10 +11,10 @@ const BlcSec = () => {
             <div className="intro md-mb30">
               <Split>
                 <h2
-                  className="extra-title wow words chars splitting"
+                  className="extra-title wow words chars splitting d-flex align-items-end"
                   data-splitting
                 >
-                  Our clients<span className="text-theme">.</span>
+                  Our clients <span className="text-theme" style={{bottom: 16, left: 5}}/>
                 </h2>
               </Split>
               <div className="sub-title">

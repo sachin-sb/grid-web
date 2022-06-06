@@ -19,6 +19,7 @@
     "react-modal-video": "^1.2.8",
     "react-slick": "^0.28.1",
     "react-visibility-sensor": "^5.1.1",
+    "scrollmagic": "^2.0.8",
     "slick-carousel": "^1.8.1",
     "swiper": "^7.4.1"
   },
