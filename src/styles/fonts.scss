@@ -1,0 +1,60 @@
+// // ######################################## //
+// // ## FONTS.SCSS ## //
+// // ######################################## //
+
+@font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/helvetica/HelveticaNeueThin.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueThin.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/helvetica/HelveticaNeueLight.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueLight.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight:400;
+    src: url("/fonts/helvetica/HelveticaNeue.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeue.ttf") format("truetype");
+  }
+  
+
+  @font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/helvetica/HelveticaNeueMedium.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueMedium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/helvetica/HelveticaNeueBold.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueBold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/helvetica/HelveticaNeueHv.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueHv.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "HelveticaNeueCond";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/helvetica/HelveticaNeueBlackCond.ttf"); /* IE9 Compat Modes */
+    src: url("/fonts/helvetica/HelveticaNeueBlackCond.ttf") format("truetype");
+  }

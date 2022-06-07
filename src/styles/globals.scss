@@ -1,7 +1,13 @@
+@import './fonts';
+
 // variables
 @import './variables/colors';
 @import './variables/mixins';
 
+
+body {
+  font-family: "HelveticaNeue", sans-serif !important;
+}
 
 .blog-crv .item {
   display: flex;
@@ -209,7 +215,7 @@ section.team.section-padding {
 
   .heading-sec h1 {
     font-size: 100px;
-    line-height: 1;
+    line-height: 1.2;
 
     &:nth-child(2) {
       color: $theme-primary;
@@ -454,10 +460,16 @@ section.team.section-padding {
   flex-direction: column;
 
   .title4 {
-    max-width: 80%;
+    max-width: 75%;
     text-align: center;
     font-size: 40px;
     margin: 25px 0 70px;
+    color: $gray-bc;
+  }
+
+  .text-gray {
+    color: $text-6a;
+    font-size: 20px;
   }
 }
 
@@ -473,6 +485,8 @@ section.team.section-padding {
     min-width: 206px;
     position: relative;
     transition: all .3s ease;
+    font-weight: 500;
+    font-size: 16px;
 
     .img-style {
       position: absolute;
@@ -528,6 +542,8 @@ section.team.section-padding {
     min-width: 206px;
     position: relative;
     transition: all .3s ease;
+    font-weight: 400;
+    font-size: 16px;
 
     .img-style {
       position: absolute;
@@ -939,10 +955,14 @@ section.team.section-padding {
     z-index: 1;
     text-transform: uppercase;
     font-size: 74px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $text-6a;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
   }
 
   .content-img {
-    position:absolute;
+    position: absolute;
     width: 400px;
     top: 0;
     opacity: 0;
@@ -959,11 +979,16 @@ section.team.section-padding {
       .content-img {
         opacity: 1;
       }
-        
+
+      h1 {
+        color: white;
+        -webkit-text-stroke-width: inherit;
+      }
+
     }
   }
 
-  
+
   .typo-grid {
     display: flex;
     flex-direction: column;

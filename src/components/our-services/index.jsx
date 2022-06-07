@@ -2,19 +2,6 @@ import React, { useEffect } from "react";
 import Split from "../Split";
 
 const OurServicesComponent = () => {
-
-  useEffect(() => {
-    const container = document.body
-    const itemsWrapper = document.querySelector('.grid')
-    // Preload images
-
-    // And then..
-    // preloadImages().then(() => {
-    //   document.body.classList.remove('loading');
-    //   const effect = new RGBShiftEffect(container, itemsWrapper, { strength: 0.25 })
-    // });
-  }, [])
-
   return (
     <section className="our-services-component">
       <div className="container">
