@@ -70,14 +70,13 @@ const Services2 = () => {
     })
       .setPin("#js-wrapper")
       .setTween(horizontalSlide)
-      // .addIndicators() // add indicators (requires plugin)
       .addTo(controller);
 
 
   }, [])
 
   return (
-    <div class="client-section-wrapper" id="js-wrapper">
+    <div className="client-section-wrapper" id="js-wrapper">
         <div className="services our-client-section sections" id="js-slideContainer">
           <div className="slide-card-section">
             {ShowcassesFullScreenData.map((slide) => (

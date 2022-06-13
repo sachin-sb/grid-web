@@ -51,8 +51,8 @@ const OurServicesComponent = () => {
 
           <div className="col-sm-12">
             <div className="typo-grid">
-              {serviceList.map((item) => (
-                <div className="item">
+              {serviceList.map((item, index) => (
+                <div className="item" key={index}>
                   <a className="link">
                     <h1 className="h1">{item.title}</h1>
                     <img className="content-img" src={item.imgUrl} alt="img1" />

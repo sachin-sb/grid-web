@@ -67,7 +67,6 @@ const HeroSection = () => {
                     </p>
                   </Split>
                   <motion.div
-                    className="App"
                     initial="hidden"
                     animate={replay ? "visible" : "hidden"}
                     variants={container}
@@ -87,7 +86,6 @@ const HeroSection = () => {
                   </Split>
 
                   <motion.div
-                    className="App"
                     initial="hidden"
                     animate={replay ? "visible" : "hidden"}
                     variants={container}

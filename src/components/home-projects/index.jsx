@@ -37,7 +37,7 @@ const HomeProjects = () => {
   return (
     <div id="pinContainer" className="project-slide-section">
       <div id="slideContainer">
-        <section class="panel first">
+        <section className="panel first">
           <div className="content-sec">
             <h3 className="title3">
               Here is some <br /> work for our <br /> clients who <br /> trusted us with <br /> design <br /> transformation
@@ -53,7 +53,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section class="panel turqoise">
+        <section className="panel turqoise">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1581434682226-72c2bab0b5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" />
@@ -64,7 +64,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section class="panel green">
+        <section className="panel green">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="" />
@@ -75,7 +75,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section class="panel bordeaux">
+        <section className="panel bordeaux">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="" />

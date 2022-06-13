@@ -22,8 +22,8 @@ const blogCards = [
 const BlogStanderd = () => {
   return (
     <section className="blog-section">
-      {blogCards.map((item) => (
-        <div className="item">
+      {blogCards.map((item, index) => (
+        <div className="item" key={index}>
           <div className="img">
             <img src={item.imgUrl} alt="" />
           </div>
