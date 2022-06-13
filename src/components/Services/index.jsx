@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
+import Split from "../Split";
 
 const ShowcassesFullScreenData = [
   {
@@ -56,7 +57,7 @@ const ShowcassesFullScreenData2 = [
   },
 ]
 
-const Services2 = () => {
+const Services = () => {
 
   useEffect(() => {
     var controller = new ScrollMagic.Controller();
@@ -76,7 +77,29 @@ const Services2 = () => {
   }, [])
 
   return (
-    <div className="client-section-wrapper" id="js-wrapper">
+    <>
+      <section className="blc-sec section-padding pb-0">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-7">
+              <div className="intro md-mb30">
+                <Split>
+                  <h2
+                    className="extra-title wow words chars splitting d-flex align-items-end"
+                    data-splitting
+                  >
+                    Our clients <span className="text-theme" style={{ bottom: 16, left: 5 }} />
+                  </h2>
+                </Split>
+                <div className="sub-title">
+                  <h6>We have re-defined user experience for <div className="text-white">200+ clients.</div></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="client-section-wrapper" id="js-wrapper">
         <div className="services our-client-section sections" id="js-slideContainer">
           <div className="slide-card-section">
             {ShowcassesFullScreenData.map((slide) => (
@@ -129,8 +152,9 @@ const Services2 = () => {
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default Services2;
+export default Services;

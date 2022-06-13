@@ -1051,6 +1051,7 @@ section.team.section-padding {
 .our-services-component {
   position: relative;
   min-height: 100vh;
+  padding-top: 50px;
 
   .content-right {
     position: relative;
@@ -1133,7 +1134,7 @@ section.team.section-padding {
     &:hover {
 
       .content-img {
-        opacity: 1;
+        opacity: 0.8;
       }
 
       h1 {

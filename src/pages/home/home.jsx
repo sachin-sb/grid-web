@@ -6,10 +6,11 @@ import HomeProjects from "../../components/home-projects";
 import LetsHearCard from "../../components/lets-hear";
 import Navbar from "../../components/Navbar";
 import OurServicesComponent from "../../components/our-services";
-import Services2 from "../../components/Services2";
+import Services2 from "../../components/Services";
 import DarkTheme from "../../layouts/Dark";
 import BlogLight from "../blog/blog-light";
 import WhoWeAre from "../../components/whoWeAre/who-we-are";
+import Services from "../../components/Services";
 
 const Homepage = () => {
   const navbarRef = React.useRef(null);
@@ -35,8 +36,7 @@ const Homepage = () => {
     <DarkTheme>
       <Navbar nr={navbarRef} lr={logoRef} />
       <HeroSection />
-      <BlcSec />
-      <Services2 />
+      <Services />
       <OurServicesComponent />
       <WhoWeAre />
       <HomeProjects />
