@@ -1,93 +1,108 @@
-import React from "react";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ShowcassesFullScreenData from "../../data/showcases-full-screen-slider.json";
+import React, { useEffect } from "react";
+import ButtonOutline from "../../common/buttonOutline";
 
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/navigation";
-import "swiper/css/mousewheel";
+const ShowcassesFullScreenData = [
+  {
+    "id": 1,
+    "title": { "first": "HEALTHCARE ", "second": "Using better UX to improve healthcare delivery" },
+    "image": "/img/clients/dr-ready.svg"
+  },
+  {
+    "id": 2,
+    "title": { "first": "Edtech", "second": "Levelling up the end-user learning experience" },
+    "image": "/img/clients/questt.svg"
+  },
+  {
+    "id": 3,
+    "title": { "first": "Entertainment", "second": "Redefining entertainment biz with next-level UX." },
+    "image": "/img/clients/pvr.svg",
+    "className": "icon-md"
+  },
+  {
+    "id": 4,
+    "title": { "first": "Fintech", "second": "Simplifying user experience for fintech products" },
+    "image": "/img/clients/elevation.svg"
+  },
+  {
+    "id": 5,
+    "title": { "first": "Sports", "second": "Bringing digital solutions to the world of sports" },
+    "image": "/img/clients/hudle.svg",
+    "className": "icon-md"
+  },
+]
 
-import SwiperCore, { Navigation, Parallax, Mousewheel, Grid } from "swiper";
-import removeSlashFromPagination from "../../common/removeSlashFromPagination";
-
-SwiperCore.use([Navigation, Parallax, Mousewheel, Grid]);
+const ShowcassesFullScreenData2 = [
+  {
+    "id": 1,
+    "title": { "first": "Enterprise", "second": "Humanising Enterprise Solutions through Design" },
+    "image": "/img/clients/value-360.svg"
+  },
+  {
+    "id": 2,
+    "title": { "first": "Real Estate", "second": "Uplifting Real Estate to the highly digital world" },
+    "image": "/img/clients/damac.svg"
+  },
+  {
+    "id": 3,
+    "title": { "first": "Media", "second": "Creating a better experience for new age Media" },
+    "image": "/img/clients/the-better-india.svg",
+    "className": "icon-md"
+  },
+  {
+    "id": 4,
+    "title": { "first": "E-Commerce", "second": "Using design for better e-shopping satisfaction" },
+    "image": "/img/clients/jubilent.svg",
+    "sub": "Design"
+  },
+]
 
 const Services2 = () => {
-  const [load, setLoad] = React.useState(true);
-  React.useEffect(() => {
-    setTimeout(() => {
-      setLoad(false);
-      removeSlashFromPagination()
-    });
-  }, []);
 
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  useEffect(() => {
+    var controller = new ScrollMagic.Controller();
+
+    var horizontalSlide = new TimelineMax()
+      .to("#js-slideContainer", 1, { x: "-40%" })
+    new ScrollMagic.Scene({
+      triggerElement: "#js-wrapper",
+      triggerHook: "0.07",
+      duration: "150%"
+    })
+      .setPin("#js-wrapper")
+      .setTween(horizontalSlide)
+      // .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+
+
+  }, [])
 
   return (
-    <section className="services our-client-section">
-      <div id="content-carousel-container-unq-1" className="swiper-container">
-        {!load ? (
-          <Swiper
-            speed={1000}
-            mousewheel={true}
-            centeredSlides={false}
-            autoplay={false}
-            // loop={true}
-            spaceBetween={50}
-            navigation={{
-              prevEl: navigationPrevRef.current,
-              nextEl: navigationNextRef.current,
-            }}
-            // breakpoints={{
-            //   0: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 0,
-            //   },
-            //   640: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 0,
-            //   },
-            //   768: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20,
-            //   },
-            //   1024: {
-            //     slidesPerView: 4,
-            //     spaceBetween: 20,
-            //   },
-            // }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-            }}
-            onSwiper={(swiper) => {
-              setTimeout(() => {
-                for (var i = 0; i < swiper.slides.length; i++) {
-                  swiper.slides[i].childNodes[0].setAttribute(
-                    "data-swiper-parallax",
-                    0.75 * swiper.width
-                  );
-                }
-
-                swiper.params.navigation.prevEl = navigationPrevRef.current;
-                swiper.params.navigation.nextEl = navigationNextRef.current;
-
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
-            }}
-            className="swiper-wrapper"
-            // modules={[Grid]}
-            // grid={{
-            //   rows: 2,
-            // }}
-            slidesPerView={4}
-          >
+    <div class="client-section-wrapper" id="js-wrapper">
+        <div className="services our-client-section sections" id="js-slideContainer">
+          <div className="slide-card-section">
             {ShowcassesFullScreenData.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper-slide">
+              <section key={slide.id} className="slide-item">
+                <div className="wow fadeInUp" data-wow-delay=".4s">
+                  <div className={`mas-item ${slide.className}`}>
+                    <img src={slide.image} alt="" />
+                    <div className="text-section">
+                      <h6 className="title6">
+                        {slide.title.first}
+                      </h6>
+                      <p>
+                        {slide.title.second}
+                      </p>
+                    </div>
+                    <div className="bg-color"></div>
+                  </div>
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <div className="slide-card-section">
+            {ShowcassesFullScreenData2.map((slide) => (
+              <section key={slide.id} className="slide-item">
                 <div className="wow fadeInUp" data-wow-delay=".4s">
                   <div className={`mas-item ${slide.className}`}>
                     <img src={slide.image} alt="" />
@@ -102,12 +117,20 @@ const Services2 = () => {
                     <div className="bg-color"></div>
                   </div>
                 </div>
-              </SwiperSlide>
+              </section>
             ))}
-          </Swiper>
-        ) : null}
-      </div>
-    </section>
+
+            <div className="info-msg">
+              <div className="">
+                <h4 className="title4">
+                  Still not convinced <br /> enough?
+                </h4>
+                <ButtonOutline className="btn-outline-style" buttonText="View our services" />
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   );
 };
 

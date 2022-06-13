@@ -1,5 +1,5 @@
 import DarkTheme from '../layouts/Dark'
-import Homepage2 from './home/home2-dark';
+import Homepage from './home/home';
 
 export default function Home(props) {
   return (
@@ -17,7 +17,7 @@ export default function Home(props) {
           </div>
         </div>
         <div className="main-wrapper">
-          <Homepage2 />
+          <Homepage />
         </div>
       </div>
     </DarkTheme>

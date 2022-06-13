@@ -1,41 +1,3 @@
-/* ----------------------------------------------------------------
-
-== Table Of Content
-
-    |--- BASE
-
-        |- typography
-        |- helper classes
-
-    |--- SHORTCODES
-
-        |- extra
-        |- overlay
-        |- section-heading
-        |- buttons
-        |- navbar
-        |- sliders
-        |- intro
-        |- feature-box
-        |- clients
-        |- counter
-        |- portfolio
-        |- process
-        |- progress-bar
-        |- tabs
-        |- team
-        |- testimonials
-        |- blog
-        |- contact-form
-        |- footers
-
-    |--- BASE
-
-        |- responsive
-	
-
-
----------------------------------------------------------------- */
 /* ====================== [ Start Typography  ] ====================== */
 
 @import "/css/bootstrap.min.css";
@@ -58,7 +20,6 @@ body {
   color: #fff;
   background: #0c0f16;
   line-height: 1.5;
-  font-weight: 400;
   overflow-x: hidden !important;
 }
 
@@ -112,7 +73,6 @@ h6 {
 p {
   color: #c8c8c8;
   font-size: 15px;
-  font-weight: 300;
   line-height: 2;
   margin: 0;
 }

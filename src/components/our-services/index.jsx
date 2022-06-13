@@ -1,5 +1,32 @@
-import React, { useEffect } from "react";
+import Link from "next/link";
+import React from "react";
+import ButtonOutline from "../../common/buttonOutline";
 import Split from "../Split";
+
+const serviceList = [
+  {
+    title: 'Design Audit',
+    imgUrl: 'https://images.unsplash.com/photo-1566796215784-fa1dad4e559e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
+  },
+  {
+    title: 'UX/UI design',
+    imgUrl: 'https://images.unsplash.com/photo-1535928968605-9418aa1e574c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
+  },
+  {
+    title: 'Branding',
+    imgUrl: 'https://images.unsplash.com/photo-1516146544193-b54a65682f16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
+  },
+  {
+    logo: 'img/sb-log.svg',
+    extraDescription: 'Building beautyful and scalable web and mobile applications',
+    title: 'Development',
+    imgUrl: 'https://images.unsplash.com/photo-1532681022781-73c806c845b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
+  }
+]
 
 const OurServicesComponent = () => {
   return (
@@ -24,22 +51,36 @@ const OurServicesComponent = () => {
 
           <div className="col-sm-12">
             <div className="typo-grid">
-              <a className="link">
-                <h1 className="h1">Design Audit</h1>
-                <img className="content-img" data-wow-delay=".5s" src="https://images.unsplash.com/photo-1566796215784-fa1dad4e559e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80" alt="img1" />
-              </a>
-              <a className="link">
-                <h1 className="h1">UX/UI design</h1>
-                <img className="content-img" data-wow-delay=".5s" src="https://images.unsplash.com/photo-1535928968605-9418aa1e574c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="img2" />
-              </a>
-              <a className="link">
-                <h1 className="h1">Branding</h1>
-                <img className="content-img" data-wow-delay=".5s" src="https://images.unsplash.com/photo-1516146544193-b54a65682f16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="img3" />
-              </a>
-              <a className="link">
-                <h1 className="h1">Development</h1>
-                <img className="content-img" data-wow-delay=".5s" src="https://images.unsplash.com/photo-1532681022781-73c806c845b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80" alt="img4" />
-              </a>
+              {serviceList.map((item) => (
+                <div className="item">
+                  <a className="link">
+                    <h1 className="h1">{item.title}</h1>
+                    <img className="content-img" src={item.imgUrl} alt="img1" />
+                  </a>
+                  <div className="content-right">
+                    {item.extraDescription && <><img className="logo-img" src={item.logo} alt="img1" />
+                      <p className="extra-description">
+                        {item.extraDescription}
+                      </p></>}
+                    <p className="description">
+                      {item.description}
+                    </p>
+                    <Link href="/blog-details/blog-details-dark">
+                      <a className="read-more mt-20 cursor-pointer"> <span>Read More</span>
+                        <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="info-msg">
+              <div className="">
+                <h4 className="title4">
+                  Love reading? <br /> We’ve got more.
+                </h4>
+                <ButtonOutline buttonText="View our services" />
+              </div>
             </div>
           </div>
         </div>
