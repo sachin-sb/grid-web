@@ -25,7 +25,7 @@ const BlogStanderd = () => {
       {blogCards.map((item, index) => (
         <div className="item" key={index}>
           <div className="img">
-            <img src={item.imgUrl} alt="" />
+            <img src={item.imgUrl} className="wow imago" data-wow-delay=".3s" alt="" />
           </div>
           <div className="content">
             <div className="date">
