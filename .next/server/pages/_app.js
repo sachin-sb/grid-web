@@ -284,6 +284,10 @@ function MyApp({ Component , pageProps  }) {
                 ...pageProps
             }),
             /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
+                id: "heading",
+                src: "/js/headingEffect/index.js"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
                 id: "wow",
                 src: "/js/wow.min.js"
             }),
