@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       <LoadingScreen />
       <ScrollToTop />
       <Component {...pageProps} />
-      <Script id="heading" src="/js/headingEffect/index.js"></Script>
+
       <Script id="wow" src="/js/wow.min.js"></Script>
       <Script
         strategy="beforeInteractive"

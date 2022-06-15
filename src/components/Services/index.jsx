@@ -163,7 +163,7 @@ const Services = () => {
           </div>
         </div>
 
-        <nav className="menu" >
+        {/* <nav className="menu" >
           <a className="menu__item" data-img="/img/clients/value-360.svg">
             <span className="menu__item-text"><span className="menu__item-textinner">Maria Costa</span></span>
             <span className="menu__item-sub">Style Reset 66 Berlin</span>
@@ -184,7 +184,7 @@ const Services = () => {
             <span className="menu__item-text"><span className="menu__item-textinner">Wilma Quest</span></span>
             <span className="menu__item-sub">2021 West End New York</span>
           </a>
-        </nav>
+        </nav> */}
       </div>
     </>
   );
