@@ -94,7 +94,7 @@ const HeroSection = () => {
 
               <div className="col-sm-6">
                 <div className="slider-section">
-                  <video autoplay="" loop="" controls="" className="video"
+                  <video autoPlay loop controls className="video"
                     poster="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
                     onMouseOver={event => event.target.play()}
                     onMouseOut={event => event.target.pause()}>

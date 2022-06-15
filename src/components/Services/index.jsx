@@ -155,7 +155,7 @@ const Services = () => {
             <div className="info-msg">
               <div className="">
                 <h6 className="title6">
-                  That's not all, our <br /> list continues....
+                  That&apos;s not all, our <br /> list continues....
                 </h6>
                 <ButtonOutline className="btn-outline-style" buttonText="View more clients" />
               </div>

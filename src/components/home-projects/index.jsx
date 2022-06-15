@@ -154,7 +154,7 @@ const HomeProjects = () => {
             <div className="info-msg">
               <div className="">
                 <h4 className="title4">
-                  We've got more <br /> to show you.
+                  We&apos;ve got more <br /> to show you.
                 </h4>
                 <ButtonOutline buttonText="View our projects" />
               </div>
