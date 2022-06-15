@@ -1,52 +1,34 @@
 import React, { useEffect } from "react";
 import ButtonPrimary from "../../common/buttonPrimary";
-import BlogStanderd from "../../components/Blog-standerd";
+// import AnimatedText from 'react-animated-text-content';
 
 const WhoWeAre = () => {
 
-  useEffect(() => {
-    var controller = new ScrollMagic.Controller();
-
-    // define movement of panels
-    var wipeAnimation = new TimelineMax()
-      .fromTo(".section-second", 1, { x: "-100%" }, { x: "0%", ease: Linear.easeNone })  // in from left
-      .fromTo(".section-third", 1, { x: "100%" }, { x: "0%", ease: Linear.easeNone })  // in from right
-      .fromTo(".section-forth", 1, { y: "-100%" }, { y: "0%", ease: Linear.easeNone }); // in from top
-
-    // create scene to pin and link animation
-    new ScrollMagic.Scene({
-      triggerElement: "#pinContainer2",
-      triggerHook: 0.1,
-      duration: "300%"
-    })
-      .setPin("#pinContainer2")
-      .setTween(wipeAnimation)
-      // .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"}) // add indicators (requires plugin)
-      .addTo(controller);
-  }, [])
-
   return (
     <div id="pinContainer2" className="who-we-are-style">
-        <section className="section-first panel">
-        <p className="text-gray">Grid Design is the one stop shop for all your product needs. </p>
-        <h4 className="title4">We’re a bunch of creatives who are passionate about harnessing the power of design to transform end-user experience, thereby accelerating the outcomes for your business.</h4>
-        <ButtonPrimary buttonText="Let’s talk" />
-      </section>
-      <section className="section-second panel">
-        <p className="text-gray">Grid Design is the one stop shop for all your product needs. </p>
-        <h4 className="title4">We’re a bunch of creatives who are passionate about harnessing the power of design to transform end-user experience, thereby accelerating the outcomes for your business.</h4>
-        <ButtonPrimary buttonText="Let’s talk" />
-      </section>
-      <section className="section-third panel">
-        <p className="text-gray">Grid Design is the one stop shop for all your product needs. </p>
-        <h4 className="title4">We’re a bunch of creatives who are passionate about harnessing the power of design to transform end-user experience, thereby accelerating the outcomes for your business.</h4>
-        <ButtonPrimary buttonText="Let’s talk" />
-      </section>
-      <section className="section-forth panel">
-        <p className="text-gray">Grid Design is the one stop shop for all your product needs. </p>
-        <h4 className="title4">We’re a bunch of creatives who are passionate about harnessing the power of design to transform end-user experience, thereby accelerating the outcomes for your business.</h4>
-        <ButtonPrimary buttonText="Let’s talk" />
-      </section>
+      <h4 className="title4">We have the skills to break the grid and deliver <br /> <span className="line-style"><span>out of the box</span></span> solutions.</h4>
+      <p className="text-gray">Let’s collaborate to push your brand to new heights.</p>
+      <ButtonPrimary buttonText="Connect with us" />
+
+      {/* <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="float"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="animated-paragraph"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+      >
+        Content to animate
+      </AnimatedText>; */}
     </div>
   );
 };

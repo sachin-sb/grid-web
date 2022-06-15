@@ -11,13 +11,14 @@ const ShowcassesFullScreenData = [
   {
     "id": 2,
     "title": { "first": "Edtech", "second": "Levelling up the end-user learning experience" },
-    "image": "/img/clients/questt.svg"
+    "image": "/img/clients/questt.svg",
+    "className": "icon-md"
   },
   {
     "id": 3,
     "title": { "first": "Entertainment", "second": "Redefining entertainment biz with next-level UX." },
     "image": "/img/clients/pvr.svg",
-    "className": "icon-md"
+    "className": "icon-sm"
   },
   {
     "id": 4,
@@ -28,7 +29,7 @@ const ShowcassesFullScreenData = [
     "id": 5,
     "title": { "first": "Sports", "second": "Bringing digital solutions to the world of sports" },
     "image": "/img/clients/hudle.svg",
-    "className": "icon-md"
+    "className": "icon-sm"
   },
 ]
 
@@ -47,13 +48,14 @@ const ShowcassesFullScreenData2 = [
     "id": 3,
     "title": { "first": "Media", "second": "Creating a better experience for new age Media" },
     "image": "/img/clients/the-better-india.svg",
-    "className": "icon-md"
+    "className": "icon-sm"
   },
   {
     "id": 4,
     "title": { "first": "E-Commerce", "second": "Using design for better e-shopping satisfaction" },
     "image": "/img/clients/jubilent.svg",
-    "sub": "Design"
+    "sub": "Design",
+    "className": "icon-sm"
   },
 ]
 
@@ -63,11 +65,11 @@ const Services = () => {
     var controller = new ScrollMagic.Controller();
 
     var horizontalSlide = new TimelineMax()
-      .to("#js-slideContainer", 1, { x: "-40%" })
+      .to("#js-slideContainer", 1, { x: "-45%" })
     new ScrollMagic.Scene({
       triggerElement: "#js-wrapper",
       triggerHook: "0.07",
-      duration: "150%"
+      duration: "170%"
     })
       .setPin("#js-wrapper")
       .setTween(horizontalSlide)
@@ -82,17 +84,17 @@ const Services = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-7">
-              <div className="intro md-mb30">
+              <div className="intro">
                 <Split>
                   <h2
-                    className="extra-title wow words chars splitting d-flex align-items-end"
+                    className="title2 wow words chars splitting d-flex align-items-end"
                     data-splitting
                   >
-                    Our clients <span className="text-theme" style={{ bottom: 16, left: 5 }} />
+                    Our Clients <span className="text-theme" style={{ bottom: 16, left: 5 }} />
                   </h2>
                 </Split>
                 <div className="sub-title">
-                  <h6>We have re-defined user experience for <div className="text-white">200+ clients.</div></h6>
+                  <h6>We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
                 </div>
               </div>
             </div>
@@ -100,7 +102,7 @@ const Services = () => {
         </div>
       </section>
       <div className="client-section-wrapper" id="js-wrapper">
-        <div className="services our-client-section sections" id="js-slideContainer">
+        <div className="our-client-section sections" id="js-slideContainer">
           <div className="slide-card-section">
             {ShowcassesFullScreenData.map((slide) => (
               <section key={slide.id} className="slide-item">
@@ -108,10 +110,10 @@ const Services = () => {
                   <div className={`mas-item ${slide.className}`}>
                     <img src={slide.image} alt="" />
                     <div className="text-section">
-                      <h6 className="title6">
+                      <h4 className="title4">
                         {slide.title.first}
-                      </h6>
-                      <p>
+                      </h4>
+                      <p className="description">
                         {slide.title.second}
                       </p>
                     </div>
@@ -144,10 +146,10 @@ const Services = () => {
 
             <div className="info-msg">
               <div className="">
-                <h4 className="title4">
-                  Still not convinced <br /> enough?
-                </h4>
-                <ButtonOutline className="btn-outline-style" buttonText="View our services" />
+                <h6 className="title6">
+                  That's not all, our <br /> list continues....
+                </h6>
+                <ButtonOutline className="btn-outline-style" buttonText="View more clients" />
               </div>
             </div>
           </div>

@@ -53,13 +53,13 @@ const Navbar = ({ lr, nr, theme }) => {
           <ul className="navbar-nav ml-auto">
 
             <li className="nav-item">
-              <Link href="/home/home2-dark">
-                <a className="nav-link">Home</a>
+              <Link href="/">
+                <a className="nav-link">About</a>
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link href="/showcase2/showcase2-dark">
+              <Link href="/">
                 <a className="nav-link">Project</a>
               </Link>
             </li>
@@ -67,20 +67,20 @@ const Navbar = ({ lr, nr, theme }) => {
 
 
             <li className="nav-item">
-              <Link href="/about/about-dark">
-                <a className="nav-link">About</a>
+              <Link href="/">
+                <a className="nav-link">Services</a>
               </Link>
             </li>
 
 
             <li className="nav-item">
-              <Link href="/about/about-dark">
+              <Link href="/">
                 <a className="nav-link">Career</a>
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link href="/contact/contact-dark">
+              <Link href="/">
                 <a className="nav-link">Contact</a>
               </Link>
             </li>

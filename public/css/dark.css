@@ -18,7 +18,7 @@
 
 body {
   color: #fff;
-  background: #0c0f16;
+  background: #191919;
   line-height: 1.5;
   overflow-x: hidden !important;
 }
@@ -91,7 +91,6 @@ span:hover {
 }
 
 .custom-font {
-  font-family: "Barlow Condensed", sans-serif;
 }
 
 /* ====================== [ End Typography  ] ====================== */
@@ -980,7 +979,7 @@ span:hover {
 }
 
 .splitting .whitespace {
-  width: 5px;
+  width: 10px;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -1017,7 +1016,7 @@ span:hover {
 }
 
 .splitting.txt .whitespace {
-  width: 5px;
+  width: 10px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1064,7 +1063,7 @@ body {
   left: 0;
   top: 0;
   pointer-events: none;
-  border-radius: 50%;
+  border-radius: 0%;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   visibility: hidden;
@@ -1077,21 +1076,17 @@ body {
   height: 6px;
   z-index: 10000001;
   background-color: #FF5530;
-  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
     margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .cursor-inner.cursor-hover {
-  margin-left: -40px;
-  margin-top: -40px;
-  width: 80px;
-  height: 80px;
+  margin-left: -30px;
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
   background-color: #FF5530;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .cursor-outer {
@@ -1342,7 +1337,6 @@ body {
   margin-bottom: 20px;
 }
 .sub-title h6 {
-  font-family: "Barlow Condensed", sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: #939393;
@@ -1553,11 +1547,13 @@ body {
 }
 .navbar .navbar-nav .nav-link {
   font-size: 14px;
+  line-height: 17px;
   font-weight: 500;
-  color: #BCBCBC;
+  color:  #BCBCBC;
   padding: 15px 7px;
   margin: 10px 30px;
   text-transform: uppercase;
+  letter-spacing: 0.7px;
 }
 .navbar .navbar-nav .dropdown-menu {
   padding: 10px 0;
@@ -1672,7 +1668,7 @@ body {
 }
 
 .nav-scroll {
-  background: #11141b;
+  background: #000;
   border-color: #181b21;
   padding: 0;
   position: fixed;
@@ -3841,7 +3837,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
-  font-family: "Barlow Condensed", sans-serif;
 }
 .portfolio .gallery .items .item-img .cont span a {
   margin: 0 10px 0 0;
@@ -3860,7 +3855,6 @@ body {
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 13px;
-  font-family: "Barlow Condensed", sans-serif;
 }
 .portfolio .gallery .items .cont span a {
   margin: 0 5px;
@@ -5371,7 +5365,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
   color: #fff;
-  font-family: "Barlow Condensed", sans-serif;
 }
 
 .contact-sec .form button {
