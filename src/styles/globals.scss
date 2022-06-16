@@ -488,7 +488,7 @@ section.team.section-padding {
       }
     }
 
-    
+
     &.icon-lg {
       img {
         width: 180px;
@@ -548,12 +548,12 @@ section.team.section-padding {
 // blog-light-style
 
 .blog-light-style {
-  background-color: white;
   padding: 70px;
+  // min-height: 100vh;
+  transition: all 0.5s ease-in-out;
 
   .title1 {
     font-size: 40px;
-    color: #414141;
   }
 
   .blog-section {
@@ -592,12 +592,7 @@ section.team.section-padding {
       }
     }
 
-    .date {
-      color: #6A6A6A;
-    }
-
     .title {
-      color: #414141;
       font-size: 25px;
       margin: 10px 0;
     }
@@ -610,22 +605,10 @@ section.team.section-padding {
     }
   }
 
-  .read-more {
-
-    span {
-      background-color: $white;
-    }
-
-    &:hover {
-      color: $theme-primary;
-    }
-  }
-
   .info-msg {
     margin-top: -80px;
 
     .title4 {
-      color: $theme-secondary;
       font-weight: 200;
       font-size: 25px;
       margin-bottom: 20px;
@@ -641,8 +624,108 @@ section.team.section-padding {
     }
   }
 
-  .description {
-    color: $text-6a;
+  &.black-style {
+    color: $white;
+
+    .title1 {
+      font-size: 40px;
+      color: $white;
+    }
+
+    .info-msg {
+      .btn-outline {
+        color: white;
+      }
+
+      img {
+        filter: contrast(0) brightness(100);
+      }
+    }
+
+    .description {
+      color: $white;
+    }
+
+    .title4 {
+      color: $white;
+    }
+
+    .btn-outline {
+      border: 1px solid $white;
+    }
+
+    .read-more {
+
+      span {
+        background-color: $theme-primary;
+      }
+
+      &:hover {
+        color: $theme-primary;
+      }
+    }
+
+    .date {
+      color: #6A6A6A;
+    }
+
+    .title {
+      color: #414141;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+  }
+
+  &.white-style {
+    background-color: white;
+
+    .title1 {
+      color: #414141;
+    }
+
+    .info-msg {
+      .btn-outline {
+        color: #414141;
+      }
+
+      img {
+        filter: none;
+      }
+    }
+
+
+    .description {
+      color: $text-6a;
+    }
+
+    .title4 {
+      color: #414141;
+    }
+
+    .btn-outline {
+      border: 1px solid $theme-secondary;
+    }
+
+    .date {
+      color: $white;
+    }
+
+    .title {
+      color: #414141;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+
+    .read-more {
+
+      span {
+        background-color: $white;
+      }
+
+      &:hover {
+        color: $theme-primary;
+      }
+    }
   }
 }
 
@@ -716,7 +799,7 @@ section.team.section-padding {
     position: relative;
     transition: all .3s ease;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
 
     .img-style {
       position: absolute;
@@ -851,6 +934,7 @@ section.team.section-padding {
       justify-content: center;
       position: relative;
       overflow: hidden;
+      font-weight: 500;
 
       .text-style {
         position: absolute;
@@ -888,39 +972,53 @@ section.team.section-padding {
 
   .link-section {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     padding-right: 70px;
 
-    .links {
-      display: flex;
-      flex-direction: column;
+    &.first {
+      .links {
+        display: flex;
+        flex-direction: column;
 
-      a {
-        margin-top: 20px;
+        a {
+          margin-top: 20px;
+          font-size: 16px;
+          color: $gray-f8;
+        }
+      }
+    }
+
+    &.second {
+      .links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          margin-top: 20px;
+          font-size: 14px;
+          color: $gray-bc;
+        }
       }
     }
   }
 
   .text-light {
     color: $gray-bc;
+    font-size: 20px;
   }
 
   .title5 {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 200;
+    color: #6A6A6A;
   }
 
   .light-style {
 
-    .title5 {
-      color: $gray-bc;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-
     a {
       color: $gray-bc;
+      font-size: 14px;
     }
   }
 
@@ -953,6 +1051,11 @@ section.team.section-padding {
       width: 140px;
       position: relative;
       top: -5px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
     }
   }
 
@@ -963,11 +1066,14 @@ section.team.section-padding {
 
     .address {
       margin-top: 35px;
+      color: $gray-f8;
+      font-size: 16px;
     }
 
     .link-email {
-      color: $gray-bc;
+      color: $gray-f8;
       margin-top: 10px;
+      font-size: 16px;
     }
   }
 

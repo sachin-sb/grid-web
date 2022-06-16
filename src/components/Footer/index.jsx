@@ -56,11 +56,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row align-items-end">
           <div className="col-sm-3">
-            <h5 className="title5">About</h5>
-            <div className="link-section">
+            <div className="link-section first">
               <div className="links">
+              <Link href="/">
+                  <a>About</a>
+                </Link>
                 <Link href="/">
                   <a>Services</a>
                 </Link>
@@ -87,9 +89,9 @@ const Footer = () => {
 
           <div className="col-sm-3 light-style">
             <h5 className="title5">Industries</h5>
-            <div className="link-section">
+            <div className="link-section second">
               <div className="links">
-                <Link href="/">
+              <Link href="/">
                   <a>Blogging</a>
                 </Link>
                 <Link href="/">
@@ -101,13 +103,13 @@ const Footer = () => {
               </div>
               <div className="links">
                 <Link href="/">
-                  <a>Projects</a>
+                  <a>Real Estate</a>
                 </Link>
                 <Link href="/">
-                  <a>Careers</a>
+                  <a>Fintech</a>
                 </Link>
                 <Link href="/">
-                  <a>Contact</a>
+                  <a>Entertainment</a>
                 </Link>
               </div>
             </div>
@@ -115,11 +117,11 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative studio by <img src="img/sb-log.svg" className="logo-sb" alt="" /> crafting powerful <br /> experiences through Design.
+                A creative studio by <a href="https://squareboat.com/" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful <br /> experiences through Design.
               </div>
               <div className="address">
                 <div className="address-text">
-                  115, Sector 44, Gurugram, Haryana - 122002, India
+                +91-1235678901
                 </div>
                 <a href="" className="link-email">hi@griddesign.in</a>
               </div>
