@@ -10,6 +10,7 @@ import BlogLight from "./blog/blog-light";
 import WhoWeAre from "../components/whoWeAre/who-we-are";
 import Services from "../components/Services";
 import useScrollSpy from 'react-use-scrollspy';
+import DesignAudit from "../components/designAudit";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -93,6 +94,8 @@ export default function Home(props) {
           <div ref={sectionRefs[6]}>
             <BlogLight />
           </div>
+
+          <DesignAudit/>
           <Footer />
         </div>
       </div>

@@ -1,42 +1,42 @@
-import Link from "next/link";
+import gsap from "gsap";
 import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
+import ButtonReadmore from "../../common/buttonReadmore";
 import Split from "../Split";
 
-const serviceList = [
-  {
-    title: 'UX RESEARCH',
-    imgUrl: 'https://images.unsplash.com/photo-1566796215784-fa1dad4e559e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
-  },
-  {
-    title: 'UX/UI DESIGN',
-    imgUrl: 'https://images.unsplash.com/photo-1535928968605-9418aa1e574c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
-  },
-  {
-    title: 'BRANDING',
-    imgUrl: 'https://images.unsplash.com/photo-1516146544193-b54a65682f16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
-  },
-  {
-    logo: 'img/sb-log.svg',
-    extraDescription: 'Building beautyful and scalable web and mobile applications',
-    title: 'DEVELOPMENT',
-    imgUrl: 'https://images.unsplash.com/photo-1532681022781-73c806c845b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.'
-  }
-]
-
 const OurServicesComponent = (props) => {
-  
+
   useEffect(() => {
-    
+    const categoriesWrapper = document.querySelector('.categories-wrapper')
+    categoriesWrapper.addEventListener('mousemove', e => {
+      gsap.to('.img-style', {
+        x: e.x,
+        y: e.y,
+        xPercent: -100,
+        yPercent: -100,
+        stagger: .05
+      })
+    })
+
+    gsap.utils.toArray('.categories h1')
+      .forEach(category => {
+        let { label } = category.dataset
+        category.addEventListener('mouseenter', () => {
+          gsap.to(`.img-style[data-image=${label}]`, { opacity: 1, scale: 1 })
+          gsap.set(`.img-style[data-image=${label}]`, { zIndex: 1 })
+          gsap.set(`h1[data-label=${label}]`, { zIndex: 2 })
+        })
+
+        category.addEventListener('mouseleave', () => {
+          gsap.to(`.img-style[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .80 })
+          gsap.set(`h1[data-label=${label}]`, { zIndex: 0 })
+        })
+      })
   }, [])
-  
+
 
   return (
-    <section className="our-services-component" id={props.id}>
+    <section className="our-services-component">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -49,34 +49,99 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" style={{ bottom: 16, left: 5 }} />
                 </h2>
               </Split>
-                <h6 className="title6">Offering worthwhile experiences that help you go above & beyond the <span>grid.</span></h6>
+              <h6 className="title6">Offering worthwhile experiences that help you go above & beyond the <span>grid.</span></h6>
             </div>
           </div>
 
           <div className="col-sm-12">
             <div className="typo-grid">
-              {serviceList.map((item, index) => (
-                <div className="item" key={index}>
-                  <a className="link">
-                    <img className="content-img" src={item.imgUrl} alt="img1" />
-                    <h1 className="h1">{item.title}</h1>
-                  </a>
-                  <div className="content-right">
-                    {item.extraDescription && <><img className="logo-img" src={item.logo} alt="img1" />
-                      <p className="extra-description">
-                        {item.extraDescription}
-                      </p></>}
-                    <p className="description">
-                      {item.description}
-                    </p>
-                    <Link href="/">
-                      <a className="read-more mt-20 cursor-pointer"> <span>Read More</span>
-                        <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
-                    </Link>
+              <div class="images">
+                <img className="img-style" src="./img/portfolio/sb/img-1.jpg" alt="activewear" data-image="activewear" />
+                <img className="img-style" src="./img/portfolio/sb/img-2.jpg" alt="beachwear" data-image="beachwear" />
+                <img className="img-style" src="./img/portfolio/sb/img-3.jpg" alt="dresses" data-image="dresses" />
+                <img className="img-style" src="./img/portfolio/sb/img-4.jpg" alt="heels" data-image="heels" />
+              </div>
+
+              <div class="categories-wrapper">
+                <div class="categories">
+                  <div className="item">
+                    <h1 className="h1" data-label="activewear">UX RESEARCH</h1>
+
+                    <div className="content-right">
+                      <div className="tag-section">
+                        <span>Design Audit</span>
+                        <span>User Interviews</span>
+                        <span>Heuristic evaluation</span>
+                        <span>Competitor analysis</span>
+                      </div>
+                      <p className="description">
+                        We provide end to end research services while discovering game-changing improvement opportunities.
+                      </p>
+                      <ButtonReadmore href="/" text="Read More" />
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <h1 className="h1" data-label="beachwear">UX/UI DESIGN</h1>
+
+                    <div className="content-right">
+                      <div className="tag-section">
+                        <span>Mobile app design</span>
+                        <span>Responsive Website</span>
+                        <span>Interface design</span>
+                        <span>Design System</span>
+                      </div>
+                      <p className="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.
+                      </p>
+                      <ButtonReadmore href="/" text="Read More" />
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <h1 className="h1" data-label="dresses">BRANDING</h1>
+                    <div className="content-right">
+                      <div className="tag-section">
+                        <span>Logo</span>
+                        <span>Brand Guidelines</span>
+                        <span>Brand Assets</span>
+                      </div>
+                      <p className="description">
+                        We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                      </p>
+                      <ButtonReadmore href="/" text="Read More" />
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <h1 className="h1" data-label="heels">DEVELOPMENT</h1>
+
+                    <div className="content-right">
+                      <div>
+                        <img className="logo-img" src="img/sb-log.svg" alt="img1" />
+                        <p className="extra-description">
+                          Building beautyful and scalable web and mobile applications
+                        </p>
+                        <div className="tag-section">
+                          <span>Web development</span>
+                          <span>App Development</span>
+                          <span>Devops</span>
+                          <span>QA/Testing</span>
+                        </div>
+                      </div>
+                      <p className="description">
+                        Pixels converted seamlessly into
+                        adaptable & scalable piece of code.
+                        Our partners at Squareboat script the
+                        screens designed by us.
+                      </p>
+                      <ButtonReadmore href="/" text="Read More" />
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
+
 
             <div className="info-msg">
               <div className="">
