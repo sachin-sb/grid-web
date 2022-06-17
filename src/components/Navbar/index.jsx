@@ -1,22 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import appData from "../../data/app.json";
-import {
-  handleDropdown,
-  handleMobileDropdown,
-  handleSearch,
-} from "../../common/navbar";
+import { handleMobileDropdown} from "../../common/navbar";
 
 const Navbar = ({ lr, nr, theme }) => {
-  // React.useEffect(() => {
-  //   handleSearch();
-  // }, []);
+  const [show, setShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(true); 
+      } else { // if scroll up show the navbar
+        setShow(false);  
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
   return (
     <nav
       ref={nr}
-      className={`navbar navbar-expand-lg change ${theme === "themeL" ? "light" : ""
+      className={`navbar navbar-expand-lg change ${show ? 'navbar-hidden' : 'navbar-show'} ${theme === "themeL" ? "light" : ""
         }`}
     >
       <div className="container">

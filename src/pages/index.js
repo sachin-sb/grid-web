@@ -40,6 +40,7 @@ export default function Home(props) {
     useRef(null),
     useRef(null),
     useRef(null),
+    useRef(null),
   ];
 
   const activeSection = useScrollSpy({
@@ -65,6 +66,7 @@ export default function Home(props) {
               <h4 className={activeSection === 4 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Projects</h4>
               <h4 className={activeSection === 5 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Let's hear</h4>
               <h4 className={activeSection === 6 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Blog</h4>
+              <h4 className={activeSection === 7 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Contact</h4>
             </nav>
           </div>
           <div className="toggle">
@@ -95,7 +97,9 @@ export default function Home(props) {
             <BlogLight />
           </div>
 
+          <div ref={sectionRefs[7]}>
           <DesignAudit/>
+          </div>
           <Footer />
         </div>
       </div>
