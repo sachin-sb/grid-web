@@ -103,7 +103,8 @@ const HeroSection = (props) => {
 
                   <div className="button-box">
                     <button className="btn-showreel" onClick={(e) => { e.preventDefault(); setOpen(true); }}>
-                      <img src="img/btn-showreel.svg" alt="" />
+                      <img src="img/play.svg" className="img-icon" alt="" />
+                     <span className="wow fadeInLeft" data-wow-delay=".4s"> Play Showreel</span>
                     </button>
                   </div>
 
@@ -112,6 +113,8 @@ const HeroSection = (props) => {
                     autoplay
                     isOpen={isOpen}
                     videoId="127203262"
+                    allowFullScreen
+                    // classNames="modal-hero-section"
                     onClose={() => setOpen(false)}
                   />
                 </div>
