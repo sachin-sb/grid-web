@@ -8,7 +8,7 @@ import fadeWhenScroll from "../../common/fadeWhenScroll";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 
 
-const HeroSection = () => {
+const HeroSection = (props) => {
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     fadeWhenScroll();
@@ -46,7 +46,7 @@ const HeroSection = () => {
   const [isOpen, setOpen] = React.useState(false);
 
   return (
-    <section className="slider slider-prlx home-hero-section">
+    <section className="slider slider-prlx home-hero-section" id={props.id}>
       <div className="swiper-container parallax-slider">
         {!load ? (
           <div className="container-fluid">

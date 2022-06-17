@@ -1,12 +1,40 @@
 import React, { useEffect } from "react";
 import ButtonPrimary from "../../common/buttonPrimary";
 import AnimatedText from 'react-animated-text-content';
+import gsap from "gsap";
+
 
 const WhoWeAre = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // const tl = gsap.timeline();
+    gsap.from(".line .title4", 1.5, {
+      y: 100,
+      ease: "power4.out",
+      delay: 0.1,
+      skewX: 7,
+      duration: 2,
+      stagger: {
+        amount: 0.1
+      },
+      scrollTrigger: {
+        trigger: '#pinContainer2',
+        toggleActions: 'restart pause reverse pause',
+        start: 'top center',
+        markers: false
+      },
+    })
+  }, [])
+
 
   return (
-    <div id="pinContainer2" className="who-we-are-style">
-      <h4 className="title4 wow bounceInUp" data-wow-delay=".5s">We have the skills to break the grid and deliver <br /> <span className="line-style"><span>out of the box</span></span> solutions.</h4>
+    <section id="pinContainer2" className="who-we-are-style c-usp">
+      <div class="line">
+        <h4 className="title4">We have the skills to break the grid and deliver</h4>
+      </div>
+      <div class="line">
+        <h4 className="title4 line-sec"><span className="line-style"><span>out of the box</span></span> solutions.</h4>
+      </div>
       <AnimatedText
         type="words" // animate words or chars
         animation={{
@@ -15,7 +43,7 @@ const WhoWeAre = () => {
           scale: 1.1,
           ease: 'ease-in-out',
         }}
-        animationType="blocks"
+        animationType="float"
         interval={0.06}
         duration={0.8}
         tag="p"
@@ -24,11 +52,12 @@ const WhoWeAre = () => {
         threshold={0.1}
         rootMargin="20%"
       >
-     Let’s collaborate to push your brand to new heights.
+        Let’s collaborate to push your brand to new heights.
       </AnimatedText>
-      {/* <p className="text-gray">Let’s collaborate to push your brand to new heights.</p> */}
-      <ButtonPrimary buttonText="Connect with us" />
-    </div>
+      <div className="wow fadeInUp" data-wow-delay=".8s">
+        <ButtonPrimary buttonText="Connect with us" />
+      </div>
+    </section>
   );
 };
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
 import Split from "../Split";
 
@@ -28,9 +28,15 @@ const serviceList = [
   }
 ]
 
-const OurServicesComponent = () => {
+const OurServicesComponent = (props) => {
+  
+  useEffect(() => {
+    
+  }, [])
+  
+
   return (
-    <section className="our-services-component">
+    <section className="our-services-component" id={props.id}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

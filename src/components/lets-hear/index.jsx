@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Split from "../Split";
 
-const LetsHearCard = () => {
+const LetsHearCard = (props) => {
 
   return (
-    <section className="lets-hear-section">
+    <section className="lets-hear-section" id={props.id}>
       <div className="container">
         <div className="row">
           <div className="col-sm-12">

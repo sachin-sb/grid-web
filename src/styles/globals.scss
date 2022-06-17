@@ -193,20 +193,37 @@ section.team.section-padding {
     justify-content: space-between;
     padding: 20px 0;
     z-index: 1;
+    transition: all 0.5s ease-in-out;
 
     .logo {
       width: 70px;
       height: 70px;
       margin: 0 auto;
+      filter: contrast(0) brightness(100);
     }
 
     .intro {
 
-      .intro-text {
+      .App-navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .App-navigation-item {
         transform: rotate(-90deg);
         color: $white;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 16px;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        position: absolute;
+        font-weight: 500;
+
+        &.App-navigation-item--active {
+          opacity: 1;
+        }
       }
     }
 
@@ -215,6 +232,30 @@ section.team.section-padding {
       width: 50px;
       height: 50px;
       margin: 0 auto;
+      background: url('../../public/img/toggle-border.svg');
+      padding: 13px;
+
+      .img-style {
+        filter: contrast(0) brightness(100);
+        width: 100%;
+      }
+    }
+
+    &.blog-active {
+      background-color: white;
+      border-color: rgba(#707070, 0.1);
+
+      .logo { 
+        filter: none;
+      }
+
+      .img-style {
+        filter: none;
+      }
+
+      .App-navigation-item {
+        color: $theme-secondary;
+      }
     }
   }
 
@@ -549,8 +590,7 @@ section.team.section-padding {
 
 .blog-light-style {
   padding: 70px;
-  // min-height: 100vh;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s ease-in-out;
 
   .title1 {
     font-size: 40px;
@@ -740,8 +780,23 @@ section.team.section-padding {
   overflow: hidden;
   height: 100vh;
 
+  .line{
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+
+    span{
+      position: absolute;
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+  }
+
+  .line-sec {
+    padding: 0 50px;
+  }
+
   .title4 {
-    max-width: 75%;
     text-align: center;
     font-size: 40px;
     color: $gray-bc;
@@ -754,21 +809,21 @@ section.team.section-padding {
 
       &::before {
         position: absolute;
-        top: 5px;
-        left: -15px;
+        top: 9px;
+        left: -17px;
         width: 93%;
         height: 55px;
+        content: "";
         border: 2px groove $gray-bc;
-        content: '';
       }
 
       &::after {
         position: absolute;
-        top: 15px;
-        right: 28px;
+        top: 20px;
+        right: 32px;
         width: 10px;
         height: 35px;
-        content: '';
+        content: "";
         background: #191919;
       }
 
