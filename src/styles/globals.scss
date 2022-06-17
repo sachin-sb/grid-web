@@ -762,7 +762,7 @@ section.team.section-padding {
     .read-more {
 
       span {
-        background-color: $white;
+        background-color: $gray-f8;
       }
 
       &:hover {
@@ -1501,6 +1501,7 @@ section.team.section-padding {
     top: 15%;
     width: 400px;
     opacity: 0;
+    transform: scale(0.9);
     transition: all 0.5s ease-in-out;
   }
 
@@ -1550,6 +1551,7 @@ section.team.section-padding {
   }
 
   .read-more {
+    margin-top: 10px;
 
     span {
       background-color: #191919;
@@ -1576,6 +1578,7 @@ section.team.section-padding {
         color: white;
       }
       .content-right {
+        transform: scale(1);
         opacity: 1;
       }
     }

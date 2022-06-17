@@ -9,7 +9,7 @@ const OurServicesComponent = (props) => {
   useEffect(() => {
     const categoriesWrapper = document.querySelector('.categories-wrapper')
     categoriesWrapper.addEventListener('mousemove', e => {
-      gsap.to('.img-style', {
+      gsap.to('.img-hover-style', {
         x: e.x,
         y: e.y,
         xPercent: -100,
@@ -22,13 +22,13 @@ const OurServicesComponent = (props) => {
       .forEach(category => {
         let { label } = category.dataset
         category.addEventListener('mouseenter', () => {
-          gsap.to(`.img-style[data-image=${label}]`, { opacity: 1, scale: 1 })
-          gsap.set(`.img-style[data-image=${label}]`, { zIndex: 1 })
+          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 1, scale: 1 })
+          gsap.set(`.img-hover-style[data-image=${label}]`, { zIndex: 1 })
           gsap.set(`h1[data-label=${label}]`, { zIndex: 2 })
         })
 
         category.addEventListener('mouseleave', () => {
-          gsap.to(`.img-style[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .80 })
+          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .80 })
           gsap.set(`h1[data-label=${label}]`, { zIndex: 0 })
         })
       })
@@ -56,10 +56,10 @@ const OurServicesComponent = (props) => {
           <div className="col-sm-12">
             <div className="typo-grid">
               <div class="images">
-                <img className="img-style" src="./img/portfolio/sb/img-1.jpg" alt="activewear" data-image="activewear" />
-                <img className="img-style" src="./img/portfolio/sb/img-2.jpg" alt="beachwear" data-image="beachwear" />
-                <img className="img-style" src="./img/portfolio/sb/img-3.jpg" alt="dresses" data-image="dresses" />
-                <img className="img-style" src="./img/portfolio/sb/img-4.jpg" alt="heels" data-image="heels" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="activewear" data-image="activewear" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="beachwear" data-image="beachwear" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="dresses" data-image="dresses" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heels" data-image="heels" />
               </div>
 
               <div class="categories-wrapper">
@@ -92,7 +92,7 @@ const OurServicesComponent = (props) => {
                         <span>Design System</span>
                       </div>
                       <p className="description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia optio dolore, quaerat fugiat consequuntur debitis provident.
+                        Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
                       </p>
                       <ButtonReadmore href="/" text="Read More" />
                     </div>
@@ -117,17 +117,15 @@ const OurServicesComponent = (props) => {
                     <h1 className="h1" data-label="heels">DEVELOPMENT</h1>
 
                     <div className="content-right">
-                      <div>
-                        <img className="logo-img" src="img/sb-log.svg" alt="img1" />
-                        <p className="extra-description">
-                          Building beautyful and scalable web and mobile applications
-                        </p>
-                        <div className="tag-section">
-                          <span>Web development</span>
-                          <span>App Development</span>
-                          <span>Devops</span>
-                          <span>QA/Testing</span>
-                        </div>
+                      <img className="logo-img" src="img/sb-log.svg" alt="img1" />
+                      <p className="extra-description">
+                        Building beautyful and scalable web and mobile applications
+                      </p>
+                      <div className="tag-section">
+                        <span>Web development</span>
+                        <span>App Development</span>
+                        <span>Devops</span>
+                        <span>QA/Testing</span>
                       </div>
                       <p className="description">
                         Pixels converted seamlessly into
