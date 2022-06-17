@@ -55,15 +55,15 @@ const OurServicesComponent = (props) => {
 
           <div className="col-sm-12">
             <div className="typo-grid">
-              <div class="images">
+              <div className="images">
                 <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="activewear" data-image="activewear" />
                 <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="beachwear" data-image="beachwear" />
                 <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="dresses" data-image="dresses" />
                 <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heels" data-image="heels" />
               </div>
 
-              <div class="categories-wrapper">
-                <div class="categories">
+              <div className="categories-wrapper">
+                <div className="categories">
                   <div className="item">
                     <h1 className="h1" data-label="activewear">UX RESEARCH</h1>
 

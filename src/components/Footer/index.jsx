@@ -117,7 +117,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative studio by <a href="https://squareboat.com/" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful <br /> experiences through Design.
+                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful <br /> experiences through Design.
               </div>
               <div className="address">
                 <div className="address-text">

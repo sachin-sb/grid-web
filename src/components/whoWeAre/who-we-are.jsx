@@ -29,10 +29,10 @@ const WhoWeAre = () => {
 
   return (
     <section id="pinContainer2" className="who-we-are-style c-usp">
-      <div class="line">
+      <div className="line">
         <h4 className="title4">We have the skills to break the grid and deliver</h4>
       </div>
-      <div class="line">
+      <div className="line">
         <h4 className="title4 line-sec"><span className="line-style"><span>out of the box</span></span> solutions.</h4>
       </div>
       <AnimatedText

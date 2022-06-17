@@ -64,7 +64,7 @@ export default function Home(props) {
               <h4 className={activeSection === 2 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Services</h4>
               <h4 className={activeSection === 3 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Who We Are</h4>
               <h4 className={activeSection === 4 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Projects</h4>
-              <h4 className={activeSection === 5 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Let's hear</h4>
+              <h4 className={activeSection === 5 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Let&apos;s hear</h4>
               <h4 className={activeSection === 6 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Blog</h4>
               <h4 className={activeSection === 7 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Contact</h4>
             </nav>
