@@ -12,7 +12,7 @@ const OurServicesComponent = (props) => {
       .forEach(category => {
         let { label, indexNumber } = category.dataset
         category.addEventListener('mouseenter', () => {
-          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 1, scale: 1 })
+          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 1, scale: 1, zIndex: 1 })
           gsap.set(`.img-hover-style[data-image=${label}]`, { zIndex: 1 })
           gsap.set(`h1[data-label=${label}]`, { zIndex: 1 })
         })
@@ -67,7 +67,7 @@ const OurServicesComponent = (props) => {
                       <p className="description">
                         We provide end to end research services while discovering game-changing improvement opportunities.
                       </p>
-                      <ButtonReadmore href="/" text="Read More" />
+                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
                   </div>
 
@@ -84,7 +84,7 @@ const OurServicesComponent = (props) => {
                       <p className="description">
                         Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
                       </p>
-                      <ButtonReadmore href="/" text="Read More" />
+                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
                   </div>
 
@@ -100,7 +100,7 @@ const OurServicesComponent = (props) => {
                       <p className="description">
                         We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
                       </p>
-                      <ButtonReadmore href="/" text="Read More" />
+                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
                   </div>
 
@@ -124,7 +124,7 @@ const OurServicesComponent = (props) => {
                         Our partners at Squareboat script the
                         screens designed by us.
                       </p>
-                      <ButtonReadmore href="/" text="Read More" />
+                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
                   </div>
                 </div>

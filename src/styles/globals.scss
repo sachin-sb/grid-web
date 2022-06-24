@@ -99,10 +99,10 @@ body .slick-dots li button {
   }
 
   img {
-    width: 35px;
+    width: 45px;
     margin-left: 10px;
-    right: -15px;
-    top: 10px;
+    right: -14px;
+    top: 8px;
     position: absolute;
     transition: all 0.5s ease-in-out;
   }
@@ -359,11 +359,11 @@ section.team.section-padding {
       background: none;
       border: none;
       position: absolute;
-      bottom: -30px;
-      left: -30px;
+      bottom: -10px;
+      left: -39px;
       z-index: 99;
       height: 100px;
-      min-width: 100px;
+      width: 100px;
       background: url('../../public/img/play-outline.svg') no-repeat;
       background-size: contain;
       display: flex;
@@ -372,11 +372,16 @@ section.team.section-padding {
       color: white;
       font-size: 18px;
       font-weight: 300;
+      cursor: pointer;
+
+      span {
+        white-space: nowrap;
+      }
     }
 
     .img-icon {
-      width: 30px;
-      margin-left: 30px;
+      height: 30px;
+      margin-left: 133px;
       margin-right: 20px;
       filter: contrast(0) brightness(100);
       transition: all 0.5s ease-in-out;
@@ -618,14 +623,12 @@ section.team.section-padding {
     .btn-outline {
       border: 1px solid $white;
       background: none;
-      height: 50px;
       padding: 10px 30px;
       border-radius: 0;
       color: $white;
 
       img {
         filter: contrast(0) brightness(100);
-        width: 40px;
       }
     }
   }
@@ -704,7 +707,6 @@ section.team.section-padding {
     .btn-outline {
       border: 1px solid $theme-secondary;
       background: none;
-      font-size: 14px;
       height: 50px;
       padding: 10px 30px;
       border-radius: 0;
@@ -903,7 +905,7 @@ section.team.section-padding {
 
     .img-style {
       position: absolute;
-      width: 50px;
+      width: 60px;
       right: -10px;
       top: 17px;
       opacity: 0;
@@ -960,7 +962,7 @@ section.team.section-padding {
 
     .img-style {
       position: absolute;
-      width: 50px;
+      width: 60px;
       right: -10px;
       top: 17px;
       opacity: 0;
@@ -1261,16 +1263,11 @@ section.team.section-padding {
     .btn-outline {
       border: 1px solid $white;
       background: none;
-      font-size: 14px;
-      height: 50px;
-      padding: 10px 30px;
-      border-radius: 0;
       color: $white;
       opacity: 0.7;
 
       img {
         filter: contrast(0) brightness(100);
-        width: 40px;
       }
     }
   }
@@ -1485,7 +1482,7 @@ section.team.section-padding {
 .our-services-component {
   position: relative;
   min-height: 100vh;
-  padding: 50px 136px 100px;
+  padding: 50px 20px 100px 136px;
 
   .title6 {
     font-size: 22px;
@@ -1495,6 +1492,10 @@ section.team.section-padding {
     span {
       color: $theme-primary;
     }
+  }
+
+  .item {
+    margin-bottom: 50px;
   }
 
   .tag-section {
@@ -1539,11 +1540,12 @@ section.team.section-padding {
 
     img {
       position: absolute;
-      height: 550px;
+      height: 600px;
       width: 400px;
-      opacity: 0;
-      z-index: -1;
+      // opacity: 0;
+      left: 14vw;
       top: 0;
+      background-color: red;
     }
   }
 
@@ -1565,16 +1567,11 @@ section.team.section-padding {
     .btn-outline {
       border: 1px solid $white;
       background: none;
-      font-size: 14px;
-      height: 50px;
-      padding: 10px 30px;
-      border-radius: 0;
       color: $white;
       opacity: 0.7;
 
       img {
         filter: contrast(0) brightness(100);
-        width: 40px;
       }
     }
   }
@@ -1605,18 +1602,17 @@ section.team.section-padding {
     transition: all 0.5s ease-in-out;
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
 
     &:after {
       display: flex;
       content: '';
-      width: 50px;
-      height: 20px;
-      background: url('../../public/img/long-right-arrow.svg') no-repeat;
+      width: 94px;
+      height: 24px;
+      background: url('../../public/img/long-arrow-right.svg') no-repeat;
       background-size: contain;
-      margin-left: 10px;
       opacity: 0;
-      transform: translateX(-20px);
+      margin-left: 10px;
+      // transform: translateX(-20px);
       transition: all 0.5s ease-in-out;
     }
   }
@@ -1640,6 +1636,7 @@ section.team.section-padding {
 
     span {
       background-color: #191919;
+      font-weight: 600;
     }
 
     &:hover {
@@ -1661,9 +1658,14 @@ section.team.section-padding {
     &:hover {
       h1 {
         color: white;
+        -webkit-text-stroke-width: 0;
 
         + .content-right {
           transform: scale(1);
+          opacity: 1;
+        }
+
+        &:after {
           opacity: 1;
         }
       }
@@ -1719,7 +1721,6 @@ section.team.section-padding {
     .btn-outline {
       border: 1px solid $theme-secondary;
       background: none;
-      font-size: 14px;
       height: 50px;
       padding: 10px 30px;
       border-radius: 0;
@@ -1727,6 +1728,11 @@ section.team.section-padding {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
 
       &:hover {
         color: white;
@@ -1745,6 +1751,7 @@ section.team.section-padding {
     height: 280px;
     right: 0;
     position: absolute;
+    opacity: 0;
   }
 }
 
