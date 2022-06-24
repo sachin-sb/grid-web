@@ -9,7 +9,7 @@ const BlogLight = () => {
     var second = new ScrollMagic.Scene({
       triggerElement: '#second',
       duration: "250%",
-      triggerHook: 0.4,
+      triggerHook: 0.1,
     })
       .setClassToggle('#second', 'white-style')
       // .addIndicators() 

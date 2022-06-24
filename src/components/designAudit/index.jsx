@@ -31,7 +31,7 @@ const DesignAudit = (props) => {
         <div className="row align-items-center">
           <div className="col-sm-8">
             <div className="title4 animation-revel1">
-              <span className="ani-text">  Want help in recognising where your brand is positioned?</span>
+              <span className="ani-text"> Want help in recognising where your brand is positioned?</span>
             </div>
             <h2 className="title2 animation-revel1"><span className="ani-text"> Get a <div className="text-orange">FREE</div> Design Audit!</span></h2>
           </div>

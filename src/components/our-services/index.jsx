@@ -7,28 +7,18 @@ import Split from "../Split";
 const OurServicesComponent = (props) => {
 
   useEffect(() => {
-    const categoriesWrapper = document.querySelector('.categories-wrapper')
-    categoriesWrapper.addEventListener('mousemove', e => {
-      gsap.to('.img-hover-style', {
-        x: e.x,
-        y: e.y,
-        xPercent: -100,
-        yPercent: -100,
-        stagger: .05
-      })
-    })
 
     gsap.utils.toArray('.categories h1')
       .forEach(category => {
-        let { label } = category.dataset
+        let { label, indexNumber } = category.dataset
         category.addEventListener('mouseenter', () => {
           gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 1, scale: 1 })
           gsap.set(`.img-hover-style[data-image=${label}]`, { zIndex: 1 })
-          gsap.set(`h1[data-label=${label}]`, { zIndex: 2 })
+          gsap.set(`h1[data-label=${label}]`, { zIndex: 1 })
         })
 
         category.addEventListener('mouseleave', () => {
-          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .80 })
+          gsap.to(`.img-hover-style[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .97 })
           gsap.set(`h1[data-label=${label}]`, { zIndex: 0 })
         })
       })
@@ -56,16 +46,16 @@ const OurServicesComponent = (props) => {
           <div className="col-sm-12">
             <div className="typo-grid">
               <div className="images">
-                <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="activewear" data-image="activewear" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="beachwear" data-image="beachwear" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="dresses" data-image="dresses" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heels" data-image="heels" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" data-image="heading1" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="heading2" data-image="heading2" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="heading3" data-image="heading3" />
+                <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heading4" data-image="heading4" />
               </div>
 
               <div className="categories-wrapper">
                 <div className="categories">
                   <div className="item">
-                    <h1 className="h1" data-label="activewear">UX RESEARCH</h1>
+                    <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
 
                     <div className="content-right">
                       <div className="tag-section">
@@ -82,7 +72,7 @@ const OurServicesComponent = (props) => {
                   </div>
 
                   <div className="item">
-                    <h1 className="h1" data-label="beachwear">UX/UI DESIGN</h1>
+                    <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
 
                     <div className="content-right">
                       <div className="tag-section">
@@ -99,7 +89,8 @@ const OurServicesComponent = (props) => {
                   </div>
 
                   <div className="item">
-                    <h1 className="h1" data-label="dresses">BRANDING</h1>
+                    <h1 className="h1" data-label="heading3">BRANDING</h1>
+
                     <div className="content-right">
                       <div className="tag-section">
                         <span>Logo</span>
@@ -114,7 +105,7 @@ const OurServicesComponent = (props) => {
                   </div>
 
                   <div className="item">
-                    <h1 className="h1" data-label="heels">DEVELOPMENT</h1>
+                    <h1 className="h1" data-label="heading4">DEVELOPMENT</h1>
 
                     <div className="content-right">
                       <img className="logo-img" src="img/sb-log.svg" alt="img1" />

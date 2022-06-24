@@ -93,16 +93,16 @@ body .slick-dots li button {
     display: block;
     position: relative;
     z-index: 1;
-    padding: 0 10px 0 0;
+    padding: 0 8px 0 0;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   img {
     width: 35px;
     margin-left: 10px;
     right: -15px;
-    top: 8px;
+    top: 10px;
     position: absolute;
     transition: all 0.5s ease-in-out;
   }
@@ -639,6 +639,7 @@ section.team.section-padding {
 
   .title1 {
     font-size: 40px;
+    font-weight: 500;
   }
 
   .blog-section {
@@ -650,6 +651,7 @@ section.team.section-padding {
     .img {
       overflow: hidden;
       margin-bottom: 30px;
+      height: 327px;
 
       img {
         transition: all 0.5s ease-in-out;
@@ -728,7 +730,9 @@ section.team.section-padding {
     }
 
     .description {
-      color: $white;
+      color: #6a6a6a;
+      font-size: 18px;
+      line-height: 27px;
     }
 
     .title4 {
@@ -743,6 +747,8 @@ section.team.section-padding {
 
       span {
         background-color: $theme-primary;
+        font-size: 17px;
+        font-weight: 500;
       }
 
       &:hover {
@@ -751,13 +757,16 @@ section.team.section-padding {
     }
 
     .date {
-      color: #6A6A6A;
+      .num {
+        color: #6A6A6A;
+      }
     }
 
     .title {
       color: #414141;
-      font-size: 25px;
-      margin: 10px 0;
+      line-height: 36px;
+      font-size: 24px;
+      margin: 10px 0 20px;
     }
   }
 
@@ -1013,7 +1022,7 @@ section.team.section-padding {
     }
 
     .alphabat {
-      border: 1px solid $gray-bc;
+      border: 0.5px solid $gray-f8;
       height: 100px;
       width: 80%;
       margin-bottom: 33px;
@@ -1039,7 +1048,7 @@ section.team.section-padding {
         transition: all 0.5s ease-in-out;
 
         span {
-          border-left: 1px solid $gray-bc;
+          border-left: 0.5px solid $gray-f8;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1059,6 +1068,12 @@ section.team.section-padding {
     .with-bg {
       background-color: $theme-primary;
     }
+  }
+
+  
+  .text-light {
+    color: $gray-bc;
+    font-size: 20px;
   }
 
   .link-section {
@@ -1105,11 +1120,6 @@ section.team.section-padding {
     }
   }
 
-  .text-light {
-    color: $gray-bc;
-    font-size: 20px;
-  }
-
   .title5 {
     font-size: 13px;
     font-weight: 200;
@@ -1132,13 +1142,14 @@ section.team.section-padding {
   .divider {
     border: 1px solid #707070;
     margin: 40px 0;
-    opacity: 0.5;
+    opacity: 0.2;
   }
 
   .copyright-sec {
     display: flex;
     align-items: center;
     color: $gray-bc;
+    font-size: 14px;
 
     a {
       border-left: 1px solid $gray-bc;
@@ -1175,6 +1186,7 @@ section.team.section-padding {
     display: flex;
     flex-direction: column;
     float: right;
+    font-weight: 500;
 
     .address {
       margin-top: 35px;
@@ -1192,8 +1204,9 @@ section.team.section-padding {
   .social {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-bottom: 30px;
+    padding-left: 15px;
 
     a {
       margin-left: 40px;
@@ -1347,6 +1360,12 @@ section.team.section-padding {
         top: 0;
         object-fit: cover;
         object-position: center;
+      }
+    }
+
+    &.first {
+      .footer-section {
+        padding-right: 20px;
       }
     }
 
@@ -1509,6 +1528,10 @@ section.team.section-padding {
       justify-content: flex-start;
     }
   }
+  
+  .typo-grid {
+    position: relative;
+  }
 
 
   .images {
@@ -1516,10 +1539,11 @@ section.team.section-padding {
 
     img {
       position: absolute;
-      height: 60vh;
-      width: 350px;
+      height: 550px;
+      width: 400px;
       opacity: 0;
       z-index: -1;
+      top: 0;
     }
   }
 
@@ -1561,6 +1585,7 @@ section.team.section-padding {
     top: 15%;
     width: 400px;
     opacity: 0;
+    z-index: -1;
     transform: scale(0.9);
     transition: all 0.5s ease-in-out;
   }
@@ -1636,11 +1661,13 @@ section.team.section-padding {
     &:hover {
       h1 {
         color: white;
+
+        + .content-right {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
-      .content-right {
-        transform: scale(1);
-        opacity: 1;
-      }
+     
     }
   }
 }
@@ -1685,6 +1712,9 @@ section.team.section-padding {
 
   .button-section {
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
     .btn-outline {
       border: 1px solid $theme-secondary;
@@ -1694,6 +1724,9 @@ section.team.section-padding {
       padding: 10px 30px;
       border-radius: 0;
       color: $theme-secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         color: white;

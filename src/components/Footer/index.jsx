@@ -132,14 +132,14 @@ const Footer = () => {
         <div className="divider"></div>
 
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-sm-6">
             <div className="copyright-sec">
               <p className="text-gray">&copy; Copyright Grid Design. All rights reserved.</p>
               <Link href="/" className="text-gray">Privacy Policy</Link>
               <Link href="/" className="text-gray">Terms & Conditions</Link>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-6">
             <div className="social">
               <a href="#0" className="icon">
                 <i className="fab fa-linkedin-in"></i>
