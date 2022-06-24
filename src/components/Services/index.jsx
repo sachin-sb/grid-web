@@ -5,7 +5,7 @@ import Split from "../Split";
 const ShowcassesFullScreenData = [
   {
     "id": 1,
-    "title": { "first": "HEALTHCARE ", "second": "Using better UX to improve healthcare delivery" },
+    "title": { "first": "Healthcare", "second": "Using better UX to improve healthcare delivery" },
     "image": "/img/clients/dr-ready.svg"
   },
   {
@@ -30,7 +30,7 @@ const ShowcassesFullScreenData = [
     "id": 5,
     "title": { "first": "Sports", "second": "Bringing digital solutions to the world of sports" },
     "image": "/img/clients/hudle.svg",
-    "className": "icon-sm"
+    "className": "icon-md2"
   },
 ]
 
@@ -42,7 +42,7 @@ const ShowcassesFullScreenData2 = [
   },
   {
     "id": 2,
-    "title": { "first": "Real Estate", "second": "Uplifting Real Estate to the highly digital world" },
+    "title": { "first": "Real Estate", "second": "Expanding real estate across the digital world" },
     "image": "/img/clients/damac.svg"
   },
   {

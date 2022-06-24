@@ -33,7 +33,7 @@ const HomeProjects = () => {
     // create scene to pin and link animation
     new ScrollMagic.Scene({
       triggerElement: "#pinContainer",
-      triggerHook: 0.1,
+      triggerHook: 0.03,
       duration: "600%"
     })
       .setPin("#pinContainer")
@@ -55,9 +55,9 @@ const HomeProjects = () => {
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" />
-              <button>
+              {/* <button>
                 <img src="img/download-button.svg" alt="" />
-              </button>
+              </button> */}
             </div>
             <div className="footer-section">
               <div className="left">

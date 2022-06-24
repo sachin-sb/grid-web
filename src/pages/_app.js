@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         <title>Grid Design</title>
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
-      <Cursor />
+      {/* <Cursor /> */}
       <LoadingScreen />
       <ScrollToTop />
       <Component {...pageProps} />

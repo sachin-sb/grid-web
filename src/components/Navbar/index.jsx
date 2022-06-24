@@ -67,7 +67,7 @@ const Navbar = ({ lr, nr, theme }) => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav ml-auto navbar-custom-style">
 
             <li className="nav-item">
               <Link href="/">

@@ -1055,7 +1055,7 @@ span:hover {
 /* ====================== [ End Text Animation & Images ] ====================== */
 /* ====================== [ Start Cursor Style ] ====================== */
 body {
-  cursor: none;
+  /* cursor: none; */
 }
 
 .mouse-cursor {
@@ -1086,7 +1086,7 @@ body {
   width: 60px;
   height: 60px;
   background-color: #FF5530;
-  opacity: 0.2;
+  opacity: 0.2 !important;
 }
 
 .cursor-outer {
@@ -1668,8 +1668,8 @@ body {
 }
 
 .nav-scroll {
-  background: #000;
-  border-color: #181b21;
+  background: #191919;
+  border-color: #191919;
   padding: 0;
   position: fixed;
   top: -80px;
