@@ -993,13 +993,21 @@ section.team.section-padding {
     height: 70px;
     position: relative;
     overflow: hidden;
-    z-index: 1;
 
-    span {
+    .animation {
       position: absolute;
       font-size: 3rem;
       line-height: 4.2rem;
     }
+  }
+
+  .line-img-style {
+    min-height: 92px;
+    width: 250px;
+    position: absolute;
+    top: -13px;
+    left: 195px;
+    object-fit: contain;
   }
 
   // .line-sec {

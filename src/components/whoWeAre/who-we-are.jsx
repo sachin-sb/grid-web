@@ -8,14 +8,13 @@ const WhoWeAre = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // const tl = gsap.timeline();
-    gsap.from(".line", 1.5, {
+    gsap.from(".line h4", 1.5, {
       y: 100,
       ease: "power4.out",
-      delay: 0.1,
-      skewX: 7,
-      duration: 2,
+      delay: 1,
+      skewY: 5,
       stagger: {
-        amount: 0.1
+        amount: 0.3
       },
       scrollTrigger: {
         trigger: '#pinContainer2',
@@ -31,11 +30,10 @@ const WhoWeAre = () => {
     <section id="pinContainer2" className="who-we-are-style c-usp">
       <div className="heading-sec">
         <div className="line">
-          <h4 className="title4">We have the skills to break the grid and deliver</h4>
+            <h4 className="title4">We have the skills to break the grid and deliver</h4>
         </div>
         <div className="line">
-          <h4 className="title4"> out of the box solutions.</h4>
-          <img src="/img/text-wrap-line.svg" alt="" />
+            <h4 className="title4"> out of the box solutions. <img src="/img/text-wrap-line.svg" className="line-img-style" alt="" /></h4>
         </div>
       </div>
       <AnimatedText
