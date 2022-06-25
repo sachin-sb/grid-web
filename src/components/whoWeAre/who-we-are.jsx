@@ -8,7 +8,7 @@ const WhoWeAre = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // const tl = gsap.timeline();
-    gsap.from(".line .title4", 1.5, {
+    gsap.from(".line", 1.5, {
       y: 100,
       ease: "power4.out",
       delay: 0.1,
@@ -35,7 +35,7 @@ const WhoWeAre = () => {
         </div>
         <div className="line">
           <h4 className="title4"> out of the box solutions.</h4>
-          <div className="line-sec"></div>
+          <img src="/img/text-wrap-line.svg" alt="" />
         </div>
       </div>
       <AnimatedText

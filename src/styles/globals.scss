@@ -325,7 +325,7 @@ section.team.section-padding {
 
   .slider-section {
     height: calc(100vh - 200px);
-    background-color: red;
+    background-color: transparent;
     position: relative;
     &::after {
       content: '';
@@ -1002,26 +1002,26 @@ section.team.section-padding {
     }
   }
 
-  .line-sec {
-    position: absolute;
-    top: 5px;
-    left: 195px;
-    width: 248px;
-    height: 55px;
-    content: "";
-    border: 3px solid $gray-bc;
+  // .line-sec {
+  //   position: absolute;
+  //   top: 5px;
+  //   left: 195px;
+  //   width: 248px;
+  //   height: 55px;
+  //   content: "";
+  //   border: 3px solid $gray-bc;
       
-    &::after {
-      position: absolute;
-      top: 9px;
-      right: initial;
-      height: 35px;
-      content: "";
-      width: 150px;
-      left: 221px;
-      background: #191919;
-    }
-  }
+  //   &::after {
+  //     position: absolute;
+  //     top: 9px;
+  //     right: initial;
+  //     height: 35px;
+  //     content: "";
+  //     width: 150px;
+  //     left: 221px;
+  //     background: #191919;
+  //   }
+  // }
 
   .title4 {
     text-align: center;
