@@ -115,9 +115,6 @@ const HomeProjects = () => {
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="" />
-              <button>
-                <img src="img/download-button.svg" alt="" />
-              </button>
             </div>
             <div className="footer-section">
               <div className="left">
