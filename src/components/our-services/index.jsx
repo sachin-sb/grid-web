@@ -159,8 +159,8 @@ const OurServicesComponent = (props) => {
           {/* For Mobile */}
           <div className="mobile-version services-style">
 
-            <Accordion>
-              <AccordionItem>
+            <Accordion preExpanded={['a']}>
+              <AccordionItem uuid="a">
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     UX RESEARCH
@@ -181,7 +181,7 @@ const OurServicesComponent = (props) => {
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
-              <AccordionItem>
+              <AccordionItem uuid="b">
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     UX/UI DESIGN
@@ -203,7 +203,7 @@ const OurServicesComponent = (props) => {
                 </AccordionItemPanel>
               </AccordionItem>
 
-              <AccordionItem>
+              <AccordionItem uuid="c">
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     BRANDING
@@ -224,7 +224,7 @@ const OurServicesComponent = (props) => {
                 </AccordionItemPanel>
               </AccordionItem>
 
-              <AccordionItem>
+              <AccordionItem uuid="d">
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     DEVELOPMENT
