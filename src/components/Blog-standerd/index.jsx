@@ -38,19 +38,21 @@ const BlogStanderd = () => {
               Through our print magazine Wrap, the products we make, and the online content we publish…
             </p>
             <Link href="/blog-details/blog-details-dark">
-              <a className="read-more mt-20"> <span>Read More</span> 
-              <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
+              <a className="read-more mt-20"> <span>Read More</span>
+                <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
             </Link>
           </div>
         </div>
       ))}
 
-      <div className="info-msg">
-        <h4 className="title4">
-          Love reading? <br /> We’ve got more.
-        </h4>
+      <div className="right-flex">
+        <div className="info-msg">
+          <h4 className="title4">
+            Love reading? <br /> We’ve got more.
+          </h4>
 
-        <ButtonOutline buttonText="View our services"/>
+          <ButtonOutline buttonText="View our services" />
+        </div>
       </div>
     </section>
   );

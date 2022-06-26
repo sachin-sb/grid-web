@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
+import { Accordion } from "react-bootstrap";
 import ButtonOutline from "../../common/buttonOutline";
 import ButtonReadmore from "../../common/buttonReadmore";
 import Split from "../Split";
@@ -43,103 +44,180 @@ const OurServicesComponent = (props) => {
             </div>
           </div>
 
-          <div className="col-sm-12">
-            <div className="typo-grid">
-              <div className="images">
-                <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" data-image="heading1" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="heading2" data-image="heading2" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="heading3" data-image="heading3" />
-                <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heading4" data-image="heading4" />
-              </div>
+          <div className="desktop-version">
+            <div className="col-sm-12">
+              <div className="typo-grid">
+                <div className="images">
+                  <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" data-image="heading1" />
+                  <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="heading2" data-image="heading2" />
+                  <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="heading3" data-image="heading3" />
+                  <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heading4" data-image="heading4" />
+                </div>
 
-              <div className="categories-wrapper">
-                <div className="categories">
-                  <div className="item">
-                    <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
+                <div className="categories-wrapper">
+                  <div className="categories">
+                    <div className="item">
+                      <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
 
-                    <div className="content-right">
-                      <div className="tag-section">
-                        <span>Design Audit</span>
-                        <span>User Interviews</span>
-                        <span>Heuristic evaluation</span>
-                        <span>Competitor analysis</span>
+                      <div className="content-right">
+                        <div className="tag-section">
+                          <span>Design Audit</span>
+                          <span>User Interviews</span>
+                          <span>Heuristic evaluation</span>
+                          <span>Competitor analysis</span>
+                        </div>
+                        <p className="description">
+                          We provide end to end research services while discovering game-changing improvement opportunities.
+                        </p>
+                        <ButtonReadmore href="/" text="Learn More" />
                       </div>
-                      <p className="description">
-                        We provide end to end research services while discovering game-changing improvement opportunities.
-                      </p>
-                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
-                  </div>
 
-                  <div className="item">
-                    <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
+                    <div className="item">
+                      <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
 
-                    <div className="content-right">
-                      <div className="tag-section">
-                        <span>Mobile app design</span>
-                        <span>Responsive Website</span>
-                        <span>Interface design</span>
-                        <span>Design System</span>
+                      <div className="content-right">
+                        <div className="tag-section">
+                          <span>Mobile app design</span>
+                          <span>Responsive Website</span>
+                          <span>Interface design</span>
+                          <span>Design System</span>
+                        </div>
+                        <p className="description">
+                          Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
+                        </p>
+                        <ButtonReadmore href="/" text="Learn More" />
                       </div>
-                      <p className="description">
-                        Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
-                      </p>
-                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
-                  </div>
 
-                  <div className="item">
-                    <h1 className="h1" data-label="heading3">BRANDING</h1>
+                    <div className="item">
+                      <h1 className="h1" data-label="heading3">BRANDING</h1>
 
-                    <div className="content-right">
-                      <div className="tag-section">
-                        <span>Logo</span>
-                        <span>Brand Guidelines</span>
-                        <span>Brand Assets</span>
+                      <div className="content-right">
+                        <div className="tag-section">
+                          <span>Logo</span>
+                          <span>Brand Guidelines</span>
+                          <span>Brand Assets</span>
+                        </div>
+                        <p className="description">
+                          We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                        </p>
+                        <ButtonReadmore href="/" text="Learn More" />
                       </div>
-                      <p className="description">
-                        We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                      </p>
-                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
-                  </div>
 
-                  <div className="item">
-                    <h1 className="h1" data-label="heading4">DEVELOPMENT</h1>
+                    <div className="item">
+                      <h1 className="h1" data-label="heading4">DEVELOPMENT</h1>
 
-                    <div className="content-right">
-                      <img className="logo-img" src="img/sb-log.svg" alt="img1" />
-                      <p className="extra-description">
-                        Building beautyful and scalable web and mobile applications
-                      </p>
-                      <div className="tag-section">
-                        <span>Web development</span>
-                        <span>App Development</span>
-                        <span>Devops</span>
-                        <span>QA/Testing</span>
+                      <div className="content-right">
+                        <img className="logo-img" src="img/sb-log.svg" alt="img1" />
+                        <p className="extra-description">
+                          Building beautyful and scalable web and mobile applications
+                        </p>
+                        <div className="tag-section">
+                          <span>Web development</span>
+                          <span>App Development</span>
+                          <span>Devops</span>
+                          <span>QA/Testing</span>
+                        </div>
+                        <p className="description">
+                          Pixels converted seamlessly into
+                          adaptable & scalable piece of code.
+                          Our partners at Squareboat script the
+                          screens designed by us.
+                        </p>
+                        <ButtonReadmore href="/" text="Learn More" />
                       </div>
-                      <p className="description">
-                        Pixels converted seamlessly into
-                        adaptable & scalable piece of code.
-                        Our partners at Squareboat script the
-                        screens designed by us.
-                      </p>
-                      <ButtonReadmore href="/" text="Learn More" />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
 
-            <div className="info-msg">
-              <div className="">
-                <h4 className="title4">
-                  Want to know more? <br /> Let’s dive deep!
-                </h4>
-                <ButtonOutline buttonText="View our services" />
+              <div className="info-msg">
+                <div className="">
+                  <h4 className="title4">
+                    Want to know more? <br /> Let’s dive deep!
+                  </h4>
+                  <ButtonOutline buttonText="View our services" />
+                </div>
               </div>
             </div>
+          </div>
+
+
+          {/* For Mobile */}
+          <div className="mobile-version services-style">
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>UX RESEARCH</Accordion.Header>
+                <Accordion.Body>
+                  <div className="content-right">
+                    <div className="tag-section">
+                      <span>Design Audit</span>
+                      <span>User Interviews</span>
+                      <span>Heuristic evaluation</span>
+                      <span>Competitor analysis</span>
+                    </div>
+                    <p className="description">
+                      We provide end to end research services while discovering game-changing improvement opportunities.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>UX/UI DESIGN</Accordion.Header>
+                <Accordion.Body>
+                  <div className="content-right">
+                    <div className="tag-section">
+                      <span>Mobile app design</span>
+                      <span>Responsive Website</span>
+                      <span>Interface design</span>
+                      <span>Design System</span>
+                    </div>
+                    <p className="description">
+                      Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>BRANDING</Accordion.Header>
+                <Accordion.Body>
+                  <div className="content-right">
+                    <div className="tag-section">
+                      <span>Logo</span>
+                      <span>Brand Guidelines</span>
+                      <span>Brand Assets</span>
+                    </div>
+                    <p className="description">
+                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="3">
+                <Accordion.Header>DEVELOPMENT</Accordion.Header>
+                <Accordion.Body>
+                  <div className="content-right">
+                    <div className="tag-section">
+                      <span>Logo</span>
+                      <span>Brand Guidelines</span>
+                      <span>Brand Assets</span>
+                    </div>
+                    <p className="description">
+                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
 import Split from "../Split";
+import { useMediaQuery } from 'react-responsive'
 
 const ShowcassesFullScreenData = [
   {
@@ -61,8 +62,10 @@ const ShowcassesFullScreenData2 = [
 ]
 
 const Services = (props) => {
-
+  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
+  
   useEffect(() => {
+    if (mobileDevice) {
     var controller = new ScrollMagic.Controller();
 
     var horizontalSlide = new TimelineMax()
@@ -75,7 +78,7 @@ const Services = (props) => {
       .setPin("#js-wrapper")
       .setTween(horizontalSlide)
       .addTo(controller);
-
+    }
   }, [])
 
   return (
@@ -101,7 +104,7 @@ const Services = (props) => {
           </div>
         </div>
       </section>
-      <div className="client-section-wrapper" id="js-wrapper">
+      <div className="client-section-wrapper no-scrollbar" id="js-wrapper">
         <div className="our-client-section sections" id="js-slideContainer">
           <div className="slide-card-section first">
             {ShowcassesFullScreenData.map((slide) => (

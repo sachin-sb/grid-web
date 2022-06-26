@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="col-sm-3">
             <div className="link-section first">
               <div className="links">
-              <Link href="/">
+                <Link href="/">
                   <a>About</a>
                 </Link>
                 <Link href="/">
@@ -91,7 +91,7 @@ const Footer = () => {
             <h5 className="title5">Industries</h5>
             <div className="link-section second">
               <div className="links">
-              <Link href="/">
+                <Link href="/">
                   <a>Blogging</a>
                 </Link>
                 <Link href="/">
@@ -121,7 +121,7 @@ const Footer = () => {
               </div>
               <div className="address">
                 <div className="address-text">
-                +91-1235678901
+                  +91-1235678901
                 </div>
                 <a href="" className="link-email">hi@griddesign.in</a>
               </div>
@@ -131,12 +131,14 @@ const Footer = () => {
 
         <div className="divider"></div>
 
-        <div className="row">
+        <div className="row row-column-style">
           <div className="col-sm-6">
             <div className="copyright-sec">
               <p className="text-gray">&copy; Copyright Grid Design. All rights reserved.</p>
-              <Link href="/" className="text-gray">Privacy Policy</Link>
-              <Link href="/" className="text-gray">Terms & Conditions</Link>
+              <div className="link-sec">
+                <Link href="/" className="text-gray">Privacy Policy</Link>
+                <Link href="/" className="text-gray">Terms & Conditions</Link>
+              </div>
             </div>
           </div>
           <div className="col-sm-6">

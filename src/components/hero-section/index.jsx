@@ -65,6 +65,30 @@ const HeroSection = (props) => {
       {!load ? (
         <div className="container-fluid">
           <div className="row align-items-center">
+            <div className="col-sm-12">
+              {/* For Mobile */}
+              <div className="logo-section">
+                <div className="logo">
+                  <img src='img/logo.svg' alt="" />
+                </div>
+
+                <motion.div
+                  initial="hidden"
+                  animate={replay ? "visible" : "hidden"}
+                  variants={container}
+                  className="sub-heading"
+                >
+                  <div className="cursor-scale">
+                    {QuoteText.map((item, index) => {
+                      return <AnimatedText {...item} key={index} />;
+                    })}
+                  </div>
+                </motion.div>
+              </div>
+              {/* End For Mobile */}
+            </div>
+          </div>
+          <div className="row align-items-center row-section-style">
             <div className="col-sm-6">
               <div className="content-sec">
                 <Split>
@@ -95,7 +119,7 @@ const HeroSection = (props) => {
                   initial="hidden"
                   animate={replay ? "visible" : "hidden"}
                   variants={container}
-                  className="sub-heading"
+                  className="sub-heading d-none d-sm-block"
                 >
                   <div className="cursor-scale">
                     {QuoteText.map((item, index) => {
@@ -103,6 +127,11 @@ const HeroSection = (props) => {
                     })}
                   </div>
                 </motion.div>
+
+
+                <button className="toggle-button">
+                  <img src='img/toggle-lines.svg' className="img-style" alt="" />
+                </button>
               </div>
             </div>
 

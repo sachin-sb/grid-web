@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
 // import ScrollMagic from 'scrollmagic';
+import { useMediaQuery } from 'react-responsive'
 
 const HomeProjects = () => {
+  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
   useEffect(() => {
-    var controller = new ScrollMagic.Controller();
+    if(mobileDevice) {
 
-    // define movement of panels
+
+    var controller = new ScrollMagic.Controller();
     var wipeAnimation = new TimelineMax()
       // animate to second panel
       .to("#slideContainer", 0.5, { z: -150 })		// move back in 3D space
@@ -26,10 +29,6 @@ const HomeProjects = () => {
       .to("#slideContainer", 1, { x: "-80%" })
       .to("#slideContainer", 0.5, { z: 0 })
 
-      // .to("#slideContainer", 0.5, { z: -150, delay: 1 })
-      // .to("#slideContainer", 1, { x: "-100%" })
-      // .to("#slideContainer", 0.5, { z: 0 });
-
     // create scene to pin and link animation
     new ScrollMagic.Scene({
       triggerElement: "#pinContainer",
@@ -40,6 +39,8 @@ const HomeProjects = () => {
       .setTween(wipeAnimation)
       // .addIndicators()
       .addTo(controller);
+
+    }
 
   }, [])
 
@@ -75,9 +76,6 @@ const HomeProjects = () => {
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1581434682226-72c2bab0b5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" />
-              <button>
-                <img src="img/download-button.svg" alt="" />
-              </button>
             </div>
             <div className="footer-section">
               <div className="left">
@@ -95,9 +93,6 @@ const HomeProjects = () => {
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="" />
-              <button>
-                <img src="img/download-button.svg" alt="" />
-              </button>
             </div>
             <div className="footer-section">
               <div className="left">
@@ -132,9 +127,6 @@ const HomeProjects = () => {
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1605859465655-84c45e14a0af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80" alt="" />
-              <button>
-                <img src="img/download-button.svg" alt="" />
-              </button>
             </div>
             <div className="footer-section">
               <div className="left">
