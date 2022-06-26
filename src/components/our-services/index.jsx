@@ -1,9 +1,18 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
-import { Accordion } from "react-bootstrap";
 import ButtonOutline from "../../common/buttonOutline";
 import ButtonReadmore from "../../common/buttonReadmore";
 import Split from "../Split";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+// Demo styles, see 'Styles' section below for some notes on use.
+import 'react-accessible-accordion/dist/fancy-example.css';
 
 const OurServicesComponent = (props) => {
 
@@ -146,13 +155,19 @@ const OurServicesComponent = (props) => {
           </div>
 
 
+
           {/* For Mobile */}
           <div className="mobile-version services-style">
-            <Accordion defaultActiveKey="0">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>UX RESEARCH</Accordion.Header>
-                <Accordion.Body>
-                  <div className="content-right">
+
+            <Accordion>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    UX RESEARCH
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <span>Design Audit</span>
                       <span>User Interviews</span>
@@ -164,12 +179,16 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>UX/UI DESIGN</Accordion.Header>
-                <Accordion.Body>
-                  <div className="content-right">
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    UX/UI DESIGN
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <span>Mobile app design</span>
                       <span>Responsive Website</span>
@@ -181,13 +200,17 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                </Accordion.Body>
-              </Accordion.Item>
+                </AccordionItemPanel>
+              </AccordionItem>
 
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>BRANDING</Accordion.Header>
-                <Accordion.Body>
-                  <div className="content-right">
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    BRANDING
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <span>Logo</span>
                       <span>Brand Guidelines</span>
@@ -198,13 +221,17 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                </Accordion.Body>
-              </Accordion.Item>
+                </AccordionItemPanel>
+              </AccordionItem>
 
-              <Accordion.Item eventKey="3">
-                <Accordion.Header>DEVELOPMENT</Accordion.Header>
-                <Accordion.Body>
-                  <div className="content-right">
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    DEVELOPMENT
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <span>Logo</span>
                       <span>Brand Guidelines</span>
@@ -215,8 +242,8 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                </Accordion.Body>
-              </Accordion.Item>
+                </AccordionItemPanel>
+              </AccordionItem>
             </Accordion>
           </div>
         </div>

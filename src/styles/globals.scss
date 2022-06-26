@@ -365,23 +365,31 @@ section.team.section-padding {
     }
   }
 
-  .heading-sec h1 {
-    font-size: 110px;
-    line-height: normal;
-    letter-spacing: 0px;
-
+  .heading-sec {
 
     @include mobile {
-      font-size: 70px;
-      line-height: 1.5;
+      margin-top: -10px;
+      margin-bottom: -20px;
     }
 
-    &:nth-child(2) {
-      color: $theme-primary;
-      position: relative;
-      margin-top: -50px;
+    h1 {
+      font-size: 110px;
+      line-height: normal;
+      letter-spacing: 0px;
+  
+  
+      @include mobile {
+        font-size: 70px;
+        line-height: 1.5;
+      }
+  
+      &:nth-child(2) {
+        color: $theme-primary;
+        position: relative;
+        margin-top: -50px;
+      }
     }
-  }
+  } 
 
   .text-move-style {
     font-size: 40px;
@@ -389,8 +397,13 @@ section.team.section-padding {
     color: $gray-f8;
 
     @include mobile {
-      font-size: 30px;
+      font-size: 24px;
       line-height: 1.3;
+      max-width: 80%;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -494,12 +507,19 @@ section.team.section-padding {
 
         span {
           white-space: nowrap;
+          position: absolute;
+          left: 80px;
+
+          @include mobile {
+            font-size: 13px;
+            left: 60px;
+          }
         }
       }
 
       .img-icon {
         height: 30px;
-        margin-left: 133px;
+        margin-left:30px;
         margin-right: 20px;
         filter: contrast(0) brightness(100);
         transition: all 0.5s ease-in-out;
@@ -683,6 +703,16 @@ section.team.section-padding {
 
   @include mobile {
     padding-left: 20px;
+    position: relative;
+    padding-top: 52px;
+
+    &::before {
+      border-top: 1px solid rgba($gray-f8, 0.3);
+      padding-top: 80px;
+      display: flex;
+      content: '';
+      width: 93%;
+    }
   }
 
   .sub-title h6 {
@@ -1202,7 +1232,7 @@ section.team.section-padding {
     overflow: hidden;
 
     @include mobile {
-      height: 180px;
+      height: 150px;
     }
 
     .animation {
@@ -1221,7 +1251,8 @@ section.team.section-padding {
     object-fit: contain;
 
     @include mobile {
-      left: 35px;
+      left: 25px;
+      top: -22px;
     }
   }
 
@@ -1234,6 +1265,11 @@ section.team.section-padding {
     letter-spacing: 0.4px;
     position: relative;
     z-index: 1;
+
+    @include mobile {
+      font-size: 35px;
+      line-height: 45px;
+    }
   }
 
   .text-gray {
@@ -1687,6 +1723,12 @@ section.team.section-padding {
       &:hover {
         color: $theme-primary;
       }
+    }
+  }
+
+  .row-column-style {
+    @include mobile {
+      flex-direction: column-reverse;
     }
   }
 }
@@ -2285,25 +2327,46 @@ section.team.section-padding {
 
   .services-style {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 0px;
 
-    .accordion-item {
-      margin-bottom: 30px;
+    .accordion__button {
+      background: none;
+      font-size: 34px;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $text-6a;
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      font-weight: 500;
+      color: transparent;
     }
 
-    .accordion-header {
+    .accordion__button[aria-expanded='true'] {
+      color: $white;
+      -webkit-text-stroke-width:0;
+    }
 
-      .accordion-button {
-        width: 100%;
-        background: none;
-        text-align: left;
-        border: none;
-        font-size: 34px;
-        color: transparent;
-        font-weight: 500;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $text-6a;
-      }
+    .accordion__button::before {
+      display: none;
+    }
+
+    .accordion__button:after {
+      margin-left: 10px;
+      border: none;
+      content: '+';
+      transform: rotate(0);
+      font-size: 40px;
+      color: $theme-primary;
+      -webkit-text-stroke-width:0;
+      font-weight: 500;
+    }
+
+    .accordion__button[aria-expanded='true']::after {
+      content: '-';
+      transform: rotate(0);
+      font-size: 40px;
+      color: $theme-primary;
+      -webkit-text-stroke-width:0;
     }
   }
 }
