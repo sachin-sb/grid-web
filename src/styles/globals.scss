@@ -2123,6 +2123,13 @@ section.team.section-padding {
     }
   }
 
+  .mobile-version {
+
+    @include desktop {
+      display: none;
+    }
+  }
+
   .title6 {
     font-size: 22px;
     color: #939393;

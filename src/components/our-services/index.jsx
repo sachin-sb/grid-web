@@ -158,7 +158,6 @@ const OurServicesComponent = (props) => {
 
           {/* For Mobile */}
           <div className="mobile-version services-style">
-
             <Accordion preExpanded={['a']}>
               <AccordionItem uuid="a">
                 <AccordionItemHeading>
