@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import ButtonPrimary from "../../common/buttonPrimary";
-import AnimatedText from 'react-animated-text-content';
 import gsap from "gsap";
 
 

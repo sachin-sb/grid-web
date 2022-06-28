@@ -13,12 +13,10 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
-
   & {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-
 }
 
 .no-scrollbar {
@@ -2399,6 +2397,7 @@ section.team.section-padding {
       font-size: 3.6vmax;
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       gap: 16px;
       justify-content: flex-start;
     }
