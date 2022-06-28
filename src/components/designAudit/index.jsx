@@ -43,9 +43,7 @@ const DesignAudit = (props) => {
             </div>
           </div>
           <div className="col-sm-4">
-            <div className="button-section">
-              <ButtonOutline buttonText="Know more" className="wow fadeInUp" data-wow-delay=".4s" />
-            </div>
+            <ButtonOutline buttonText="Know more" className="wow fadeInUp" data-wow-delay=".4s" />
           </div>
         </div>
       </div>

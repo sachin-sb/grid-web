@@ -721,21 +721,29 @@ section.team.section-padding {
     }
   }
 
-  .sub-title h6 {
-    display: flex;
-    font-size: 22px;
+  .sub-title {
 
     @include mobile {
-      font-size: 16px;
-      max-width: 90%;
-      flex-direction: column;
+      margin-bottom: 40px;
     }
 
-    div {
-      margin-left: 5px;
+    h6 {
+      display: flex;
+      font-size: 22px;
+      line-height: 1.6;
 
       @include mobile {
-        margin-left: 0px;
+        font-size: 16px;
+        max-width: 90%;
+        flex-direction: column;
+      }
+  
+      div {
+        margin-left: 5px;
+  
+        @include mobile {
+          margin-left: 0px;
+        }
       }
     }
   }
@@ -1270,6 +1278,7 @@ section.team.section-padding {
 
   @include mobile {
     padding: 20px;
+    background-size: cover;
   }
 
   .box-outline {
@@ -1277,6 +1286,13 @@ section.team.section-padding {
     background-repeat: no-repeat;
     background-position: 20px 70%;
     padding-left: 30px;
+
+    @include mobile {
+      background-position: 2px 3px;
+      padding-left: 18px;
+      padding-bottom: 5px;
+      background-size: 90%;
+    }
   }
 
   .line-img-style {
@@ -1304,8 +1320,8 @@ section.team.section-padding {
     z-index: 1;
 
     @include mobile {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 32px;
+      line-height: 45px;
     }
   }
 
@@ -1401,6 +1417,7 @@ section.team.section-padding {
 
     @include mobile {
       font-size: 14px;
+      min-width: auto;
     }
 
     .img-style {
@@ -1537,7 +1554,6 @@ section.team.section-padding {
 
     @include mobile {
       font-size: 16px;
-      opacity: 0.6;
       text-align: center;
       line-height: 1.5;
     }
@@ -1563,6 +1579,7 @@ section.team.section-padding {
         @include mobile {
           flex-direction: row;
           gap: 20px;
+          flex-wrap: wrap;
         }
 
         a {
@@ -1574,7 +1591,8 @@ section.team.section-padding {
           align-items: center;
 
           @include mobile {
-            margin-top: 25px;
+            margin-top: 0px;
+            letter-spacing: 1.2px;
 
             &:after {
               display: flex;
@@ -1598,14 +1616,24 @@ section.team.section-padding {
     }
 
     &.second {
+      @include mobile {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
       .links {
         display: flex;
         flex-direction: column;
 
         @include mobile {
-          flex-direction: row;
           flex-wrap: wrap;
           gap: 20px;
+
+          &:first-child {
+            margin-right: 58px;
+          }
         }
 
         a {
@@ -1615,7 +1643,8 @@ section.team.section-padding {
           transition: all 0.5s ease-in-out;
 
           @include mobile {
-            margin-top: 25px;
+            margin: 0;
+            letter-spacing: 1.2px;
           }
 
           &:hover {
@@ -1701,6 +1730,11 @@ section.team.section-padding {
       line-height: 1;
       transition: all 0.5s ease-in-out;
 
+      @include mobile {
+        padding-left: 10px;
+        margin-left: 10px;
+      }
+
       &:nth-child(1) {
 
         @include mobile {
@@ -1739,6 +1773,7 @@ section.team.section-padding {
 
       @include mobile {
         width: 100px;
+        top: -3px;
       }
 
       &:hover {
@@ -1764,6 +1799,10 @@ section.team.section-padding {
       font-size: 16px;
       display: flex;
       flex-direction: column;
+
+      @include mobile {
+        margin-top: 15px;
+      }
 
 
       a {
@@ -1839,6 +1878,23 @@ section.team.section-padding {
       flex-direction: column-reverse;
     }
   }
+
+  .hide-mobile {
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  
+  .hide-desktop {
+    display: none;
+    
+    @include mobile {
+      display: flex;
+    }
+  }
+
 }
 
 
@@ -1915,6 +1971,7 @@ section.team.section-padding {
       @include mobile {
         border: 1px solid $theme-primary;
         opacity: 1;
+        color: rgba($gray-f8, 1);
       }
 
       &:hover {
@@ -1954,6 +2011,7 @@ section.team.section-padding {
 
       @include mobile {
         padding: 20px;
+        width: 100%;
       }
     }
 
@@ -1966,12 +2024,20 @@ section.team.section-padding {
 
       @include mobile {
         padding: 20px;
+        width: 100%;
       }
 
       .content-sec {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+          padding: 20px;
+          width: 100%;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
       }
     }
 
@@ -1997,6 +2063,11 @@ section.team.section-padding {
         top: 0px;
         left: 0px;
         margin-bottom: 12px;
+
+        @include mobile {
+          margin-bottom: 6px;
+          left: 3px;
+        }
       }
     }
 
@@ -2607,6 +2678,7 @@ section.team.section-padding {
 
     @include mobile {
       justify-content: flex-start;
+      margin-top: 25px;
     }
 
     .btn-outline {

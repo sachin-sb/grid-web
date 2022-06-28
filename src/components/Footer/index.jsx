@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="row align-items-end">
           <div className="col-sm-3">
-            <div className="link-section first">
+            <div className="link-section first hide-mobile">
               <div className="links">
                 <Link href="/">
                   <a>About</a>
@@ -87,35 +87,62 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
+
+            {/* For Mobile */}
+            <div className="link-section first hide-desktop">
+              <div className="links">
+                <Link href="/">
+                  <a>About</a>
+                </Link>
+                <Link href="/">
+                  <a>Services</a>
+                </Link>
+                <Link href="/">
+                  <a>Process</a>
+                </Link>
+                <Link href="/">
+                  <a>Blogs</a>
+                </Link>
+                <Link href="/">
+                  <a>Projects</a>
+                </Link>
+                <Link href="/">
+                  <a>Careers</a>
+                </Link>
+                <Link href="/">
+                  <a>Contact</a>
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="col-sm-3">
             <div className="light-style">
-            <h5 className="title5">Industries</h5>
-            <div className="link-section second">
-              <div className="links">
-                <Link href="/">
-                  <a>Blogging</a>
-                </Link>
-                <Link href="/">
-                  <a>Healthcare</a>
-                </Link>
-                <Link href="/">
-                  <a>Edtech</a>
-                </Link>
+              <h5 className="title5">Industries</h5>
+              <div className="link-section second">
+                <div className="links">
+                  <Link href="/">
+                    <a>Blogging</a>
+                  </Link>
+                  <Link href="/">
+                    <a>Healthcare</a>
+                  </Link>
+                  <Link href="/">
+                    <a>Edtech</a>
+                  </Link>
+                </div>
+                <div className="links">
+                  <Link href="/">
+                    <a>Real Estate</a>
+                  </Link>
+                  <Link href="/">
+                    <a>Fintech</a>
+                  </Link>
+                  <Link href="/">
+                    <a>Entertainment</a>
+                  </Link>
+                </div>
               </div>
-              <div className="links">
-                <Link href="/">
-                  <a>Real Estate</a>
-                </Link>
-                <Link href="/">
-                  <a>Fintech</a>
-                </Link>
-                <Link href="/">
-                  <a>Entertainment</a>
-                </Link>
-              </div>
-            </div>
             </div>
           </div>
           <div className="col-sm-6">
