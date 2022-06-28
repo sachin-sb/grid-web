@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import AnimatedText from "../../common/animatedText";
 import "react-modal-video/css/modal-video.css";
-import Split from "../Split";
 import fadeWhenScroll from "../../common/fadeWhenScroll";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
+import gsap from "gsap";
 
 
 const HeroSection = (props) => {
@@ -15,33 +13,19 @@ const HeroSection = (props) => {
     setTimeout(() => {
       setLoad(false);
       removeSlashFromPagination();
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(".animation-block .animation-text", 1.8, {
+        y: 100,
+        ease: "power4.out",
+        delay: 1,
+        skewY: 0,
+        stagger: {
+          amount: 1
+        },
+        autoAlpha: 0,
+      })
     }, 1000);
   }, []);
-
-
-  const [replay, setReplay] = React.useState(true);
-
-  const headingText = [
-    { type: "heading1", text: "power of " },
-    {
-      type: "heading1", text: "design"
-    },
-  ];
-
-  const QuoteText = [
-    { type: "heading1", text: "Creative agency based in" },
-    {
-      type: "heading1", text: "Gurgaon, India."
-    },
-  ];
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
 
   const handleClick = () => {
     const div = document.getElementById('modal-container');
@@ -72,62 +56,40 @@ const HeroSection = (props) => {
                   <img src='img/logo.svg' alt="" />
                 </div>
 
-                <motion.div
-                  initial="hidden"
-                  animate={replay ? "visible" : "hidden"}
-                  variants={container}
-                  className="sub-heading"
-                >
-                  <div className="cursor-scale">
-                    {QuoteText.map((item, index) => {
-                      return <AnimatedText {...item} key={index} />;
-                    })}
+                <div className="animation-block">
+                  <div className="sub-heading animation-text">
+                    Creative agency based in <br />
+                    Gurgaon, India.
                   </div>
-                </motion.div>
+                </div>
               </div>
               {/* End For Mobile */}
             </div>
           </div>
+
           <div className="row align-items-center row-section-style">
             <div className="col-sm-6">
               <div className="content-sec">
-                <Split>
-                  <p className="wow txt words chars splitting text-1" data-splitting>
+                <div className="animation-block">
+                  <p className="text-1 animation-text">
                     Crafting experiences through
                   </p>
-                </Split>
-                <motion.div
-                  initial="hidden"
-                  animate={replay ? "visible" : "hidden"}
-                  variants={container}
-                  className="heading-sec"
-                >
-                  <div className="cursor-scale">
-                    {headingText.map((item, index) => {
-                      return <AnimatedText {...item} key={index} />;
-                    })}
-                  </div>
-                </motion.div>
-
-                <Split>
-                  <p className="wow txt words chars splitting text-move-style" data-splitting>
+                </div>
+                <div className="animation-block">
+                  <h1 className="h1 animation-text">power of <span>design</span></h1>
+                </div>
+                <div className="animation-block">
+                  <p className="text-move-style animation-text">
                     that move businesses <br /> & people
                   </p>
-                </Split>
+                </div>
 
-                <motion.div
-                  initial="hidden"
-                  animate={replay ? "visible" : "hidden"}
-                  variants={container}
-                  className="sub-heading d-none d-sm-block"
-                >
-                  <div className="cursor-scale">
-                    {QuoteText.map((item, index) => {
-                      return <AnimatedText {...item} key={index} />;
-                    })}
+                <div className="animation-block d-none d-sm-block">
+                  <div className="sub-heading animation-text">
+                    Creative agency based in <br />
+                    Gurgaon, India.
                   </div>
-                </motion.div>
-
+                </div>
 
                 <button className="toggle-button">
                   <img src='img/toggle-lines.svg' className="img-style" alt="" />

@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from "react";
+import gsap from "gsap";
 import Link from "next/link";
-import React, { useState } from "react";
 import ButtonPrimary from "../../common/buttonPrimary";
 
 const Footer = () => {
@@ -8,6 +9,7 @@ const Footer = () => {
   const textButtonToggle = () => {
     setTextChange(!textChange)
   }
+
 
   return (
     <footer className="footer-section section-padding pb-0">
@@ -87,7 +89,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-sm-3 light-style">
+          <div className="col-sm-3">
+            <div className="light-style">
             <h5 className="title5">Industries</h5>
             <div className="link-section second">
               <div className="links">
@@ -113,6 +116,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
+            </div>
           </div>
           <div className="col-sm-6">
             <div className="information-section">
@@ -120,10 +124,8 @@ const Footer = () => {
                 A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful <br /> experiences through Design.
               </div>
               <div className="address">
-                <div className="address-text">
-                  +91-1235678901
-                </div>
-                <a href="" className="link-email">hi@griddesign.in</a>
+                <a href="tel:+91-1235678901" className="address-text"> +91-1235678901 </a>
+                <a href="mailto:hi@griddesign.in" className="link-email">hi@griddesign.in</a>
               </div>
             </div>
           </div>

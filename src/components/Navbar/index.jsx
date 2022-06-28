@@ -36,7 +36,7 @@ const Navbar = ({ lr, nr, theme }) => {
       className={`navbar navbar-expand-lg change ${show ? 'navbar-hidden' : 'navbar-show'} ${theme === "themeL" ? "light" : ""
         }`}
     >
-      <div className="container">
+      <div className="container-fluid">
         {/* <Link href="/">
           <a className="logo">
             {theme ? (

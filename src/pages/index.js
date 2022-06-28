@@ -54,25 +54,25 @@ export default function Home(props) {
   //   (function () {
   //     var indicator = $("#indicator");
   //     var counter = indicator.find("span");
-    
+
   //     var win = jQuery(window);
   //     if (indicator.length) {
   //       var moveIndicator = debounce(function () {
   //         var viewportHeight = $(window).height();
   //         var documentHeight = $(document).height();
   //         var hasScrolled = $(window).scrollTop();
-    
+
   //         var percent = (hasScrolled / (documentHeight - viewportHeight)) * 100;
   //         indicator.css("top", percent + "%");
   //         counter.html(Math.floor(percent) + "%");
   //       }, 10);
   //     }
-    
+
   //     win.on("resize scroll", moveIndicator);
-    
+
   //     function debounce(func, wait, immediate) {
   //       var timeout;
-    
+
   //       return function () {
   //         var context = this,
   //           args = arguments;
@@ -87,11 +87,11 @@ export default function Home(props) {
   //       };
   //     }
   //   })();
-    
-  // }, [])
-  
 
-  
+  // }, [])
+
+
+
 
   return (
     <DarkTheme>
@@ -109,7 +109,7 @@ export default function Home(props) {
               <h4 className={activeSection === 4 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Projects</h4>
               <h4 className={activeSection === 5 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Let&apos;s hear</h4>
               <h4 className={activeSection === 6 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Blog</h4>
-              <h4 className={activeSection === 7 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Contact</h4>
+              <h4 className={activeSection === 7 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Footer</h4>
             </nav>
           </div>
           <div className="toggle">
@@ -139,11 +139,12 @@ export default function Home(props) {
           <div ref={sectionRefs[6]}>
             <BlogLight />
           </div>
-
           <div ref={sectionRefs[7]}>
             <DesignAudit />
           </div>
-          <Footer />
+          <div>
+            <Footer />
+          </div>
         </div>
 
         <div id="scroll-indicator" className="scroll-indicator">

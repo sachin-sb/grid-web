@@ -2,50 +2,54 @@ import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
 // import ScrollMagic from 'scrollmagic';
 import { useMediaQuery } from 'react-responsive'
+import gsap from "gsap";
 
 const HomeProjects = () => {
   const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
   useEffect(() => {
-    if(mobileDevice) {
+    if (mobileDevice) {
+      var controller = new ScrollMagic.Controller();
+      var wipeAnimation = new TimelineMax()
+        .to("#slideContainer", 1, { x: "-20%" },  {x: "0%", ease: Linear.easeNone})
+        .to("#slideContainer", 1, { x: "-40%" },  {x: "0%", ease: Linear.easeNone})
+        .to("#slideContainer", 1, { x: "-60%" },  {x: "0%", ease: Linear.easeNone})
+        .to("#slideContainer", 1, { x: "-80%" },  {x: "0%", ease: Linear.easeNone})
 
-
-    var controller = new ScrollMagic.Controller();
-    var wipeAnimation = new TimelineMax()
-      // animate to second panel
-      .to("#slideContainer", 0.5, { z: -150 })		// move back in 3D space
-      .to("#slideContainer", 1, { x: "-20%" })	// move in to first panel
-      .to("#slideContainer", 0.5, { z: 0 })				// move back to origin in 3D space
-      // animate to third panel
-      .to("#slideContainer", 0.5, { z: -150, delay: 1 })
-      .to("#slideContainer", 1, { x: "-40%" })
-      .to("#slideContainer", 0.5, { z: 0 })
-      // animate to forth panel
-      .to("#slideContainer", 0.5, { z: -150, delay: 1 })
-      .to("#slideContainer", 1, { x: "-60%" })
-      .to("#slideContainer", 0.5, { z: 0 })
-
-      .to("#slideContainer", 0.5, { z: -150, delay: 1 })
-      .to("#slideContainer", 1, { x: "-80%" })
-      .to("#slideContainer", 0.5, { z: 0 })
-
-    // create scene to pin and link animation
-    new ScrollMagic.Scene({
-      triggerElement: "#pinContainer",
-      triggerHook: 0.03,
-      duration: "600%"
-    })
-      .setPin("#pinContainer")
-      .setTween(wipeAnimation)
-      // .addIndicators()
-      .addTo(controller);
+      // create scene to pin and link animation
+      new ScrollMagic.Scene({
+        triggerElement: "#pinContainerPortfolio",
+        triggerHook: 0,
+        duration: "800%"
+      })
+        .setPin("#pinContainerPortfolio")
+        .setTween(wipeAnimation)
+        // .addIndicators()
+        .addTo(controller);
 
     }
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".content-sec .title3", 1.8, {
+      y: 100,
+      ease: "power4.out",
+      delay: 1,
+      skewY: 0,
+      stagger: {
+        amount: 1
+      },
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '#pinContainerPortfolio',
+        start: 'top bottom',
+        markers: false
+      },
+    })
 
   }, [])
 
   return (
-    <div id="pinContainer" className="project-slide-section">
+    <div id="pinContainerPortfolio" className="project-slide-section">
       <div id="slideContainer">
         <section className="panel first">
           <div className="content-sec">
@@ -60,14 +64,14 @@ const HomeProjects = () => {
                 <img src="img/download-button.svg" alt="" />
               </button> */}
             </div>
-            <div className="footer-section">
+            <div className="footer-block">
               <div className="left">
                 <div className="title4">Behold Industries</div>
                 <div className="subtext">Identity design</div>
               </div>
 
               <div className="right">
-                <div className="title-theme">healthcare</div>
+                <a href="#" className="title-theme">healthcare</a>
               </div>
             </div>
           </div>
@@ -77,14 +81,14 @@ const HomeProjects = () => {
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1581434682226-72c2bab0b5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" />
             </div>
-            <div className="footer-section">
+            <div className="footer-block">
               <div className="left">
                 <div className="title4">Behold Industries</div>
                 <div className="subtext">Identity design</div>
               </div>
 
               <div className="right">
-                <div className="title-theme">healthcare</div>
+                <a href="#" className="title-theme">healthcare</a>
               </div>
             </div>
           </div>
@@ -94,14 +98,14 @@ const HomeProjects = () => {
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="" />
             </div>
-            <div className="footer-section">
+            <div className="footer-block">
               <div className="left">
                 <div className="title4">Behold Industries</div>
                 <div className="subtext">Identity design</div>
               </div>
 
               <div className="right">
-                <div className="title-theme">healthcare</div>
+                <a href="#" className="title-theme">healthcare</a>
               </div>
             </div>
           </div>
@@ -111,14 +115,14 @@ const HomeProjects = () => {
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="" />
             </div>
-            <div className="footer-section">
+            <div className="footer-block">
               <div className="left">
                 <div className="title4">Behold Industries</div>
                 <div className="subtext">Identity design</div>
               </div>
 
               <div className="right">
-                <div className="title-theme">healthcare</div>
+                <a href="#" className="title-theme">healthcare</a>
               </div>
             </div>
           </div>
@@ -128,14 +132,14 @@ const HomeProjects = () => {
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1605859465655-84c45e14a0af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80" alt="" />
             </div>
-            <div className="footer-section">
+            <div className="footer-block">
               <div className="left">
                 <div className="title4">Behold Industries</div>
                 <div className="subtext">Identity design</div>
               </div>
 
               <div className="right">
-                <div className="title-theme">healthcare</div>
+                <a href="#" className="title-theme">healthcare</a>
               </div>
             </div>
           </div>

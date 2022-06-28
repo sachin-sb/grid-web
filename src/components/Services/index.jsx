@@ -83,7 +83,7 @@ const Services = (props) => {
 
   return (
     <>
-      <section className="blc-sec section-padding pb-0" id={props.id}>
+      <section className="blc-sec section-padding pb-0">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-7">
@@ -97,7 +97,7 @@ const Services = (props) => {
                   </h2>
                 </Split>
                 <div className="sub-title">
-                  <h6>We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
+                  <h6 className="h6 wow flipInX center" data-wow-delay="0.4s">We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
                 </div>
               </div>
             </div>
@@ -157,29 +157,6 @@ const Services = (props) => {
             </div>
           </div>
         </div>
-
-        {/* <nav className="menu" >
-          <a className="menu__item" data-img="/img/clients/value-360.svg">
-            <span className="menu__item-text"><span className="menu__item-textinner">Maria Costa</span></span>
-            <span className="menu__item-sub">Style Reset 66 Berlin</span>
-          </a>
-          <a className="menu__item" data-img="/img/clients/value-360.svg">
-            <span className="menu__item-text"><span className="menu__item-textinner">Lana Ferrari</span></span>
-            <span className="menu__item-sub">Fashion Week Milano</span>
-          </a>
-          <a className="menu__item" data-img="/img/clients/value-360.svg">
-            <span className="menu__item-text"><span className="menu__item-textinner">Franklin Roth</span></span>
-            <span className="menu__item-sub">Amber Convention London</span>
-          </a>
-          <a className="menu__item" data-img="/img/clients/value-360.svg">
-            <span className="menu__item-text"><span className="menu__item-textinner">Cristie Noe</span></span>
-            <span className="menu__item-sub">Tokyo Summer Trends</span>
-          </a>
-          <a className="menu__item" data-img="/img/clients/value-360.svg">
-            <span className="menu__item-text"><span className="menu__item-textinner">Wilma Quest</span></span>
-            <span className="menu__item-sub">2021 West End New York</span>
-          </a>
-        </nav> */}
       </div>
     </>
   );

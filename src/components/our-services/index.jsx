@@ -17,6 +17,26 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 const OurServicesComponent = (props) => {
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".item .h1", 1.5, {
+      y: 100,
+      ease: "power4.out",
+      delay: 1,
+      skewY: 0,
+      stagger: {
+        amount: 0.5
+      },
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '#pinContainerServices',
+        start: 'top center',
+        markers: false
+      },
+    })
+  }, [])
+  
+
+  useEffect(() => {
 
     gsap.utils.toArray('.categories h1')
       .forEach(category => {
@@ -35,8 +55,11 @@ const OurServicesComponent = (props) => {
   }, [])
 
 
+
+
+
   return (
-    <section className="our-services-component">
+    <section className="our-services-component" id="pinContainerServices">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -49,11 +72,13 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" style={{ bottom: 16, left: 5 }} />
                 </h2>
               </Split>
-              <h6 className="title6">Offering worthwhile experiences that help you go above & beyond the <span>grid.</span></h6>
+              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.4s">Offering worthwhile experiences that help you go above & beyond the <span>grid.</span></h6>
             </div>
           </div>
+        </div>
 
-          <div className="desktop-version">
+        <div className="desktop-version">
+          <div className="row">
             <div className="col-sm-12">
               <div className="typo-grid">
                 <div className="images">
@@ -66,7 +91,9 @@ const OurServicesComponent = (props) => {
                 <div className="categories-wrapper">
                   <div className="categories">
                     <div className="item">
-                      <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
+                      <div className="animation-block">
+                        <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
+                      </div>
 
                       <div className="content-right">
                         <div className="tag-section">
@@ -83,7 +110,9 @@ const OurServicesComponent = (props) => {
                     </div>
 
                     <div className="item">
-                      <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
+                      <div className="animation-block">
+                        <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
+                      </div>
 
                       <div className="content-right">
                         <div className="tag-section">
@@ -100,7 +129,9 @@ const OurServicesComponent = (props) => {
                     </div>
 
                     <div className="item">
-                      <h1 className="h1" data-label="heading3">BRANDING</h1>
+                      <div className="animation-block">
+                        <h1 className="h1" data-label="heading3">BRANDING</h1>
+                      </div>
 
                       <div className="content-right">
                         <div className="tag-section">
@@ -116,7 +147,9 @@ const OurServicesComponent = (props) => {
                     </div>
 
                     <div className="item">
-                      <h1 className="h1" data-label="heading4">DEVELOPMENT</h1>
+                      <div className="animation-block">
+                        <h1 className="h1" data-label="heading4">DEVELOPMENT</h1>
+                      </div>
 
                       <div className="content-right">
                         <img className="logo-img" src="img/sb-log.svg" alt="img1" />
@@ -153,98 +186,98 @@ const OurServicesComponent = (props) => {
               </div>
             </div>
           </div>
+        </div>
 
 
 
-          {/* For Mobile */}
-          <div className="mobile-version services-style">
-            <Accordion preExpanded={['a']}>
-              <AccordionItem uuid="a">
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    UX RESEARCH
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div>
-                    <div className="tag-section">
-                      <span>Design Audit</span>
-                      <span>User Interviews</span>
-                      <span>Heuristic evaluation</span>
-                      <span>Competitor analysis</span>
-                    </div>
-                    <p className="description">
-                      We provide end to end research services while discovering game-changing improvement opportunities.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
+        {/* For Mobile */}
+        <div className="mobile-version services-style">
+          <Accordion preExpanded={['a']}>
+            <AccordionItem uuid="a">
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  UX RESEARCH
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div>
+                  <div className="tag-section">
+                    <span>Design Audit</span>
+                    <span>User Interviews</span>
+                    <span>Heuristic evaluation</span>
+                    <span>Competitor analysis</span>
                   </div>
-                </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem uuid="b">
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    UX/UI DESIGN
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div>
-                    <div className="tag-section">
-                      <span>Mobile app design</span>
-                      <span>Responsive Website</span>
-                      <span>Interface design</span>
-                      <span>Design System</span>
-                    </div>
-                    <p className="description">
-                      Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
+                  <p className="description">
+                    We provide end to end research services while discovering game-changing improvement opportunities.
+                  </p>
+                  <ButtonReadmore href="/" text="Learn More" />
+                </div>
+              </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem uuid="b">
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  UX/UI DESIGN
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div>
+                  <div className="tag-section">
+                    <span>Mobile app design</span>
+                    <span>Responsive Website</span>
+                    <span>Interface design</span>
+                    <span>Design System</span>
                   </div>
-                </AccordionItemPanel>
-              </AccordionItem>
+                  <p className="description">
+                    Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
+                  </p>
+                  <ButtonReadmore href="/" text="Learn More" />
+                </div>
+              </AccordionItemPanel>
+            </AccordionItem>
 
-              <AccordionItem uuid="c">
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    BRANDING
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div>
-                    <div className="tag-section">
-                      <span>Logo</span>
-                      <span>Brand Guidelines</span>
-                      <span>Brand Assets</span>
-                    </div>
-                    <p className="description">
-                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
+            <AccordionItem uuid="c">
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  BRANDING
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div>
+                  <div className="tag-section">
+                    <span>Logo</span>
+                    <span>Brand Guidelines</span>
+                    <span>Brand Assets</span>
                   </div>
-                </AccordionItemPanel>
-              </AccordionItem>
+                  <p className="description">
+                    We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                  </p>
+                  <ButtonReadmore href="/" text="Learn More" />
+                </div>
+              </AccordionItemPanel>
+            </AccordionItem>
 
-              <AccordionItem uuid="d">
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    DEVELOPMENT
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div>
-                    <div className="tag-section">
-                      <span>Logo</span>
-                      <span>Brand Guidelines</span>
-                      <span>Brand Assets</span>
-                    </div>
-                    <p className="description">
-                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
+            <AccordionItem uuid="d">
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  DEVELOPMENT
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div>
+                  <div className="tag-section">
+                    <span>Logo</span>
+                    <span>Brand Guidelines</span>
+                    <span>Brand Assets</span>
                   </div>
-                </AccordionItemPanel>
-              </AccordionItem>
-            </Accordion>
-          </div>
+                  <p className="description">
+                    We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                  </p>
+                  <ButtonReadmore href="/" text="Learn More" />
+                </div>
+              </AccordionItemPanel>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>
