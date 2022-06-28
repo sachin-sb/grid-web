@@ -51,7 +51,7 @@ const BlogStanderd = () => {
             Love reading? <br /> We’ve got more.
           </h4>
 
-          <ButtonOutline buttonText="View our services" />
+          <ButtonOutline buttonText="View all blogs" />
         </div>
       </div>
     </section>

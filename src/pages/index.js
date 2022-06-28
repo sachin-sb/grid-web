@@ -49,6 +49,8 @@ export default function Home(props) {
     offsetPx: -80,
   });
 
+  
+
 
   // useEffect(() => {
   //   (function () {
@@ -91,8 +93,6 @@ export default function Home(props) {
   // }, [])
 
 
-
-
   return (
     <DarkTheme>
       <div className={`layout-primary-style ${props.className}`}>
@@ -117,7 +117,7 @@ export default function Home(props) {
           </div>
         </div>
         <div className="main-wrapper">
-          <Navbar nr={navbarRef} lr={logoRef} />
+          <Navbar nr={navbarRef} lr={logoRef} navClass={activeSection === 6 && 'blog-nav-active'} />
           <div ref={sectionRefs[0]} >
             <HeroSection />
           </div>

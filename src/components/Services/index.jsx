@@ -63,21 +63,21 @@ const ShowcassesFullScreenData2 = [
 
 const Services = (props) => {
   const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
-  
+
   useEffect(() => {
     if (mobileDevice) {
-    var controller = new ScrollMagic.Controller();
+      var controller = new ScrollMagic.Controller();
 
-    var horizontalSlide = new TimelineMax()
-      .to("#js-slideContainer", 1, { x: "-45%" })
-    new ScrollMagic.Scene({
-      triggerElement: "#js-wrapper",
-      triggerHook: "0.07",
-      duration: "170%"
-    })
-      .setPin("#js-wrapper")
-      .setTween(horizontalSlide)
-      .addTo(controller);
+      var horizontalSlide = new TimelineMax()
+        .to("#js-slideContainer", 1, { x: "-45%" })
+      new ScrollMagic.Scene({
+        triggerElement: "#js-wrapper",
+        triggerHook: "0.03",
+        duration: "170%"
+      })
+        .setPin("#js-wrapper")
+        .setTween(horizontalSlide)
+        .addTo(controller);
     }
   }, [])
 
@@ -111,7 +111,9 @@ const Services = (props) => {
               <section key={slide.id} className="slide-item">
                 <div className="wow fadeInUp" data-wow-delay=".4s">
                   <div className={`mas-item ${slide.className}`}>
-                    <img src={slide.image} alt="" />
+                    <div className="logo-box">
+                      <img src={slide.image} alt="" />
+                    </div>
                     <div className="text-section">
                       <h4 className="title4">
                         {slide.title.first}
@@ -132,7 +134,9 @@ const Services = (props) => {
               <section key={slide.id} className="slide-item">
                 <div className="wow fadeInUp" data-wow-delay=".4s">
                   <div className={`mas-item ${slide.className}`}>
-                    <img src={slide.image} alt="" />
+                    <div className="logo-box">
+                      <img src={slide.image} alt="" />
+                    </div>
                     <div className="text-section">
                       <h4 className="title4">
                         {slide.title.first}

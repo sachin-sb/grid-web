@@ -8,7 +8,7 @@ const WhoWeAre = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // const tl = gsap.timeline();
-    gsap.from(".animation-sec .revel-style", 1.5, {
+    gsap.from(".animation-sec .revel-style", 1, {
       y: 100,
       ease: "power4.out",
       delay: 0.5,
@@ -33,7 +33,7 @@ const WhoWeAre = () => {
           <h4 className="title4 revel-style">We have the skills to break the grid and deliver</h4>
         </div>
         <div className="animation-sec">
-          <h4 className="title4 revel-style"> out of the box solutions.</h4>
+          <h4 className="title4 revel-style"> <span className="box-outline">out of the box</span> solutions.</h4>
         </div>
 
         <div className="animation-sec">

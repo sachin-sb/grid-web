@@ -51,7 +51,7 @@ const Footer = () => {
                   </div>
                 }
               </button>
-              <p className="text-light">Let’s create a Kick-ass digital experience together!</p>
+              <p className="text-gray-light">Let’s create a Kick-ass digital experience together!</p>
 
               <ButtonPrimary buttonText="Connect with us" />
             </div>

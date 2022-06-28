@@ -284,11 +284,23 @@ section.team.section-padding {
       height: 50px;
       margin: 0 auto;
       background: url('../../public/img/toggle-border.svg');
-      padding: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
 
       .img-style {
-        width: 100%;
+        width: 23.63px;
+        height: 15.86px;
         filter: contrast(0) brightness(100);
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:hover {
+
+        .img-style {
+          transform: rotate(-90deg);
+        }
       }
     }
 
@@ -767,6 +779,11 @@ section.team.section-padding {
     }
   }
 
+  .logo-box {
+    width: 200px;
+    height: 100px;
+  }
+
   .slide-card-section {
     display: flex;
     align-items: center;
@@ -777,12 +794,12 @@ section.team.section-padding {
     }
 
     &:nth-child(1) {
-      margin-top: 50px;
+      // margin-top: 50px;
     }
 
     &:nth-child(2) {
       margin-left: 100px;
-      margin-top: 50px;
+      margin-top: 40px;
 
       @include mobile {
         margin-top: 0px;
@@ -884,6 +901,11 @@ section.team.section-padding {
     }
   }
 
+  .text-section {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
   .mas-item {
     height: 350px;
     min-width: 300px;
@@ -891,7 +913,7 @@ section.team.section-padding {
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
-    padding: 50px 30px;
+    padding: 50px 30px 30px;
 
     @include mobile {
       min-width: auto;
@@ -964,14 +986,17 @@ section.team.section-padding {
   }
 
   .btn-outline-style {
-    opacity: 0.7;
 
     .btn-outline {
-      border: 1px solid $white;
+      border: 1px solid rgba($gray-f8, 0.5);
+      color: rgba($gray-f8, 0.5);
       background: none;
       padding: 10px 30px;
       border-radius: 0;
-      color: $white;
+
+      &:hover {
+        color: rgba($gray-f8, 1);
+      }
 
       img {
         filter: contrast(0) brightness(100);
@@ -1111,20 +1136,20 @@ section.team.section-padding {
   }
 
   &.black-style {
-    color: $white;
+    color: $gray-f8;
 
     .title1 {
       font-size: 40px;
-      color: $white;
+      color: $gray-f8;
     }
 
     .title {
-      color: $white;
+      color: $gray-f8;
     }
 
     .info-msg {
       .btn-outline {
-        color: white;
+        color: rgb(29, 13, 13);
       }
 
       img {
@@ -1133,13 +1158,13 @@ section.team.section-padding {
     }
 
     .description {
-      color: $white;
+      color: $gray-f8;
       font-size: 18px;
       line-height: 27px;
     }
 
     .btn-outline {
-      border: 1px solid $white;
+      border: 1px solid $gray-f8;
     }
 
     .read-more {
@@ -1157,12 +1182,12 @@ section.team.section-padding {
 
     .date {
       .num {
-        color: $white;
+        color: $gray-f8;
       }
     }
 
     .title {
-      color: $white;
+      color: $gray-f8;
       line-height: 36px;
       font-size: 24px;
       margin: 10px 0 20px;
@@ -1208,7 +1233,9 @@ section.team.section-padding {
     }
 
     .date {
-      color: #414141;
+      .num {
+        color: #414141;
+      }
     }
 
     .title {
@@ -1243,6 +1270,13 @@ section.team.section-padding {
 
   @include mobile {
     padding: 20px;
+  }
+
+  .box-outline {
+    background: url('../../public/img/text-wrap-line.svg');
+    background-repeat: no-repeat;
+    background-position: 20px 70%;
+    padding-left: 30px;
   }
 
   .line-img-style {
@@ -1305,6 +1339,7 @@ section.team.section-padding {
     font-size: 16px;
     font-weight: 500;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 
     .img-style {
       position: absolute;
@@ -1312,7 +1347,7 @@ section.team.section-padding {
       right: -10px;
       top: 17px;
       opacity: 0;
-      transition: all .3s ease;
+      transition: all .3s ease-in-out;
     }
 
     &:before {
@@ -1324,7 +1359,7 @@ section.team.section-padding {
       background: $white;
       width: 0%;
       height: 50px;
-      transition: all .3s ease;
+      transition: all .3s ease-in-out;
     }
 
     span {
@@ -1357,14 +1392,14 @@ section.team.section-padding {
     height: 50px;
     padding: 10px 40px;
     color: $theme-secondary;
-    min-width: 206px;
+    min-width: 208px;
     position: relative;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
     font-weight: 300;
     font-size: 16px;
+    cursor: pointer;
 
     @include mobile {
-      font-weight: 500;
       font-size: 14px;
     }
 
@@ -1374,7 +1409,7 @@ section.team.section-padding {
       right: -10px;
       top: 17px;
       opacity: 0;
-      transition: all .3s ease;
+      transition: all .3s ease-in-out;
       filter: brightness(0) contrast(100);
     }
 
@@ -1398,7 +1433,6 @@ section.team.section-padding {
       color: $white;
       border-color: $theme-primary;
       background-color: $theme-primary;
-      font-weight: 500;
 
       &:before {
         width: 100%;
@@ -1442,7 +1476,7 @@ section.team.section-padding {
     }
 
     .alphabat {
-      border: 0.5px solid $gray-f8;
+      border: 0.5px solid rgba($gray-f8, 0.5);
       height: 100px;
       width: 80%;
       margin-bottom: 30px;
@@ -1474,7 +1508,7 @@ section.team.section-padding {
         transition: all 0.5s ease-in-out;
 
         span {
-          border-left: 0.5px solid $gray-f8;
+          border-left: 0.5px solid rgba($gray-f8, 0.5);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1497,7 +1531,7 @@ section.team.section-padding {
   }
 
 
-  .text-light {
+  .text-gray-light {
     color: $gray-bc;
     font-size: 20px;
 
@@ -1541,7 +1575,7 @@ section.team.section-padding {
 
           @include mobile {
             margin-top: 25px;
-            
+
             &:after {
               display: flex;
               content: '';
@@ -1820,6 +1854,7 @@ section.team.section-padding {
 
   .content-sec {
     overflow: hidden;
+    width: 100%;
   }
 
   &#pinContainerPortfolio {
@@ -1873,10 +1908,9 @@ section.team.section-padding {
     }
 
     .btn-outline {
-      border: 1px solid $white;
+      border: 1px solid rgba($gray-f8, 0.5);
+      color: rgba($gray-f8, 0.5);
       background: none;
-      color: $white;
-      opacity: 0.7;
 
       @include mobile {
         border: 1px solid $theme-primary;
@@ -1885,6 +1919,7 @@ section.team.section-padding {
 
       &:hover {
         border: 1px solid $theme-primary;
+        color: rgba($gray-f8, 1);
       }
 
       img {
@@ -1900,7 +1935,7 @@ section.team.section-padding {
     display: flex;
     align-items: flex-start;
     background-color: transparent;
-    padding: 0 20px;
+    padding: 0 30px;
     overflow: hidden;
 
     @include mobile {
@@ -1912,11 +1947,34 @@ section.team.section-padding {
 
     &:nth-child(1) {
       padding: 0;
+      width: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include mobile {
         padding: 20px;
       }
     }
+
+    &:last-child {
+      padding: 0;
+      width: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile {
+        padding: 20px;
+      }
+
+      .content-sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
 
     .title3 {
       font-weight: 300;
@@ -1936,8 +1994,9 @@ section.team.section-padding {
       }
 
       .text-theme {
-        top: -6px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 12px;
       }
     }
 
@@ -1993,6 +2052,13 @@ section.team.section-padding {
         background: none;
         border: none;
       }
+
+      &:hover {
+
+        img {
+          transform: scale(1.1);
+        }
+      }
     }
 
     .img-box {
@@ -2014,6 +2080,7 @@ section.team.section-padding {
         top: 0;
         object-fit: cover;
         object-position: center;
+        transition: all 0.5s ease-in-out;
       }
     }
 
@@ -2031,7 +2098,6 @@ section.team.section-padding {
     &.last {
 
       .content-sec {
-        width: 35%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2157,9 +2223,10 @@ section.team.section-padding {
   .description {
     font-size: 25px;
     line-height: 37.5px;
-    font-weight: 200;
+    font-weight: 300;
     color: $gray-f8;
-    max-width: 85%;
+    max-width: 90%;
+    text-align: left;
 
     @include mobile {
       font-size: 16px;
@@ -2292,7 +2359,7 @@ section.team.section-padding {
     margin-top: 50px;
 
     .title4 {
-      color: $white;
+      color: $gray-f8;
       font-weight: 200;
       font-size: 30px;
       line-height: 40px;
@@ -2305,13 +2372,13 @@ section.team.section-padding {
     }
 
     .btn-outline {
-      border: 1px solid $white;
+      border: 1px solid rgba($gray-f8, 0.5);
+      color: rgba($gray-f8, 0.5);
       background: none;
-      color: $white;
-      opacity: 0.7;
 
       &:hover {
         border: 1px solid $theme-primary;
+        color: rgba($gray-f8, 1);
       }
 
       img {
@@ -2413,19 +2480,22 @@ section.team.section-padding {
   .item {
     &:hover {
       .animation-block {
-        color: white;
-        -webkit-text-stroke-width: 0;
+
+        .h1 {
+          color: white;
+          -webkit-text-stroke-width: 0;
+
+          &:after {
+            opacity: 1;
+          }
+        }
 
         +.content-right {
           transform: scale(1);
           opacity: 1;
         }
 
-        &:after {
-          opacity: 1;
-        }
       }
-
     }
   }
 
@@ -2486,16 +2556,16 @@ section.team.section-padding {
   padding: 50px 0;
   position: relative;
 
-  .animation-revel1 {
+  .animation-block {
     position: relative;
     overflow: hidden;
-    z-index: 1;
     display: flex;
     align-items: center;
+    z-index: 1;
 
-    span {
-      position: absolute;
+    .ani-text {
       display: flex;
+      align-items: center;
     }
   }
 
@@ -2518,7 +2588,6 @@ section.team.section-padding {
 
   .title2 {
     color: $theme-secondary;
-    height: 80px;
 
     @include mobile {
       font-size: 26px;
@@ -2542,11 +2611,11 @@ section.team.section-padding {
 
     .btn-outline {
       border: 1px solid $theme-secondary;
+      color: $theme-secondary;
       background: none;
       height: 50px;
       padding: 10px 30px;
       border-radius: 0;
-      color: $theme-secondary;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2665,4 +2734,11 @@ section.team.section-padding {
   position: relative;
   overflow: hidden;
   text-align: center;
+}
+
+
+// style when user reach blog section
+.blog-nav-active {
+  background: $white;
+  border-color: rgba($gray-bc, 0.1)
 }

@@ -14,10 +14,10 @@ const HeroSection = (props) => {
       setLoad(false);
       removeSlashFromPagination();
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".animation-block .animation-text", 1.8, {
+      gsap.from(".animation-block .animation-text", 1, {
         y: 100,
         ease: "power4.out",
-        delay: 1,
+        delay: 0.5,
         skewY: 0,
         stagger: {
           amount: 1

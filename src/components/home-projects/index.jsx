@@ -11,10 +11,10 @@ const HomeProjects = () => {
     if (mobileDevice) {
       var controller = new ScrollMagic.Controller();
       var wipeAnimation = new TimelineMax()
-        .to("#slideContainer", 1, { x: "-20%" },  {x: "0%", ease: Linear.easeNone})
-        .to("#slideContainer", 1, { x: "-40%" },  {x: "0%", ease: Linear.easeNone})
-        .to("#slideContainer", 1, { x: "-60%" },  {x: "0%", ease: Linear.easeNone})
-        .to("#slideContainer", 1, { x: "-80%" },  {x: "0%", ease: Linear.easeNone})
+        .to("#slideContainer", 1, { x: "-20%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: "-40%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: "-60%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: "-80%" }, { x: "0%", ease: Linear.easeNone })
 
       // create scene to pin and link animation
       new ScrollMagic.Scene({
@@ -57,12 +57,11 @@ const HomeProjects = () => {
               Here is some <br /> work for our <br /> clients who <br /> trusted us with <br /> design <br /> transformation <span className="text-theme"></span>
             </h3>
           </div>
+        </section>
+        <section className="panel">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" />
-              {/* <button>
-                <img src="img/download-button.svg" alt="" />
-              </button> */}
             </div>
             <div className="footer-block">
               <div className="left">
@@ -76,7 +75,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section className="panel turqoise">
+        <section className="panel">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1581434682226-72c2bab0b5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" />
@@ -93,7 +92,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section className="panel green">
+        <section className="panel">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="" />
@@ -110,7 +109,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section className="panel bordeaux">
+        <section className="panel">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="" />
@@ -127,7 +126,7 @@ const HomeProjects = () => {
             </div>
           </div>
         </section>
-        <section className="panel last">
+        <section className="panel">
           <div className="img-section">
             <div className="img-box">
               <img src="https://images.unsplash.com/photo-1605859465655-84c45e14a0af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80" alt="" />
@@ -143,6 +142,8 @@ const HomeProjects = () => {
               </div>
             </div>
           </div>
+        </section>
+        <section className="panel">
           <div className="content-sec">
             <div className="info-msg">
               <div className="">

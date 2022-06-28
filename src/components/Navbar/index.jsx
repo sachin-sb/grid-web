@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { handleMobileDropdown} from "../../common/navbar";
 
-const Navbar = ({ lr, nr, theme }) => {
+const Navbar = ({ lr, nr, theme, navClass }) => {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -34,7 +34,7 @@ const Navbar = ({ lr, nr, theme }) => {
     <nav
       ref={nr}
       className={`navbar navbar-expand-lg change ${show ? 'navbar-hidden' : 'navbar-show'} ${theme === "themeL" ? "light" : ""
-        }`}
+        } ${navClass}`}
     >
       <div className="container-fluid">
         {/* <Link href="/">

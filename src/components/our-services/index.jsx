@@ -18,10 +18,10 @@ const OurServicesComponent = (props) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".item .h1", 1.5, {
+    gsap.from(".item .h1", 0.2, {
       y: 100,
       ease: "power4.out",
-      delay: 1,
+      delay: 0.5,
       skewY: 0,
       stagger: {
         amount: 0.5

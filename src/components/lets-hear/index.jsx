@@ -6,7 +6,7 @@ const LetsHearCard = (props) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".head .title3", 1.8, {
+    gsap.from(".head .title3", 1, {
       y: 100,
       ease: "power4.out",
       delay: 1,
