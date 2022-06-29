@@ -12,8 +12,8 @@ const Footer = () => {
 
 
   return (
-    <footer className="footer-section section-padding pb-0">
-      <div className="container">
+    <footer className="footer-section">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
             <div className="info-animation-sec">
@@ -148,7 +148,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful <br /> experiences through Design.
+                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful experiences through Design.
               </div>
               <div className="address">
                 <a href="tel:+91-1235678901" className="address-text"> +91-1235678901 </a>
@@ -161,7 +161,7 @@ const Footer = () => {
         <div className="divider"></div>
 
         <div className="row row-column-style">
-          <div className="col-sm-6">
+          <div className="col-sm-7">
             <div className="copyright-sec">
               <p className="text-gray">&copy; Copyright Grid Design. All rights reserved.</p>
               <div className="link-sec">
@@ -170,7 +170,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-5">
             <div className="social">
               <a href="#0" className="icon">
                 <i className="fab fa-linkedin-in"></i>

@@ -15,6 +15,7 @@ const HomeProjects = () => {
         .to("#slideContainer", 1, { x: "-40%" }, { x: "0%", ease: Linear.easeNone })
         .to("#slideContainer", 1, { x: "-60%" }, { x: "0%", ease: Linear.easeNone })
         .to("#slideContainer", 1, { x: "-80%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: "-82%" }, { x: "0%", ease: Linear.easeNone })
 
       // create scene to pin and link animation
       new ScrollMagic.Scene({

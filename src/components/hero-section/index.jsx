@@ -58,8 +58,7 @@ const HeroSection = (props) => {
 
                 <div className="animation-block">
                   <div className="sub-heading animation-text">
-                    Creative agency based in <br />
-                    Gurgaon, India.
+                    A global creative agency <br /> based out of India.
                   </div>
                 </div>
               </div>
@@ -86,8 +85,7 @@ const HeroSection = (props) => {
 
                 <div className="animation-block d-none d-sm-block">
                   <div className="sub-heading animation-text">
-                    Creative agency based in <br />
-                    Gurgaon, India.
+                    A global creative agency <br /> based out of India.
                   </div>
                 </div>
 

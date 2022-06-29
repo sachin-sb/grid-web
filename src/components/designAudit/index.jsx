@@ -10,10 +10,10 @@ const DesignAudit = (props) => {
     gsap.from(".animation-block .ani-text", 1, {
       y: 100,
       ease: "power4.out",
-      delay: 0.5,
+      delay: 0.2,
       skewY: 0,
       stagger: {
-        amount: 0.3
+        amount: 0.2
       },
       autoAlpha: 0,
       scrollTrigger: {
@@ -26,7 +26,7 @@ const DesignAudit = (props) => {
   return (
     <section className="design-audit">
       <div id="pinDesignAudit" className="trigger-style"></div>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-sm-8">
             <div className="title4 animation-block">

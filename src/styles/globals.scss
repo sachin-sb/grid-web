@@ -38,6 +38,27 @@ button {
   }
 }
 
+.tag-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .tag {
+    font-size: 14px;
+    background-color: #414141;
+    width: auto;
+    height: 28px;
+    font-weight: 300;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
 .blog-crv .item {
   display: flex;
   align-items: center;
@@ -323,7 +344,9 @@ section.team.section-padding {
   .main-wrapper {
     width: 100%;
     padding: 0px;
-    padding-left: 140px;
+    // padding-left: 140px;
+    margin-left: 140px;
+    overflow: hidden;
 
     @include mobile {
       padding-left: 0px;
@@ -350,17 +373,15 @@ section.team.section-padding {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 136px;
 
   .sub-heading {
     margin-top: 110px;
     border-left: 2px solid $theme-primary;
     padding-left: 10px;
-
-    h1 {
-      font-size: 18px;
-      font-weight: 300;
-      color: $gray-f8;
-    }
+    font-size: 18px;
+    font-weight: 300;
+    color: $gray-f8;
   }
 
   .text-1 {
@@ -377,6 +398,7 @@ section.team.section-padding {
   h1 {
     font-size: 110px;
     font-weight: bold;
+    margin: -10px 0;
 
     @include mobile {
       font-size: 70px;
@@ -412,7 +434,6 @@ section.team.section-padding {
   }
 
   .content-sec {
-    padding-left: 50px;
 
     @include mobile {
       padding: 20px;
@@ -754,6 +775,11 @@ section.team.section-padding {
       font-size: 36px;
     }
   }
+
+  
+  .intro {
+    padding-bottom: 70px;
+  }
 }
 
 .client-section-wrapper {
@@ -764,25 +790,25 @@ section.team.section-padding {
 .our-client-section {
   margin-left: 50px;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
   @include mobile {
     padding-left: 20px;
     margin-left: 0;
     padding-bottom: 0px;
     margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    & {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
   }
 
   .logo-box {
@@ -1014,7 +1040,7 @@ section.team.section-padding {
 // blog-light-style
 
 .blog-light-style {
-  padding: 70px;
+  padding: 100px 70px 150px;
   transition: all 0.6s ease-in-out;
 
   @include mobile {
@@ -1178,7 +1204,6 @@ section.team.section-padding {
       span {
         background-color: $theme-primary;
         font-size: 17px;
-        font-weight: 500;
       }
 
       &:hover {
@@ -1411,6 +1436,7 @@ section.team.section-padding {
     transition: all .3s ease-in-out;
     font-weight: 300;
     font-size: 16px;
+    letter-spacing: 1px;
     cursor: pointer;
 
     @include mobile {
@@ -1441,7 +1467,15 @@ section.team.section-padding {
     }
 
     span {
-      position: relative;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.1s ease-in-out;
     }
 
     &:hover {
@@ -1449,12 +1483,16 @@ section.team.section-padding {
       border-color: $theme-primary;
       background-color: $theme-primary;
 
+      span {
+        font-weight: 500;
+      }
+
       &:before {
         width: 100%;
       }
 
       .img-style {
-        right: -30px;
+        right: -40px;
         opacity: 1;
       }
     }
@@ -1470,6 +1508,7 @@ section.team.section-padding {
 // Footer Section Style
 .footer-section {
   min-height: 100vh;
+  padding: 120px 70px 0;
 
   @include mobile {
     padding: 80px 10px;
@@ -1587,6 +1626,7 @@ section.team.section-padding {
           transition: all 0.5s ease-in-out;
           display: flex;
           align-items: center;
+          letter-spacing: 1px;
 
           @include mobile {
             margin-top: 0px;
@@ -1639,6 +1679,7 @@ section.team.section-padding {
           font-size: 14px;
           color: $gray-bc;
           transition: all 0.5s ease-in-out;
+          letter-spacing: 1px;
 
           @include mobile {
             margin: 0;
@@ -1657,6 +1698,7 @@ section.team.section-padding {
     font-size: 13px;
     font-weight: 500;
     color: #6A6A6A;
+    letter-spacing: 0.5px;
 
     @include mobile {
       text-transform: uppercase;
@@ -1679,6 +1721,7 @@ section.team.section-padding {
       color: $gray-bc;
       font-size: 14px;
       transition: all 0.5s ease-in-out;
+      letter-spacing: 0.5px;
 
       @include mobile {
         font-weight: 300;
@@ -1705,6 +1748,7 @@ section.team.section-padding {
     align-items: center;
     color: $gray-bc;
     font-size: 14px;
+    letter-spacing: 0.5px;
 
     @include mobile {
       flex-direction: column;
@@ -1753,6 +1797,7 @@ section.team.section-padding {
     font-size: 16px;
     float: right;
     font-weight: 300;
+    letter-spacing: 0.5px;
 
     @include mobile {
       font-size: 14px;
@@ -1784,7 +1829,6 @@ section.team.section-padding {
     display: flex;
     flex-direction: column;
     float: right;
-    font-weight: 500;
     width: 402px;
 
     @include mobile {
@@ -1797,6 +1841,7 @@ section.team.section-padding {
       font-size: 16px;
       display: flex;
       flex-direction: column;
+      letter-spacing: 0.5px;
 
       @include mobile {
         margin-top: 15px;
@@ -1901,6 +1946,7 @@ section.team.section-padding {
 .project-slide-section {
   min-height: 100vh;
   padding: 20px 0;
+  scroll-snap-align: start;
 
   @include mobile {
     padding-top: 0;
@@ -1913,7 +1959,7 @@ section.team.section-padding {
 
   &#pinContainerPortfolio {
     width: 100%;
-    height: 750px;
+    // height: 750px;
     overflow: hidden;
     perspective: 1000;
 
@@ -1924,7 +1970,7 @@ section.team.section-padding {
   }
 
   #slideContainer {
-    width: 500%;
+    width: 550%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -1985,7 +2031,7 @@ section.team.section-padding {
 
   .panel {
     height: 100%;
-    width: 20%;
+    width: 100%;
     /* relative to parent -> 25% of 400% = 100% of window width */
     display: flex;
     align-items: flex-start;
@@ -2002,7 +2048,7 @@ section.team.section-padding {
 
     &:nth-child(1) {
       padding: 0;
-      width: 10%;
+      width: 40%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2015,7 +2061,7 @@ section.team.section-padding {
 
     &:last-child {
       padding: 0;
-      width: 10%;
+      width: 40%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2097,6 +2143,11 @@ section.team.section-padding {
         color: $theme-primary;
         font-weight: 500;
         font-size: 18px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .subtext {
@@ -2131,7 +2182,7 @@ section.team.section-padding {
     }
 
     .img-box {
-      min-height: 640px;
+      min-height: 77.9vh;
       width: 100%;
       overflow: hidden;
       position: relative;
@@ -2229,7 +2280,7 @@ section.team.section-padding {
   .title3 {
     font-size: 30px;
     color: #939393;
-    font-weight: 500;
+    font-weight: 300;
 
     @include mobile {
       font-size: 22px;
@@ -2363,26 +2414,6 @@ section.team.section-padding {
 
     span {
       color: $theme-primary;
-    }
-  }
-
-  .tag-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-
-    span {
-      font-size: 14px;
-      background-color: #414141;
-      width: auto;
-      height: 28px;
-      font-weight: 300;
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 2px;
     }
   }
 
@@ -2540,7 +2571,7 @@ section.team.section-padding {
 
   .description {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
     margin-top: 20px;
   }
@@ -2557,7 +2588,6 @@ section.team.section-padding {
 
     span {
       background-color: #191919;
-      font-weight: 600;
     }
 
     &:hover {
@@ -2570,7 +2600,6 @@ section.team.section-padding {
   .logo-img {
     width: 150px;
     filter: contrast(0) brightness(100);
-    margin-bottom: 10px;
   }
 
 
@@ -2651,7 +2680,7 @@ section.team.section-padding {
 // Design audit
 .design-audit {
   background-color: $white;
-  padding: 50px 0;
+  padding: 50px 70px;
   position: relative;
 
   .animation-block {
@@ -2838,6 +2867,10 @@ section.team.section-padding {
 
 // style when user reach blog section
 .blog-nav-active {
-  background: $white;
-  border-color: rgba($gray-bc, 0.1)
+  background: $gray-f8;
+  border-color: rgba($gray-bc, 0.05);
+
+  .nav-link {
+    color: $theme-secondary !important;
+  }
 }

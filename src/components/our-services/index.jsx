@@ -21,10 +21,10 @@ const OurServicesComponent = (props) => {
     gsap.from(".item .h1", 0.2, {
       y: 100,
       ease: "power4.out",
-      delay: 0.5,
+      delay: 0.2,
       skewY: 0,
       stagger: {
-        amount: 0.5
+        amount: 0.1
       },
       autoAlpha: 0,
       scrollTrigger: {
@@ -60,7 +60,7 @@ const OurServicesComponent = (props) => {
 
   return (
     <section className="our-services-component" id="pinContainerServices">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
             <div className="intro">
@@ -72,7 +72,7 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" style={{ bottom: 16, left: 5 }} />
                 </h2>
               </Split>
-              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.4s">Offering worthwhile experiences that help you go above & beyond the <span>grid.</span></h6>
+              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.4s">Offering worthwhile experiences that help you go above & beyond the <a herf="#" className="tag">grid.</a></h6>
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@ const OurServicesComponent = (props) => {
 
                       <div className="content-right">
                         <div className="tag-section">
-                          <span>Design Audit</span>
-                          <span>User Interviews</span>
-                          <span>Heuristic evaluation</span>
+                          <a herf="#" className="tag">Design Audit</a>
+                          <a herf="#" className="tag">User Interviews</a>
+                          <a herf="#" className="tag">Heuristic evaluation</a>
                           <span>Competitor analysis</span>
                         </div>
                         <p className="description">
@@ -116,10 +116,10 @@ const OurServicesComponent = (props) => {
 
                       <div className="content-right">
                         <div className="tag-section">
-                          <span>Mobile app design</span>
-                          <span>Responsive Website</span>
-                          <span>Interface design</span>
-                          <span>Design System</span>
+                          <a herf="#" className="tag">Mobile app design</a>
+                          <a herf="#" className="tag">Responsive Website</a>
+                          <a herf="#" className="tag">Interface design</a>
+                          <a herf="#" className="tag">Design System</a>
                         </div>
                         <p className="description">
                           Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
@@ -135,8 +135,8 @@ const OurServicesComponent = (props) => {
 
                       <div className="content-right">
                         <div className="tag-section">
-                          <span>Logo</span>
-                          <span>Brand Guidelines</span>
+                          <a herf="#" className="tag">Logo</a>
+                          <a herf="#" className="tag">Brand Guidelines</a>
                           <span>Brand Assets</span>
                         </div>
                         <p className="description">
@@ -157,10 +157,10 @@ const OurServicesComponent = (props) => {
                           Building beautyful and scalable web and mobile applications
                         </p>
                         <div className="tag-section">
-                          <span>Web development</span>
-                          <span>App Development</span>
-                          <span>Devops</span>
-                          <span>QA/Testing</span>
+                          <a herf="#" className="tag">Web development</a>
+                          <a herf="#" className="tag">App Development</a>
+                          <a herf="#" className="tag">Devops</a>
+                          <a herf="#" className="tag">QA/Testing</a>
                         </div>
                         <p className="description">
                           Pixels converted seamlessly into
@@ -202,10 +202,10 @@ const OurServicesComponent = (props) => {
               <AccordionItemPanel>
                 <div>
                   <div className="tag-section">
-                    <span>Design Audit</span>
-                    <span>User Interviews</span>
-                    <span>Heuristic evaluation</span>
-                    <span>Competitor analysis</span>
+                    <a herf="#" className="tag">Design Audit</a>
+                    <a herf="#" className="tag">User Interviews</a>
+                    <a herf="#" className="tag">Heuristic evaluation</a>
+                    <a herf="#" className="tag">Competitor analysis</a>
                   </div>
                   <p className="description">
                     We provide end to end research services while discovering game-changing improvement opportunities.
@@ -223,10 +223,10 @@ const OurServicesComponent = (props) => {
               <AccordionItemPanel>
                 <div>
                   <div className="tag-section">
-                    <span>Mobile app design</span>
-                    <span>Responsive Website</span>
-                    <span>Interface design</span>
-                    <span>Design System</span>
+                    <a herf="#" className="tag">Mobile app design</a>
+                    <a herf="#" className="tag">Responsive Website</a>
+                    <a herf="#" className="tag">Interface design</a>
+                    <a herf="#" className="tag">Design System</a>
                   </div>
                   <p className="description">
                     Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
@@ -245,9 +245,9 @@ const OurServicesComponent = (props) => {
               <AccordionItemPanel>
                 <div>
                   <div className="tag-section">
-                    <span>Logo</span>
-                    <span>Brand Guidelines</span>
-                    <span>Brand Assets</span>
+                    <a herf="#" className="tag">Logo</a>
+                    <a herf="#" className="tag">Brand Guidelines</a>
+                    <a herf="#" className="tag">Brand Assets</a>
                   </div>
                   <p className="description">
                     We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
@@ -266,9 +266,9 @@ const OurServicesComponent = (props) => {
               <AccordionItemPanel>
                 <div>
                   <div className="tag-section">
-                    <span>Logo</span>
-                    <span>Brand Guidelines</span>
-                    <span>Brand Assets</span>
+                    <a herf="#" className="tag">Logo</a>
+                    <a herf="#" className="tag">Brand Guidelines</a>
+                    <a herf="#" className="tag">Brand Assets</a>
                   </div>
                   <p className="description">
                     We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.

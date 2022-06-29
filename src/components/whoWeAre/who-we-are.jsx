@@ -16,7 +16,7 @@ const WhoWeAre = () => {
         amount: 0.3
       },
       scrollTrigger: {
-        trigger: '#pinContainer2',
+        trigger: '#pinWhoWeAre',
         // toggleActions: 'restart pause reverse pause',
         start: 'top center',
         markers: false
@@ -26,26 +26,30 @@ const WhoWeAre = () => {
 
 
   return (
-    <section id="pinContainer2" className="who-we-are-style c-usp">
-      <div className="heading-sec">
-        <div className="animation-sec">
-          <h4 className="title4 revel-style">We have the skills to break the grid and deliver</h4>
-        </div>
-        <div className="animation-sec">
-          <h4 className="title4 revel-style"> <span className="box-outline">out of the box</span> solutions.</h4>
-        </div>
+    <>
+    <div id="panelContainer"></div>
+      <section id="pinWhoWeAre" className="who-we-are-style c-usp">
+        <div className="heading-sec">
+          <div className="animation-sec">
+            <h4 className="title4 revel-style">We have the skills to break the grid and deliver</h4>
+          </div>
+          <div className="animation-sec">
+            <h4 className="title4 revel-style"> <span className="box-outline">out of the box</span> solutions.</h4>
+          </div>
 
-        <div className="animation-sec">
-          <p className="text-gray revel-style">Let’s collaborate to push your brand to new heights.</p>
-        </div>
+          <div className="animation-sec">
+            <p className="text-gray revel-style">Let’s collaborate to push your brand to new heights.</p>
+          </div>
 
-        <div className="animation-sec">
-          <div className="revel-style">
-            <ButtonPrimary buttonText="Connect with us" />
+          <div className="animation-sec">
+            <div className="revel-style">
+              <ButtonPrimary buttonText="Connect with us" />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      </>
+
   );
 };
 
