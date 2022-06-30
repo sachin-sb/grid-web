@@ -147,7 +147,7 @@ const HomeProjects = () => {
         <section className="panel">
           <div className="content-sec">
             <div className="info-msg">
-              <div className="">
+              <div className="wow flipInX center" data-wow-delay="0.4s">
                 <h4 className="title4">
                   We&apos;ve got more <br /> to show you.
                 </h4>

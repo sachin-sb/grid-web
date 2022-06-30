@@ -103,6 +103,18 @@ body {
 
 }
 
+
+// Titles style
+.title2 {
+  font-size: 50px;
+  font-weight: 500;
+  color: $gray-f8;
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
 button {
 
   &:hover,
@@ -831,7 +843,11 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -7px;
+    left: -11px;
+
+    @include mobile {
+      left: -2px;
+    }
   }
 
 
@@ -850,7 +866,7 @@ section.team.section-padding {
 
 // Our Client Section
 .our-client-section {
-  margin-left: 50px;
+  padding-left: 50px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -1170,11 +1186,6 @@ section.team.section-padding {
         }
       }
     }
-
-    .title {
-      font-size: 25px;
-      margin: 10px 0;
-    }
   }
 
   .blog-col {
@@ -1253,6 +1264,10 @@ section.team.section-padding {
   .title {
     font-size: 25px;
     margin: 10px 0;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
 
@@ -1671,7 +1686,6 @@ section.team.section-padding {
     padding-right: 70px;
 
     @include mobile {
-      flex-direction: column;
       padding-right: 0px;
       align-items: flex-start;
     }
@@ -1710,6 +1724,8 @@ section.team.section-padding {
               background-position: center;
               margin-left: 5px;
               transition: all 0.5s ease-in-out;
+              position: relative;
+              top: 2px;
             }
           }
 
@@ -2053,7 +2069,11 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -5px;
+    left: -10px;
+
+    @include mobile {
+      left: -5px;
+    }
   }
 
   .info-msg {
@@ -2457,7 +2477,11 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -5px;
+    left: -10px;
+
+    @include mobile {
+      left: -5px;
+    }
   }
 
   .extra-title {
@@ -2751,7 +2775,7 @@ section.team.section-padding {
       color: transparent;
 
       @include mobile {
-        font-size: 30px;
+        font-size: 31px;
         padding: 0px;
       }
     }
@@ -2821,8 +2845,8 @@ section.team.section-padding {
     max-width: 70%;
 
     @include mobile {
-      font-size: 22px;
-      line-height: 33px;
+      font-size: 20px;
+      line-height: 30px;
       font-weight: 500;
       max-width: 100%;
     }

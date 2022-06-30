@@ -46,7 +46,7 @@ const BlogStanderd = () => {
       ))}
 
       <div className="right-flex">
-        <div className="info-msg">
+        <div className="info-msg wow flipInX center" data-wow-delay="0.4s">
           <h4 className="title4">
             Love reading? <br /> We’ve got more.
           </h4>

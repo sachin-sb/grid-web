@@ -34,7 +34,7 @@ const OurServicesComponent = (props) => {
       },
     })
 
-    gsap.from(".animation-block .extra-title", 1, {
+    gsap.from(".animation-block .animate-text", 1, {
       y: 100,
       ease: "power4.out",
       delay: 0.5,
@@ -81,7 +81,7 @@ const OurServicesComponent = (props) => {
           <div className="col-lg-12">
             <div className="intro">
               <div className="animation-block">
-                <h2 className="title2 extra-title">
+                <h2 className="title2 animate-text">
                   Our Services <span className="text-theme" />
                 </h2>
               </div>
@@ -190,7 +190,7 @@ const OurServicesComponent = (props) => {
 
 
               <div className="info-msg">
-                <div className="">
+                <div className="wow flipInX center" data-wow-delay="0.4s">
                   <h4 className="title4">
                     Want to know more? <br /> Let’s dive deep!
                   </h4>
@@ -210,7 +210,7 @@ const OurServicesComponent = (props) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <div className="animation-block">
-                    <div className="animation-style">UX RESEARCH</div>
+                    <div className="animate-text">UX RESEARCH</div>
                   </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -233,7 +233,7 @@ const OurServicesComponent = (props) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <div className="animation-block">
-                    <div className="animation-style">UX/UI DESIGN</div>
+                    <div className="animate-text">UX/UI DESIGN</div>
                   </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -257,7 +257,7 @@ const OurServicesComponent = (props) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <div className="animation-block">
-                    <div className="animation-style">BRANDING</div>
+                    <div className="animate-text">BRANDING</div>
                   </div>
 
                 </AccordionItemButton>
@@ -281,7 +281,7 @@ const OurServicesComponent = (props) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <div className="animation-block">
-                    <div className="animation-style">DEVELOPMENT</div>
+                    <div className="animate-text">DEVELOPMENT</div>
                   </div>
                 </AccordionItemButton>
               </AccordionItemHeading>

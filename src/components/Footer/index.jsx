@@ -60,36 +60,7 @@ const Footer = () => {
 
         <div className="row align-items-end">
           <div className="col-sm-3">
-            <div className="link-section first hide-mobile">
-              <div className="links">
-                <Link href="/">
-                  <a>About</a>
-                </Link>
-                <Link href="/">
-                  <a>Services</a>
-                </Link>
-                <Link href="/">
-                  <a>Process</a>
-                </Link>
-                <Link href="/">
-                  <a>Blogs</a>
-                </Link>
-              </div>
-              <div className="links">
-                <Link href="/">
-                  <a>Projects</a>
-                </Link>
-                <Link href="/">
-                  <a>Careers</a>
-                </Link>
-                <Link href="/">
-                  <a>Contact</a>
-                </Link>
-              </div>
-            </div>
-
-            {/* For Mobile */}
-            <div className="link-section first hide-desktop">
+            <div className="link-section first">
               <div className="links">
                 <Link href="/">
                   <a>About</a>
@@ -100,6 +71,8 @@ const Footer = () => {
                 <Link href="/">
                   <a>Blogs</a>
                 </Link>
+              </div>
+              <div className="links">
                 <Link href="/">
                   <a>Projects</a>
                 </Link>
