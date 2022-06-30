@@ -7,13 +7,13 @@ const WhoWeAre = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // const tl = gsap.timeline();
-    gsap.from(".animation-sec .revel-style", 1.5, {
+    gsap.from(".animation-sec .revel-style", 1, {
       y: 100,
       ease: "power4.out",
       delay: 0.5,
       skewY: 0,
       stagger: {
-        amount: 0.2
+        amount: 0.3
       },
       scrollTrigger: {
         trigger: '#pinWhoWeAre',

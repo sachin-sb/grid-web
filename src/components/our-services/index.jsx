@@ -18,7 +18,7 @@ const OurServicesComponent = (props) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".item .h1", 0.2, {
+    gsap.from(".item .animation-style", 0.2, {
       y: 100,
       ease: "power4.out",
       delay: 0.2,
@@ -33,7 +33,24 @@ const OurServicesComponent = (props) => {
         markers: false
       },
     })
+
+    gsap.from(".animation-block .extra-title", 1, {
+      y: 100,
+      ease: "power4.out",
+      delay: 0.5,
+      skewY: 0,
+      stagger: {
+        amount: 0.2
+      },
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '#pinContainerServices',
+        start: 'top center',
+        markers: false
+      },
+    })
   }, [])
+
 
 
   useEffect(() => {
@@ -57,24 +74,17 @@ const OurServicesComponent = (props) => {
       })
   }, [])
 
-
-
-
-
   return (
     <section className="our-services-component" id="pinContainerServices">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
             <div className="intro">
-              <Split>
-                <h2
-                  className="extra-title wow words chars splitting d-flex align-items-end"
-                  data-splitting
-                >
-                  Our Services <span className="text-theme" style={{ bottom: 16, left: 5 }} />
+              <div className="animation-block">
+                <h2 className="title2 extra-title">
+                  Our Services <span className="text-theme" />
                 </h2>
-              </Split>
+              </div>
               <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.4s">Offering worthwhile experiences that help you go above & beyond the <span className="text-primary-theme">grid.</span></h6>
             </div>
           </div>
@@ -94,7 +104,20 @@ const OurServicesComponent = (props) => {
                 <div className="contents">
                   <div className="content-right" data-content="heading1">
                     <div className="tag-section">
-                      <a herf="#" className="tag">Mobile app design ssasasas</a>
+                      <a herf="#" className="tag">Design Audit</a>
+                      <a herf="#" className="tag">User Interviews</a>
+                      <a herf="#" className="tag">Heuristic evaluation</a>
+                      <a herf="#" className="tag">Competitor analysis</a>
+                    </div>
+                    <p className="description">
+                      We provide end to end research services while discovering game-changing improvement opportunities.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
+                  </div>
+
+                  <div className="content-right" data-content="heading2">
+                    <div className="tag-section">
+                      <a herf="#" className="tag">Mobile app design</a>
                       <a herf="#" className="tag">Responsive Website</a>
                       <a herf="#" className="tag">Interface design</a>
                       <a herf="#" className="tag">Design System</a>
@@ -104,17 +127,7 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                  <div className="content-right" data-content="heading2">
-                    <div className="tag-section">
-                      <a herf="#" className="tag">Logo</a>
-                      <a herf="#" className="tag">Brand Guidelines</a>
-                      <a herf="#" className="tag">Brand Assets</a>
-                    </div>
-                    <p className="description">
-                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
-                  </div>
+
                   <div className="content-right" data-content="heading3">
                     <div className="tag-section">
                       <a herf="#" className="tag">Logo</a>
@@ -126,10 +139,11 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
+
                   <div className="content-right" data-content="heading4">
                     <img className="logo-img" src="img/sb-log.svg" alt="img1" />
                     <p className="extra-description">
-                      Building beautyful and scalable web and mobile applications
+                      Building beautiful and scalable web and mobile applications.
                     </p>
                     <div className="tag-section">
                       <a herf="#" className="tag">Web development</a>
@@ -138,10 +152,7 @@ const OurServicesComponent = (props) => {
                       <a herf="#" className="tag">QA/Testing</a>
                     </div>
                     <p className="description">
-                      Pixels converted seamlessly into
-                      adaptable & scalable piece of code.
-                      Our partners at Squareboat script the
-                      screens designed by us.
+                      Pixels converted seamlessly into adaptable & scalable piece of code. Our partners at Squareboat script the screens designed by us.
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
@@ -149,28 +160,28 @@ const OurServicesComponent = (props) => {
 
                 <div className="categories-wrapper">
                   <div className="categories">
-                    
+
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1" data-label="heading1">UX RESEARCH</h1>
+                        <h1 className="h1 animation-style" data-label="heading1">UX RESEARCH</h1>
                       </div>
                     </div>
 
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1" data-label="heading2">UX/UI DESIGN</h1>
+                        <h1 className="h1 animation-style" data-label="heading2">UX/UI DESIGN</h1>
                       </div>
                     </div>
 
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-2x" data-label="heading3">BRANDING</h1>
+                        <h1 className="h1 arrow-2x animation-style" data-label="heading3">BRANDING</h1>
                       </div>
                     </div>
 
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-short" data-label="heading4">DEVELOPMENT</h1>
+                        <h1 className="h1 arrow-short animation-style" data-label="heading4">DEVELOPMENT</h1>
                       </div>
                     </div>
                   </div>
@@ -198,7 +209,9 @@ const OurServicesComponent = (props) => {
             <AccordionItem uuid="a">
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  UX RESEARCH
+                  <div className="animation-block">
+                    <div className="animation-style">UX RESEARCH</div>
+                  </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -219,7 +232,9 @@ const OurServicesComponent = (props) => {
             <AccordionItem uuid="b">
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  UX/UI DESIGN
+                  <div className="animation-block">
+                    <div className="animation-style">UX/UI DESIGN</div>
+                  </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -241,7 +256,10 @@ const OurServicesComponent = (props) => {
             <AccordionItem uuid="c">
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  BRANDING
+                  <div className="animation-block">
+                    <div className="animation-style">BRANDING</div>
+                  </div>
+
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -262,7 +280,9 @@ const OurServicesComponent = (props) => {
             <AccordionItem uuid="d">
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  DEVELOPMENT
+                  <div className="animation-block">
+                    <div className="animation-style">DEVELOPMENT</div>
+                  </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>

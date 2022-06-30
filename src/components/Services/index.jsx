@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ButtonOutline from "../../common/buttonOutline";
 import Split from "../Split";
 import { useMediaQuery } from 'react-responsive'
+import gsap from "gsap";
 
 const ShowcassesFullScreenData = [
   {
@@ -64,38 +65,36 @@ const ShowcassesFullScreenData2 = [
 const Services = (props) => {
   // const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
-  // useEffect(() => {
-  //   if (mobileDevice) {
-  //     var controller = new ScrollMagic.Controller();
-
-  //     var horizontalSlide = new TimelineMax()
-  //       .to("#js-slideContainer", 1, { x: "-45%" })
-  //     new ScrollMagic.Scene({
-  //       triggerElement: "#js-wrapper",
-  //       triggerHook: "0.03",
-  //       duration: "170%"
-  //     })
-  //       .setPin("#js-wrapper")
-  //       .setTween(horizontalSlide)
-  //       .addTo(controller);
-  //   }
-  // }, [])
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".animation-blc-block .revel-style", 1.5, {
+      y: 100,
+      ease: "power4.out",
+      delay: 0.5,
+      skewY: 0,
+      stagger: {
+        amount: 0.2
+      },
+      scrollTrigger: {
+        trigger: '#blcSec',
+        start: 'top center',
+        markers: false
+      },
+    })
+  }, [])
 
   return (
     <>
-      <section className="blc-sec section-padding pb-0">
+      <section id="blcSec" className="blc-sec section-padding pb-0">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-7">
               <div className="intro">
-                <Split>
-                  <h2
-                    className="title2 wow words chars splitting d-flex align-items-end"
-                    data-splitting
-                  >
-                    Our Clients <span className="text-theme" style={{ bottom: 16, left: 5 }} />
+                <div className="animation-blc-block">
+                  <h2 className="title2 revel-style">
+                    Our Clients <span className="text-theme" />
                   </h2>
-                </Split>
+                  </div>
                 <div className="sub-title">
                   <h6 className="h6 wow flipInX center" data-wow-delay="0.4s">We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
                 </div>

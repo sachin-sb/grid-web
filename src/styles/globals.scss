@@ -539,7 +539,7 @@ section.team.section-padding {
     position: relative;
 
     @include mobile {
-      height: 304px;
+      height: 394px;
     }
 
     &::after {
@@ -765,9 +765,9 @@ section.team.section-padding {
 // text-theme
 .text-theme {
   background: $theme-primary;
-  min-width: 7px;
+  width: 7px;
   height: 7px;
-  display: block;
+  display: inline-block;
   position: relative;
 }
 
@@ -787,6 +787,10 @@ section.team.section-padding {
       content: '';
       width: 93%;
     }
+  }
+
+  .animation-blc-block {
+    overflow: hidden;
   }
 
   .sub-title {
@@ -824,6 +828,10 @@ section.team.section-padding {
     @include mobile {
       font-size: 30px;
     }
+  }
+
+  .text-theme {
+    left: -7px;
   }
 
 
@@ -2044,6 +2052,9 @@ section.team.section-padding {
     }
   }
 
+  .text-theme {
+    left: -5px;
+  }
 
   .info-msg {
     display: flex;
@@ -2160,18 +2171,6 @@ section.team.section-padding {
 
         br {
           display: none;
-        }
-      }
-
-      .text-theme {
-        top: 0px;
-        left: 0px;
-        margin-bottom: 0;
-        display: inline-block;
-
-        @include mobile {
-          margin-bottom: 0px;
-          left: 3px;
         }
       }
     }
@@ -2457,22 +2456,23 @@ section.team.section-padding {
     min-height: auto;
   }
 
-  .extra-title {
+  .text-theme {
+    left: -5px;
+  }
 
+  .extra-title {
     @include mobile {
       font-size: 30px;
     }
   }
 
   .desktop-version {
-
     @include mobile {
       display: none;
     }
   }
 
   .mobile-version {
-
     @include desktop {
       display: none;
     }
@@ -2613,9 +2613,7 @@ section.team.section-padding {
       }
     }
   }
-
-
-
+  
   .intro {
     margin-bottom: 80px;
 
@@ -2635,6 +2633,10 @@ section.team.section-padding {
     transition: all 0.5s ease-in-out;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      font-size: 40px;
+    }
 
     &:after {
       display: flex;
