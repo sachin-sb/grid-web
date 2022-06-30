@@ -71,7 +71,7 @@ const HomeProjects = () => {
               </div>
 
               <div className="right">
-                <a href="#" className="title-theme">healthcare</a>
+                <a href="#" className="title-theme">Healthcare</a>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ const HomeProjects = () => {
               </div>
 
               <div className="right">
-                <a href="#" className="title-theme">healthcare</a>
+                <a href="#" className="title-theme">Healthcare</a>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const HomeProjects = () => {
               </div>
 
               <div className="right">
-                <a href="#" className="title-theme">healthcare</a>
+                <a href="#" className="title-theme">Healthcare</a>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const HomeProjects = () => {
               </div>
 
               <div className="right">
-                <a href="#" className="title-theme">healthcare</a>
+                <a href="#" className="title-theme">Healthcare</a>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ const HomeProjects = () => {
               </div>
 
               <div className="right">
-                <a href="#" className="title-theme">healthcare</a>
+                <a href="#" className="title-theme">Healthcare</a>
               </div>
             </div>
           </div>
