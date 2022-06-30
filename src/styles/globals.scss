@@ -378,6 +378,7 @@ section.team.section-padding {
 
   @include mobile {
     padding-left: 0px;
+    min-height: auto;
   }
 
   .sub-heading {
