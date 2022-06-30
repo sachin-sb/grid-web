@@ -55,6 +55,11 @@ button {
     justify-content: center;
     border-radius: 2px;
     cursor: pointer;
+
+    @include mobile {
+      font-size: 12px;
+      padding: 0 7px;
+    }
   }
 }
 
@@ -407,9 +412,14 @@ section.team.section-padding {
     margin: -10px 0;
 
     @include mobile {
-      font-size: 70px;
+      font-size: 65px;
       line-height: 1.5;
       margin: -20px 0;
+    }
+
+    
+    @include iphone5 {
+      font-size: 60px;
     }
 
     span {
@@ -445,7 +455,7 @@ section.team.section-padding {
     @include mobile {
       padding: 20px 45px;
       margin-top: 50px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
   }
 
@@ -762,7 +772,7 @@ section.team.section-padding {
 
       @include mobile {
         font-size: 16px;
-        max-width: 90%;
+        max-width: 95%;
         flex-direction: column;
       }
   
@@ -1510,7 +1520,7 @@ section.team.section-padding {
   padding: 120px 70px 0;
 
   @include mobile {
-    padding: 80px 20px;
+    padding: 80px 20px 0;
   }
 
   .info-animation-sec {
@@ -2650,7 +2660,14 @@ section.team.section-padding {
     padding: 0 0px;
 
     @include mobile {
-      margin: 0 -20px;
+      margin: 0 0px;
+    }
+
+    .accordion__panel {
+
+      @include mobile {
+       padding: 20px 0;
+      }
     }
 
     .accordion__button {
@@ -2665,7 +2682,8 @@ section.team.section-padding {
       color: transparent;
 
       @include mobile {
-        font-size: 32px;
+        font-size: 30px;
+        padding: 0px;
       }
     }
 
