@@ -48,24 +48,6 @@ const HeroSection = (props) => {
     <section className="slider slider-prlx home-hero-section" id={props.id}>
       {!load ? (
         <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-sm-12">
-              {/* For Mobile */}
-              <div className="logo-section">
-                <div className="logo">
-                  <img src='img/logo.svg' alt="" />
-                </div>
-
-                <div className="animation-block">
-                  <div className="animation-text text-right">
-                    A global creative agency <br /> based out of India.
-                  </div>
-                </div>
-              </div>
-              {/* End For Mobile */}
-            </div>
-          </div>
-
           <div className="row align-items-center row-section-style">
             <div className="col-sm-6">
               <div className="content-sec">

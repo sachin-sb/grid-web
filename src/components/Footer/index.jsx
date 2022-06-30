@@ -98,9 +98,6 @@ const Footer = () => {
                   <a>Services</a>
                 </Link>
                 <Link href="/">
-                  <a>Process</a>
-                </Link>
-                <Link href="/">
                   <a>Blogs</a>
                 </Link>
                 <Link href="/">

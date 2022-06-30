@@ -22,7 +22,7 @@ const LetsHearCard = (props) => {
       },
     })
   }, [])
-  
+
   return (
     <section className="lets-hear-section" id="pinLets">
       <div className="container">
@@ -30,7 +30,7 @@ const LetsHearCard = (props) => {
           <div className="col-sm-12">
             <div className="head">
               <h3 className="title3">Let’s hear it from our
-              <div className="d-flex align-items-end">esteemed clients <span className="text-theme" style={{ bottom: 10, left: 5 }} /></div>
+                <div className="d-flex align-items-end">esteemed clients <span className="text-theme" style={{ bottom: 10, left: 5 }} /></div>
               </h3>
             </div>
           </div>
@@ -39,8 +39,14 @@ const LetsHearCard = (props) => {
         <div className="row">
           <div className="col-sm-12">
             <div className="media-section">
-              <div className="img-box">
-                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80" alt="" />
+              <div className="d-flex">
+                <div className="img-box">
+                  <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80" alt="" />
+                </div>
+                <div className="d-sm-none">
+                  <div className="name">Margaret Cyphers</div>
+                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                </div>
               </div>
               <div className="text-section">
                 <Split>
@@ -48,14 +54,22 @@ const LetsHearCard = (props) => {
                     “Grid was an outstanding partner throughout the process to redesign Dr. Reddy’ Workspace. They have breathed new life into a complex set of brands used by billions of people daily.”
                   </p>
                 </Split>
-                <div className="name">Margaret Cyphers</div>
-                <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                <div className="d-none d-sm-block">
+                  <div className="name">Margaret Cyphers</div>
+                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                </div>
               </div>
             </div>
 
             <div className="media-section">
-              <div className="img-box">
-                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80" alt="" />
+              <div className="d-flex">
+                <div className="img-box">
+                  <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80" alt="" />
+                </div>
+                <div className="d-sm-none">
+                  <div className="name">Margaret Cyphers</div>
+                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                </div>
               </div>
               <div className="text-section">
                 <Split>
@@ -63,8 +77,10 @@ const LetsHearCard = (props) => {
                     “Grid was an outstanding partner throughout the process to redesign Dr. Reddy’ Workspace. They have breathed new life into a complex set of brands used by billions of people daily.”
                   </p>
                 </Split>
-                <div className="name">Margaret Cyphers</div>
-                <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                <div className="d-none d-sm-block">
+                  <div className="name">Margaret Cyphers</div>
+                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                </div>
               </div>
             </div>
           </div>

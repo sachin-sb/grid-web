@@ -115,6 +115,8 @@ export default function Home(props) {
             <img src='img/toggle-lines.svg' className="img-style" alt="" />
           </div>
         </div>
+
+        {/* Main Section start */}
         <div className="main-wrapper">
           <Navbar nr={navbarRef} lr={logoRef} navClass={activeSection === 6 && 'blog-nav-active'} />
           <div ref={sectionRefs[0]} >

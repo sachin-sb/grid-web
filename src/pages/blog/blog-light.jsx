@@ -1,18 +1,20 @@
 import gsap from "gsap";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import BlogStanderd from "../../components/Blog-standerd";
+import { useMediaQuery } from 'react-responsive'
 
 const BlogLight = () => {
+  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
+
   useEffect(() => {
     var controller3 = new ScrollMagic.Controller()
     var second = new ScrollMagic.Scene({
       triggerElement: '#second',
-      duration: "250%",
+      duration:  mobileDevice ? "250%" : "370%",
       triggerHook: 0.1,
     })
       .setClassToggle('#second', 'white-style')
       .addTo(controller3);
-
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".cont .title1", 1, {
@@ -31,10 +33,10 @@ const BlogLight = () => {
       },
     })
   }, [])
-  
+
   return (
     <>
-      <div id="section-div" className="hide-mobile">
+      <div id="section-div">
         <section className="blog-light-style black-style" id="second">
           <div className="cont">
             <h1 className="title1 mb-10 d-flex align-items-end">Blogs<span className="text-theme" style={{ bottom: 16, left: 5 }} /></h1>
@@ -42,13 +44,6 @@ const BlogLight = () => {
           <BlogStanderd />
         </section>
       </div>
-
-      <section className="blog-light-style white-style hide-desktop">
-        <div className="cont">
-          <h1 className="title1 mb-10 d-flex align-items-end">Blogs<span className="text-theme" style={{ bottom: 16, left: 5 }} /></h1>
-        </div>
-        <BlogStanderd />
-      </section>
     </>
   );
 };

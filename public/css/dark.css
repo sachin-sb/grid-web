@@ -1659,12 +1659,6 @@ body {
   transform: translateY(80px);
 }
 
-.navbar-hidden {
-  -webkit-transform: translateY(-80px);
-  -ms-transform: translateY(-80px);
-  transform: translateY(-80px);
-}
-
 .topnav {
   position: fixed;
   top: 0;
