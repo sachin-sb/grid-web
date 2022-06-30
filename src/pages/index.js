@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import useScrollSpy from 'react-use-scrollspy';
 import DesignAudit from "../components/designAudit";
 import $ from 'jquery';
+import gsap from "gsap";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -50,8 +51,6 @@ export default function Home(props) {
   });
 
   
-
-
   // useEffect(() => {
   //   (function () {
   //     var indicator = $("#indicator");
@@ -127,7 +126,7 @@ export default function Home(props) {
           <div ref={sectionRefs[2]}>
             <OurServicesComponent />
           </div>
-          <div ref={sectionRefs[3]}>
+          <div className="panel-div" ref={sectionRefs[3]}>
             <WhoWeAre />
           </div>
           <div ref={sectionRefs[4]}>

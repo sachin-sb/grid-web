@@ -4,7 +4,6 @@
 @import './variables/colors';
 @import './variables/mixins';
 
-
 body {
   font-family: "HelveticaNeue", sans-serif !important;
   font-weight: 300;
@@ -236,6 +235,9 @@ section.team.section-padding {
 }
 
 
+.text-primary-theme {
+  color: $theme-primary;
+}
 
 // Sidebar Primary
 .layout-primary-style {
@@ -344,12 +346,11 @@ section.team.section-padding {
   .main-wrapper {
     width: 100%;
     padding: 0px;
-    // padding-left: 140px;
     margin-left: 140px;
     overflow: hidden;
 
     @include mobile {
-      padding-left: 0px;
+      margin-left: 0px;
       overflow-x: hidden;
     }
   }
@@ -374,6 +375,10 @@ section.team.section-padding {
   flex-direction: column;
   justify-content: center;
   padding-left: 136px;
+
+  @include mobile {
+    padding-left: 0px;
+  }
 
   .sub-heading {
     margin-top: 110px;
@@ -403,6 +408,7 @@ section.team.section-padding {
     @include mobile {
       font-size: 70px;
       line-height: 1.5;
+      margin: -20px 0;
     }
 
     span {
@@ -436,9 +442,9 @@ section.team.section-padding {
   .content-sec {
 
     @include mobile {
-      padding: 20px;
+      padding: 20px 45px;
       margin-top: 50px;
-      margin-bottom: 70px;
+      margin-bottom: 30px;
     }
   }
 
@@ -528,6 +534,8 @@ section.team.section-padding {
         @include mobile {
           height: 70px;
           width: 70px;
+          left: -17px;
+          bottom: -30px;
         }
 
         span {
@@ -770,6 +778,7 @@ section.team.section-padding {
   .title2 {
     font-size: 50px;
     font-weight: 500;
+    margin-bottom: 10px;
 
     @include mobile {
       font-size: 36px;
@@ -1379,6 +1388,7 @@ section.team.section-padding {
     font-weight: 500;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    letter-spacing: 1px;
 
     .img-style {
       position: absolute;
@@ -1466,25 +1476,13 @@ section.team.section-padding {
       transition: all .3s ease;
     }
 
-    span {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.1s ease-in-out;
-    }
-
     &:hover {
       color: $white;
       border-color: $theme-primary;
       background-color: $theme-primary;
 
       span {
-        font-weight: 500;
+        // font-weight: 500;
       }
 
       &:before {
@@ -1511,7 +1509,7 @@ section.team.section-padding {
   padding: 120px 70px 0;
 
   @include mobile {
-    padding: 80px 10px;
+    padding: 80px 20px;
   }
 
   .info-animation-sec {
@@ -1802,6 +1800,7 @@ section.team.section-padding {
     @include mobile {
       font-size: 14px;
       float: none;
+      max-width: 90%;
 
       br {
         display: none;
@@ -2090,8 +2089,6 @@ section.team.section-padding {
       font-weight: 300;
       font-size: 34px;
       color: $gray-bc;
-      display: flex;
-      align-items: flex-end;
 
       @include mobile {
         font-size: 20px;
@@ -2106,10 +2103,11 @@ section.team.section-padding {
       .text-theme {
         top: 0px;
         left: 0px;
-        margin-bottom: 12px;
+        margin-bottom: 0;
+        display: inline-block;
 
         @include mobile {
-          margin-bottom: 6px;
+          margin-bottom: 0px;
           left: 3px;
         }
       }
@@ -2126,7 +2124,7 @@ section.team.section-padding {
       @include mobile {
         margin-top: 20px;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
       }
 
       .title4 {
@@ -2209,7 +2207,7 @@ section.team.section-padding {
       .content-sec {
 
         @include mobile {
-          margin-bottom: 40px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -2312,6 +2310,10 @@ section.team.section-padding {
     }
   }
 
+  .splitting.txt .whitespace {
+    width: 4px;
+}
+
   .media-section {
     display: flex;
     align-items: flex-start;
@@ -2341,11 +2343,11 @@ section.team.section-padding {
   }
 
   .description {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 37.5px;
     font-weight: 300;
     color: $gray-f8;
-    max-width: 90%;
+    max-width: 95%;
     text-align: left;
 
     @include mobile {
@@ -2374,7 +2376,7 @@ section.team.section-padding {
   padding: 50px 20px 100px 136px;
 
   @include mobile {
-    padding: 0px;
+    padding: 0px 45px;
     min-height: auto;
   }
 
@@ -2440,8 +2442,10 @@ section.team.section-padding {
 
     img {
       position: absolute;
-      height: 600px;
-      width: 400px;
+      min-width: 354px;
+      max-width: 354px;
+      min-height: 586px;
+      max-height: 586px;
       opacity: 0;
       left: 14vw;
       top: 0;
@@ -2489,11 +2493,12 @@ section.team.section-padding {
     right: 0px;
     top: 0;
     width: 400px;
-    opacity: 0;
-    z-index: -1;
+    z-index: 99;
     transform: scale(0.9);
     transition: all 0.5s ease-in-out;
     text-align: left;
+    margin-right: 70px;
+    opacity: 0;
 
     @include mobile {
       position: relative;
@@ -2505,35 +2510,33 @@ section.team.section-padding {
 
   .item {
     margin-bottom: 50px;
+  }
 
-    &:nth-child(1) {
-      .content-right {
-        top: 30px;
+  .contents {
+    z-index: 1;
+    
+    .content-right {
+  
+      &:nth-child(1) {
+          top: 30px;
       }
-    }
-
-    &:nth-child(2) {
-      
-      .content-right {
-        top: 190px;
+  
+      &:nth-child(2) {
+          top: 190px;
       }
-    }
-
-    &:nth-child(3) {
-      
-      .content-right {
-        top: 350px;
+  
+      &:nth-child(3) {
+          top: 350px;
       }
-    }
-
-    &:last-child {
-      
-      .content-right {
-        top: auto;
-        bottom: 50px;
+  
+      &:last-child {
+          top: auto;
+          bottom: 50px;
       }
     }
   }
+
+ 
 
   .intro {
     margin-bottom: 80px;
@@ -2568,6 +2571,22 @@ section.team.section-padding {
       transition: all 0.5s ease-in-out;
     }
   }
+  
+  .arrow-2x {
+    
+    &:after {
+      width: 194px;
+      background: url('../../public/img/arrow-2x-long.svg') no-repeat;
+    }
+  }
+
+  .arrow-short {
+    
+    &:after {
+      width: 194px;
+      background: url('../../public/img/arrow-short.svg') no-repeat;
+    }
+  }
 
   .description {
     color: white;
@@ -2599,30 +2618,28 @@ section.team.section-padding {
 
   .logo-img {
     width: 150px;
+    margin-bottom: 10px;
     filter: contrast(0) brightness(100);
   }
 
 
   // Hover effect
-  .item {
+  .animation-block {
     &:hover {
-      .animation-block {
+      .h1 {
+        color: white;
+        -webkit-text-stroke-width: 0;
 
-        .h1 {
-          color: white;
-          -webkit-text-stroke-width: 0;
-
-          &:after {
-            opacity: 1;
-          }
-        }
-
-        +.content-right {
-          transform: scale(1);
+        &:after {
           opacity: 1;
         }
-
       }
+
+      +.content-right {
+        transform: scale(1);
+        opacity: 1;
+      }
+
     }
   }
 
@@ -2645,6 +2662,10 @@ section.team.section-padding {
       padding: 0 18px;
       font-weight: 500;
       color: transparent;
+
+      @include mobile {
+        font-size: 32px;
+      }
     }
 
     .accordion__button[aria-expanded='true'] {
@@ -2683,6 +2704,10 @@ section.team.section-padding {
   padding: 50px 70px;
   position: relative;
 
+  @include mobile {
+    padding: 50px 20px;
+  }
+
   .animation-block {
     position: relative;
     overflow: hidden;
@@ -2702,14 +2727,12 @@ section.team.section-padding {
     color: $theme-secondary;
     font-weight: 500;
     max-width: 70%;
-    height: 70px;
 
     @include mobile {
       font-size: 22px;
       line-height: 33px;
       font-weight: 500;
       max-width: 100%;
-      height: 60px;
     }
   }
 
