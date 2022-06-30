@@ -50,7 +50,7 @@ export default function Home(props) {
     offsetPx: -80,
   });
 
-  
+
   // useEffect(() => {
   //   (function () {
   //     var indicator = $("#indicator");
@@ -145,6 +145,10 @@ export default function Home(props) {
             <Footer />
           </div>
         </div>
+
+        <button className="toggle-button-fix">
+          <img src='img/toggle-lines.svg' className="img-style" alt="" />
+        </button>
 
         <div id="scroll-indicator" className="scroll-indicator">
           <div id="indicator" className="indicator"></div>

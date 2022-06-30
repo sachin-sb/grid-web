@@ -57,7 +57,7 @@ const HeroSection = (props) => {
                 </div>
 
                 <div className="animation-block">
-                  <div className="sub-heading animation-text">
+                  <div className="animation-text text-right">
                     A global creative agency <br /> based out of India.
                   </div>
                 </div>
@@ -88,10 +88,6 @@ const HeroSection = (props) => {
                     A global creative agency <br /> based out of India.
                   </div>
                 </div>
-
-                <button className="toggle-button">
-                  <img src='img/toggle-lines.svg' className="img-style" alt="" />
-                </button>
               </div>
             </div>
 
