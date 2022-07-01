@@ -1767,11 +1767,16 @@ section.team.section-padding {
       justify-content: flex-start;
     }
 
+    .links {
+      list-style: none;
+      padding: 0;
+    }
+
     &.first {
       .links {
         display: flex;
         flex-direction: column;
-        
+
         @include mobile {
           gap: 20px;
           flex-wrap: wrap;
@@ -1785,10 +1790,21 @@ section.team.section-padding {
           margin-top: 20px;
           font-size: 16px;
           color: $gray-f8;
-          transition: all 0.5s ease-in-out;
-          display: flex;
-          align-items: center;
+          transition: all 0.3s ease-in-out;
           letter-spacing: 1px;
+          position: relative;
+          display: table;
+
+          &:after {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 1px;
+            content: '';
+            transition: all 0.3s ease-in-out;
+            bottom: -2px;
+            background: $theme-primary;
+          }
 
           @include mobile {
             margin-top: 0px;
@@ -1811,7 +1827,10 @@ section.team.section-padding {
 
           &:hover {
             color: $theme-primary;
-            text-decoration: underline;
+
+            &:after {
+              width: 100%;
+            }
           }
         }
       }
@@ -1844,6 +1863,7 @@ section.team.section-padding {
           color: $gray-bc;
           transition: all 0.5s ease-in-out;
           letter-spacing: 1px;
+          display: table;
 
           @include mobile {
             margin: 0;
@@ -1933,7 +1953,7 @@ section.team.section-padding {
         font-size: 13px;
         margin-top: 5px;
       }
-  
+
     }
 
     a {
@@ -2325,9 +2345,23 @@ section.team.section-padding {
         font-weight: 500;
         font-size: 18px;
         transition: all 0.5s ease-in-out;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          left: 0;
+          width: 0;
+          height: 1px;
+          content: '';
+          transition: all 0.3s ease-in-out;
+          bottom: -2px;
+          background: $theme-primary;
+        }
 
         &:hover {
-          text-decoration: underline;
+          &:after {
+            width: 100%;
+          }
         }
       }
 

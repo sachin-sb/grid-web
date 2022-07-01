@@ -61,28 +61,40 @@ const Footer = () => {
         <div className="row align-items-end">
           <div className="col-sm-3">
             <div className="link-section first">
-              <div className="links">
+              <ul className="links">
+                <li>
                 <Link href="/">
                   <a>About</a>
                 </Link>
+                </li>
+                <li>
                 <Link href="/">
                   <a>Services</a>
                 </Link>
+                </li>
+                <li>
                 <Link href="/">
                   <a>Blogs</a>
                 </Link>
-              </div>
-              <div className="links">
+                </li>
+              </ul>
+              <ul className="links">
+              <li>
                 <Link href="/">
                   <a>Projects</a>
                 </Link>
+                </li>
+                <li>
                 <Link href="/">
                   <a>Careers</a>
                 </Link>
+                </li>
+                <li>
                 <Link href="/">
                   <a>Contact</a>
                 </Link>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -90,28 +102,40 @@ const Footer = () => {
             <div className="light-style">
               <h5 className="title5">Industries</h5>
               <div className="link-section second">
-                <div className="links">
+                <ul className="links">
+                <li>
                   <Link href="/">
                     <a>Blogging</a>
                   </Link>
+                  </li>
+                  <li>
                   <Link href="/">
                     <a>Healthcare</a>
                   </Link>
+                  </li>
+                  <li>
                   <Link href="/">
                     <a>Edtech</a>
                   </Link>
-                </div>
-                <div className="links">
+                  </li>
+                </ul>
+                <ul className="links">
+                <li>
                   <Link href="/">
                     <a>Real Estate</a>
                   </Link>
+                  </li>
+                  <li>
                   <Link href="/">
                     <a>Fintech</a>
                   </Link>
+                  </li>
+                  <li>
                   <Link href="/">
                     <a>Entertainment</a>
                   </Link>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
