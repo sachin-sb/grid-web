@@ -1845,6 +1845,11 @@ section.team.section-padding {
           position: relative;
           display: table;
 
+          @include mobile {
+            display: flex;
+            align-items: center;
+          }
+
           &:after {
             position: absolute;
             left: 0;
@@ -2075,7 +2080,8 @@ section.team.section-padding {
     width: 402px;
 
     @include mobile {
-      width: auto;
+      width: 100%;
+      float: left;
     }
 
     .address {
