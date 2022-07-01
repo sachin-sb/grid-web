@@ -1115,7 +1115,8 @@ section.team.section-padding {
     min-width: 300px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 10px;
 
     @include mobile {
       justify-content: flex-start;
@@ -1132,6 +1133,11 @@ section.team.section-padding {
       background: none;
       padding: 10px 30px;
       border-radius: 0;
+
+      @include mobile {
+        border: 1px solid $theme-primary;
+        color: rgba($gray-f8, 1);
+      }
 
       &:hover {
         color: rgba($gray-f8, 1);
@@ -1182,6 +1188,7 @@ section.team.section-padding {
 
       @include mobile {
         height: 220px;
+        margin-bottom: 10px;
       }
 
       img {
@@ -1660,6 +1667,11 @@ section.team.section-padding {
 
     .btn-red {
       margin-top: 40px;
+
+      @include mobile {
+        padding: 10px 10px;
+        min-width: 170px
+      }
     }
 
     .alphabat {
@@ -1898,6 +1910,14 @@ section.team.section-padding {
       }
     }
 
+    .link-sec {
+      @include mobile {
+        font-size: 13px;
+        margin-top: 5px;
+      }
+  
+    }
+
     a {
       border-left: 1px solid $gray-bc;
       padding-left: 15px;
@@ -2017,6 +2037,10 @@ section.team.section-padding {
       color: $theme-primary;
       margin-top: 10px;
       font-size: 16px;
+
+      @include mobile {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -2265,7 +2289,7 @@ section.team.section-padding {
       @include mobile {
         margin-top: 20px;
         height: auto;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
 
       .title4 {
@@ -2452,7 +2476,6 @@ section.team.section-padding {
       min-width: 80px;
       height: 80px;
       margin-right: 15px;
-      filter: grayscale(1);
     }
 
     img {
@@ -2464,6 +2487,10 @@ section.team.section-padding {
       object-fit: cover;
       opacity: 0.5;
       transition: all 0.5s ease-in-out;
+
+      @include mobile {
+        opacity: 1;
+      }
     }
   }
 
@@ -2518,7 +2545,7 @@ section.team.section-padding {
     letter-spacing: 1px;
 
     @include mobile {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
       max-width: 100%;
     }
@@ -2531,6 +2558,7 @@ section.team.section-padding {
 
     @include mobile {
       margin-top: 0;
+      font-size: 18px;
     }
   }
 

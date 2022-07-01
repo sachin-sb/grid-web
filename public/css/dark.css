@@ -1122,9 +1122,17 @@ body {
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
   transform: translateY(20px);
-  -webkit-transition: all 400ms linear;
-  -o-transition: all 400ms linear;
-  transition: all 400ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+  /* height: 36px; */
+  overflow: hidden;
+  height: 35px;
+
+}
+
+.progress-wrap:hover {
+  height: 40px;
 }
 
 .progress-wrap.active-progress {
