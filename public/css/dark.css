@@ -1133,15 +1133,19 @@ body {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+  mix-blend-mode: difference;
 }
 
 .progress-wrap svg path {
   fill: white;
 }
 
+.progress-wrap:hover.active-progress {
+  mix-blend-mode:normal;
+}
 
 .progress-wrap:hover svg path {
-  fill: #FF5530;
+  fill: #FF5530 !important;
 }
 
 

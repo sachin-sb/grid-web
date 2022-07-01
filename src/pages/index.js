@@ -12,7 +12,6 @@ import Services from "../components/Services";
 import useScrollSpy from 'react-use-scrollspy';
 import DesignAudit from "../components/designAudit";
 import $ from 'jquery';
-import gsap from "gsap";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -94,8 +93,8 @@ export default function Home(props) {
 
   return (
     <DarkTheme>
-      <div className={`layout-primary-style ${props.className}`}>
-        <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
+      <div className={`layout-primary-style ${activeSection === 6 && 'blog-active blog-nav-active'} ${props.className}`}>
+        <div className={`sidebar`} id="sidebarSection">
           <div className="logo">
             <img src='img/logo-dark.svg' alt="" />
           </div>
@@ -118,7 +117,7 @@ export default function Home(props) {
 
         {/* Main Section start */}
         <div className="main-wrapper">
-          <Navbar nr={navbarRef} lr={logoRef} navClass={activeSection === 6 && 'blog-nav-active'} />
+          <Navbar nr={navbarRef} lr={logoRef} />
           <div ref={sectionRefs[0]} >
             <HeroSection />
           </div>
@@ -148,7 +147,8 @@ export default function Home(props) {
           </div>
         </div>
 
-        <button className="toggle-button-fix">
+        <button className={`toggle-button-fix`}>
+          <div className="img-bg"></div>
           <img src='img/toggle-lines.svg' className="img-style" alt="" />
         </button>
 

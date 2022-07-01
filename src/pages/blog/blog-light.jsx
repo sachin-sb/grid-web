@@ -39,7 +39,7 @@ const BlogLight = () => {
       <div id="section-div">
         <section className="blog-light-style black-style" id="second">
           <div className="cont">
-            <h1 className="title1 mb-10 d-flex align-items-end">Blogs<span className="text-theme" style={{ bottom: 16, left: 5 }} /></h1>
+            <h1 className="title1 mb-10 d-flex align-items-end">Blogs<span className="text-theme" /></h1>
           </div>
           <BlogStanderd />
         </section>

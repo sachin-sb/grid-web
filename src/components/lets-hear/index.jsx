@@ -30,7 +30,7 @@ const LetsHearCard = (props) => {
           <div className="col-sm-12">
             <div className="head">
               <h3 className="title3">Let’s hear it from our
-                <div className="d-flex align-items-end">esteemed clients <span className="text-theme" style={{ bottom: 10, left: 5 }} /></div>
+                <div className="d-flex align-items-end">esteemed clients <span className="text-theme" /></div>
               </h3>
             </div>
           </div>

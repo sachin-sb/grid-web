@@ -32,7 +32,6 @@ body {
   width: 50px;
   height: 50px;
   margin: 0 auto;
-  background: $theme-secondary url('../../public/img/toggle-border.svg');
   padding: 13px;
   border: none;
   position: fixed;
@@ -40,14 +39,34 @@ body {
   right: 20px;
   z-index: 999;
 
-  @include desktop {
-    display: none;
+  .img-bg {
+    background: $theme-secondary;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
-  .img-style {
+  &::before {
+    background: url('../../public/img/toggle-border.svg');
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    filter: contrast(0) brightness(100);
+    height: 100%;
+    z-index: 1;
   }
+
+@include desktop {
+  display: none;
+}
+
+.img-style {
+  width: 100%;
+  filter: contrast(0) brightness(100);
+}
 }
 
 .navbar-hidden {
@@ -55,7 +74,7 @@ body {
   transition: all 0.3s ease-in-out;
 
   @include mobile {
-    transform: translateY(-100px); 
+    transform: translateY(-100px);
   }
 }
 
@@ -843,10 +862,10 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -11px;
+    margin-left: -11px;
 
     @include mobile {
-      left: -2px;
+      margin-left: 0px;
     }
   }
 
@@ -1267,6 +1286,16 @@ section.team.section-padding {
 
     @include mobile {
       font-size: 20px;
+    }
+  }
+
+  .text-theme {
+    margin-bottom: 14px;
+    margin-left: 5px;
+
+    @include mobile {
+      margin-bottom: 10px;
+      margin-left: 5px;
     }
   }
 
@@ -2069,10 +2098,10 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -10px;
+    margin-left: -5px;
 
     @include mobile {
-      left: -5px;
+      margin-left: 0px;
     }
   }
 
@@ -2367,6 +2396,16 @@ section.team.section-padding {
     }
   }
 
+  .text-theme {
+    bottom: 10px;
+    margin-left: 5px;
+
+    @include mobile {
+      bottom: 7px;
+      margin-left: 5px;
+    }
+  }
+
   .img-box {
     min-width: 100px;
     height: 100px;
@@ -2435,12 +2474,13 @@ section.team.section-padding {
   }
 
   .description {
-    font-size: 23px;
+    font-size: 22px;
     line-height: 37.5px;
     font-weight: 300;
     color: $gray-f8;
     max-width: 95%;
     text-align: left;
+    letter-spacing: 1px;
 
     @include mobile {
       font-size: 16px;
@@ -2477,10 +2517,10 @@ section.team.section-padding {
   }
 
   .text-theme {
-    left: -10px;
+    margin-left: -10px;
 
     @include mobile {
-      left: -5px;
+      margin-left: -5px;
     }
   }
 
@@ -2637,7 +2677,7 @@ section.team.section-padding {
       }
     }
   }
-  
+
   .intro {
     margin-bottom: 80px;
 
@@ -3011,8 +3051,12 @@ section.team.section-padding {
 
 // style when user reach blog section
 .blog-nav-active {
-  background: $gray-f8;
-  border-color: rgba($gray-bc, 0.05);
+
+  .mobile-top-nav {
+    background: $gray-f8;
+    border-color: rgba($gray-bc, 0.05);
+  }
+
 
   .nav-link {
     color: $theme-secondary !important;
@@ -3029,6 +3073,22 @@ section.team.section-padding {
       filter: contrast(100) invert(100);
     }
   }
+
+  .toggle-button-fix {
+
+    
+    img {
+      transition: all 0.5s ease-in-out;
+      filter: grayscale(100) invert(0);
+    }
+
+  
+  .img-bg {
+    background: white;
+    transition: all 0.5s ease-in-out;
+
+  }
+}
 
 }
 
