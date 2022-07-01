@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import ButtonOutline from "../../common/buttonOutline";
+import gsap from "gsap";
 
 
 const blogCards = [
@@ -26,7 +27,27 @@ const blogCards = [
 ]
 
 const BlogStanderd = () => {
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".animation-card .ani-sec", 1, {
+      y: 100,
+      ease: "power4.out",
+      delay: 0.5,
+      skewY: 0,
+      stagger: {
+        amount: 0.3
+      },
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '#animationActive',
+        start: 'top 80%',
+        markers: false
+      },
+    })
+  }, [])
   return (
+    <>
     <section className="blog-section">
       {blogCards.map((item, index) => (
         <div className="item" key={index}>
@@ -50,17 +71,21 @@ const BlogStanderd = () => {
           </div>
         </div>
       ))}
+    </section>
 
-      <div className="right-flex">
-        <div className="info-msg wow flipInX center" data-wow-delay="0.4s">
-          <h4 className="title4">
-            Love reading? <br /> We’ve got more.
-          </h4>
+    <div id="animationActive"></div>
+      <div className="animation-card">
+        <div className="right-flex ani-sec">
+          <div className="info-msg">
+            <h4 className="title4">
+              Love reading? <br /> We’ve got more.
+            </h4>
 
-          <ButtonOutline buttonText="View all blogs" />
+            <ButtonOutline buttonText="View all blogs" />
+          </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

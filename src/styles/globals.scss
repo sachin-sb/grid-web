@@ -7,7 +7,12 @@
 body {
   font-family: "HelveticaNeue", sans-serif !important;
   font-weight: 300;
+  letter-spacing: 1px;
   background: $theme-secondary !important;
+
+  @include mobile {
+    letter-spacing: normal;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -403,6 +408,7 @@ section.team.section-padding {
         transition: all 0.5s ease-in-out;
         position: absolute;
         font-weight: 500;
+        letter-spacing: 1.2;
 
         &.App-navigation-item--active {
           opacity: 1;
@@ -817,7 +823,7 @@ section.team.section-padding {
 
     &::before {
       border-top: 1px solid rgba($gray-f8, 0.3);
-      padding-top: 40px;
+      padding-top: 60px;
       display: flex;
       content: '';
       width: 93%;
@@ -1112,11 +1118,11 @@ section.team.section-padding {
 
   .info-msg {
     height: 350px;
-    min-width: 300px;
+    min-width: 380px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 10px;
+    justify-content: center;
+    padding-right: 50px;
 
     @include mobile {
       justify-content: flex-start;
@@ -1162,6 +1168,14 @@ section.team.section-padding {
 
   .cont {
     overflow: hidden;
+  }
+
+  #animationActive {
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   .blog-section {
@@ -1526,7 +1540,7 @@ section.team.section-padding {
     min-width: 206px;
     position: relative;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
     transition: all .5s ease-in-out;
     cursor: pointer;
     letter-spacing: 1px;
@@ -1750,17 +1764,21 @@ section.team.section-padding {
     @include mobile {
       padding-right: 0px;
       align-items: flex-start;
+      justify-content: flex-start;
     }
 
     &.first {
       .links {
         display: flex;
         flex-direction: column;
-
+        
         @include mobile {
-          flex-direction: row;
           gap: 20px;
           flex-wrap: wrap;
+
+          &:first-child {
+            margin-right: 80px;
+          }
         }
 
         a {
@@ -1816,7 +1834,7 @@ section.team.section-padding {
           gap: 20px;
 
           &:first-child {
-            margin-right: 58px;
+            margin-right: 80px;
           }
         }
 
@@ -2930,6 +2948,14 @@ section.team.section-padding {
     align-items: center;
     z-index: 1;
 
+    &.button-sec {
+      justify-content: flex-end;
+
+      @include mobile {
+        justify-content: flex-start;
+      }
+    }
+
     .ani-text {
       display: flex;
       align-items: center;
@@ -2957,6 +2983,8 @@ section.team.section-padding {
 
   .title2 {
     color: $theme-secondary;
+    font-weight: bold;
+    font-size: 44px;
 
     @include mobile {
       font-size: 24px;

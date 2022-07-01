@@ -10,11 +10,13 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+import { useMediaQuery } from 'react-responsive'
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 const OurServicesComponent = (props) => {
+  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +47,7 @@ const OurServicesComponent = (props) => {
       autoAlpha: 0,
       scrollTrigger: {
         trigger: '#pinContainerServices',
-        start: 'top center',
+        start: mobileDevice ? 'top center' : 'top 90%',
         markers: false
       },
     })
@@ -85,7 +87,7 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" />
                 </h2>
               </div>
-              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.4s">Offering worthwhile experiences that help you go above & beyond the <span className="text-primary-theme">grid.</span></h6>
+              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.5s">Offering worthwhile experiences that help you go above & beyond the <span className="text-primary-theme">grid.</span></h6>
             </div>
           </div>
         </div>
@@ -189,8 +191,8 @@ const OurServicesComponent = (props) => {
               </div>
 
 
-              <div className="info-msg">
-                <div className="wow flipInX center" data-wow-delay="0.4s">
+              <div className="info-msg animation-block">
+                <div className="animate-text">
                   <h4 className="title4">
                     Want to know more? <br /> Let’s dive deep!
                   </h4>

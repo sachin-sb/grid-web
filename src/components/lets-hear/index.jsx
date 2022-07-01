@@ -45,7 +45,7 @@ const LetsHearCard = (props) => {
                 </div>
                 <div className="d-sm-none">
                   <div className="name">Margaret Cyphers</div>
-                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                  <div className="position">Director, Dr. Reddy’s Laboratories</div>
                 </div>
               </div>
               <div className="text-section">
@@ -56,7 +56,7 @@ const LetsHearCard = (props) => {
                 </Split>
                 <div className="d-none d-sm-block">
                   <div className="name">Margaret Cyphers</div>
-                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                  <div className="position">Director, Dr. Reddy’s Laboratories</div>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const LetsHearCard = (props) => {
                 </div>
                 <div className="d-sm-none">
                   <div className="name">Margaret Cyphers</div>
-                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                  <div className="position">Director, Dr. Reddy’s Laboratories</div>
                 </div>
               </div>
               <div className="text-section">
@@ -79,7 +79,7 @@ const LetsHearCard = (props) => {
                 </Split>
                 <div className="d-none d-sm-block">
                   <div className="name">Margaret Cyphers</div>
-                  <div className="position">Director, Dr. Reddy’s lABORATORIES</div>
+                  <div className="position">Director, Dr. Reddy’s Laboratories</div>
                 </div>
               </div>
             </div>

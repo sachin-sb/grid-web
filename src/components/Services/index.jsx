@@ -63,7 +63,6 @@ const ShowcassesFullScreenData2 = [
 ]
 
 const Services = (props) => {
-  // const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -96,7 +95,7 @@ const Services = (props) => {
                   </h2>
                   </div>
                 <div className="sub-title">
-                  <h6 className="h6 wow flipInX center" data-wow-delay="0.4s">We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
+                  <h6 className="h6 wow flipInX center" data-wow-delay="0.5s">We have re-defined user experiences for over <div className="text-white">150+ clients.</div></h6>
                 </div>
               </div>
             </div>

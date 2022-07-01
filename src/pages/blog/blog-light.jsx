@@ -10,14 +10,14 @@ const BlogLight = () => {
     var controller3 = new ScrollMagic.Controller()
     var second = new ScrollMagic.Scene({
       triggerElement: '#second',
-      duration:  mobileDevice ? "330%" : "370%",
+      duration:  mobileDevice ? "330%" : "500%",
       triggerHook: 0.1,
     })
       .setClassToggle('#second', 'white-style')
       .addTo(controller3);
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".cont .title1", 1, {
+    gsap.from(".animation-sec .ani-text", 1, {
       y: 100,
       ease: "power4.out",
       delay: 0.5,
@@ -38,8 +38,8 @@ const BlogLight = () => {
     <>
       <div id="section-div">
         <section className="blog-light-style black-style" id="second">
-          <div className="cont">
-            <h1 className="title1 mb-10 d-flex align-items-end">Blogs<span className="text-theme" /></h1>
+          <div className="cont animation-sec">
+            <h1 className="title1 ani-text mb-10 d-flex align-items-end">Blogs<span className="text-theme" /></h1>
           </div>
           <BlogStanderd />
         </section>

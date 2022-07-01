@@ -7,13 +7,13 @@ const DesignAudit = (props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // const tl = gsap.timeline();
-    gsap.from(".animation-block .ani-text", 1, {
+    gsap.from(".animation-block .ani-text", 1.5, {
       y: 100,
       ease: "power4.out",
       delay: 0.2,
       skewY: 0,
       stagger: {
-        amount: 0.2
+        amount: 0.1
       },
       autoAlpha: 0,
       scrollTrigger: {
@@ -35,15 +35,17 @@ const DesignAudit = (props) => {
 
             {/* For Desktop */}
             <div className="animation-block mt-4">
-              <h2 className="title2 ani-text d-none d-sm-block"><span className="ani-text"> Get a <div className="text-orange">FREE</div> Design Audit!</span></h2>
+              <h2 className="title2 ani-text d-none d-sm-block"><span className="ani-text"> Get <div className="text-orange">FREE</div> Design Audit!</span></h2>
             </div>
             {/* For Mobile */}
             <div className="animation-block">
-              <h2 className="title2 ani-text d-sm-none"><span className="ani-text"> Get a <div className="text-orange">FREE Design Audit!</div></span></h2>
+              <h2 className="title2 ani-text d-sm-none"><span className="ani-text"> Get <div className="text-orange">FREE Design Audit!</div></span></h2>
             </div>
           </div>
           <div className="col-sm-4">
-            <ButtonOutline buttonText="Know more" className="wow fadeInUp" data-wow-delay=".4s" />
+            <div className="animation-block button-sec">
+              <ButtonOutline buttonText="Know more" className="ani-text" data-wow-delay=".4s" />
+            </div>
           </div>
         </div>
       </div>

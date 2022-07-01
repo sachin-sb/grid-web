@@ -33,7 +33,7 @@ const HomeProjects = () => {
     }
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".content-sec .title3", 1.8, {
+    gsap.from(".content-sec .animation-text", 1.4, {
       y: 100,
       ease: "power4.out",
       delay: 1,
@@ -56,7 +56,7 @@ const HomeProjects = () => {
       <div id="slideContainer">
         <section className="panel first">
           <div className="content-sec">
-            <h3 className="title3">
+            <h3 className="title3 animation-text">
               Here is some <br /> work for our <br /> clients who <br /> trusted us with <br /> design <br /> transformation <span className="text-theme"></span>
             </h3>
           </div>
@@ -148,8 +148,8 @@ const HomeProjects = () => {
         </section>
         <section className="panel">
           <div className="content-sec">
-            <div className="info-msg">
-              <div className="wow flipInX center" data-wow-delay="0.4s">
+            <div className="info-msg animation-text">
+              <div>
                 <h4 className="title4">
                   We&apos;ve got more <br /> to show you.
                 </h4>
