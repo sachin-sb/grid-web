@@ -7,6 +7,8 @@ import gsap from "gsap";
 const HomeProjects = () => {
   const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
 
+  const LargeDevice = useMediaQuery({ query: '(min-width: 1500px)' })
+
   useEffect(() => {
     if (mobileDevice) {
       var controller = new ScrollMagic.Controller();
@@ -20,8 +22,8 @@ const HomeProjects = () => {
       // create scene to pin and link animation
       new ScrollMagic.Scene({
         triggerElement: "#pinContainerPortfolio",
-        triggerHook: 0,
-        duration: "800%"
+        triggerHook: LargeDevice ? 0.17 : 0,
+        duration: LargeDevice ? "500%" : "800%"
       })
         .setPin("#pinContainerPortfolio")
         .setTween(wipeAnimation)

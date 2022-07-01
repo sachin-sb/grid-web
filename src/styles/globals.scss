@@ -59,14 +59,14 @@ body {
     z-index: 1;
   }
 
-@include desktop {
-  display: none;
-}
+  @include desktop {
+    display: none;
+  }
 
-.img-style {
-  width: 100%;
-  filter: contrast(0) brightness(100);
-}
+  .img-style {
+    width: 100%;
+    filter: contrast(0) brightness(100);
+  }
 }
 
 .navbar-hidden {
@@ -1160,6 +1160,10 @@ section.team.section-padding {
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
 
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include mobile {
       display: flex;
       flex-direction: column;
@@ -1184,11 +1188,19 @@ section.team.section-padding {
 
     .item {
 
-      &:nth-child(odd) {
-        margin-top: -70px;
+      @include desktop {
+        &:nth-child(odd) {
+          margin-top: -70px;
+        }
+      }
 
-        @include mobile {
-          margin-top: 0;
+      @include desktop-lg {
+        &:nth-child(odd) {
+          margin-top: 0px;
+        }
+
+        &:nth-child(3n+2) {
+          margin-top: 50px;
         }
       }
 
@@ -1206,6 +1218,7 @@ section.team.section-padding {
       }
     }
   }
+
 
   .blog-col {
 
@@ -1251,6 +1264,10 @@ section.team.section-padding {
   }
 
   .right-flex {
+
+    @include desktop-lg {
+      margin-top: 50px;
+    }
 
     @include mobile {
       display: flex;
@@ -2062,6 +2079,11 @@ section.team.section-padding {
   padding: 20px 0;
   scroll-snap-align: start;
 
+  @include desktop-lg {
+    padding-top: 0;
+    min-height: auto;
+  }
+
   @include mobile {
     padding-top: 0;
   }
@@ -2089,6 +2111,10 @@ section.team.section-padding {
     display: flex;
     align-items: center;
     overflow: hidden;
+
+    @include desktop-lg {
+      width: 400%;
+    }
 
     @include mobile {
       flex-direction: column;
@@ -2295,6 +2321,11 @@ section.team.section-padding {
       width: 100%;
       overflow: hidden;
       position: relative;
+
+
+      @include desktop-lg {
+        min-height: 57.9vh;
+      }
 
       @include mobile {
         min-height: 210px;
@@ -3076,19 +3107,19 @@ section.team.section-padding {
 
   .toggle-button-fix {
 
-    
+
     img {
       transition: all 0.5s ease-in-out;
       filter: grayscale(100) invert(0);
     }
 
-  
-  .img-bg {
-    background: white;
-    transition: all 0.5s ease-in-out;
 
+    .img-bg {
+      background: white;
+      transition: all 0.5s ease-in-out;
+
+    }
   }
-}
 
 }
 
