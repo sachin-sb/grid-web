@@ -14,6 +14,7 @@ import { useMediaQuery } from 'react-responsive'
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
+import Link from "next/link";
 
 const OurServicesComponent = (props) => {
   const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
@@ -87,7 +88,7 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" />
                 </h2>
               </div>
-              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.5s">Offering worthwhile experiences that help you go above & beyond the <span className="text-primary-theme">grid.</span></h6>
+              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.5s">Offering worthwhile experiences that help you go above & beyond the <Link href="/"><a className="text-primary-theme">grid.</a></Link></h6>
             </div>
           </div>
         </div>

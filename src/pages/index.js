@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import useScrollSpy from 'react-use-scrollspy';
 import DesignAudit from "../components/designAudit";
 import $ from 'jquery';
+import Link from "next/link";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -95,9 +96,11 @@ export default function Home(props) {
     <DarkTheme>
       <div className={`layout-primary-style ${activeSection === 6 && 'blog-nav-active'} ${props.className}`}>
         <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
-          <div className="logo">
+          <Link href="/">
+            <a className="logo">
             <img src='img/logo-dark.svg' alt="" />
-          </div>
+            </a>
+          </Link>
           <div className="intro">
             <nav className="App-navigation">
               <h4 className={activeSection === 0 ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}>Intro</h4>

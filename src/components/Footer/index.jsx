@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import gsap from "gsap";
 import Link from "next/link";
 import ButtonPrimary from "../../common/buttonPrimary";
 
 const Footer = () => {
-  const [textChange, setTextChange] = useState(true)
+  const [textChange, setTextChange] = useState(0);
 
   const textButtonToggle = () => {
     setTextChange(!textChange)
   }
-
 
   return (
     <footer className="footer-section">
@@ -142,7 +140,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a> crafting powerful experiences through Design.
+                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>
               </div>
               <div className="address">
                 <a href="tel:+91-1235678901" className="address-text"> +91-1235678901 </a>

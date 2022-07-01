@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "react-modal-video/css/modal-video.css";
 import fadeWhenScroll from "../../common/fadeWhenScroll";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 import gsap from "gsap";
+import $ from 'jquery';
+import HoverVideoPlayer from 'react-hover-video-player';
 
 
 const HeroSection = (props) => {
@@ -44,6 +46,18 @@ const HeroSection = (props) => {
     return () => clearTimeout(timer);
   }
 
+  //  const stopMovie = (e) => {
+  //     e.target.pause();
+  //     console.log('off');
+  //   }
+
+  //   const playMovie = (e) => {
+  //     e.target.play();
+  //     console.log('on');
+  //   }
+
+  const wrapperLinkRef = useRef();
+
   return (
     <section className="slider slider-prlx home-hero-section" id={props.id}>
       {!load ? (
@@ -75,14 +89,31 @@ const HeroSection = (props) => {
 
             <div className="col-sm-6">
               <div className="slider-section">
-                <video loop className="video"
-                  poster="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
-                  onMouseOver={event => event.target.play()}
-                  onMouseOut={event => event.target.pause()}
-                  onClick={handleClick}
-                >
-                  <source type="video/mp4" src="video/project-fi.mp4" />
-                </video>
+                <div id="videoPlayOverlay" className="videoHover"> </div>
+                <HoverVideoPlayer
+                  videoSrc="video/project-fi.mp4"
+                  className="video-player-custom"
+                  hoverTarget={() => document.getElementById("videoPlayOverlay")}
+                  muted={false}
+                  pausedOverlay={
+                    <img
+                      src="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
+                      alt=""
+                      style={{
+                        // Make the image expand to cover the video's dimensions
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  }
+                  // loadingOverlay={
+                  //   <div className="loading-overlay">
+                  //     <div className="loading-spinner" />
+                  //   </div>
+                  // }
+                />
+ 
 
                 <div className="button-box">
                   <button className="btn-showreel"
