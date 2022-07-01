@@ -10,7 +10,7 @@ const BlogLight = () => {
     var controller3 = new ScrollMagic.Controller()
     var second = new ScrollMagic.Scene({
       triggerElement: '#second',
-      duration:  mobileDevice ? "250%" : "370%",
+      duration:  mobileDevice ? "330%" : "370%",
       triggerHook: 0.1,
     })
       .setClassToggle('#second', 'white-style')

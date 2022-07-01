@@ -149,16 +149,16 @@ const Footer = () => {
                 <i className="fab fa-instagram"></i>
               </a>
               <a href="#0" className="icon">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#0" className="icon">
                 <i className="fab fa-twitter"></i>
               </a>
               <a href="#0" className="icon">
-                <i className="fab fa-pinterest"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#0" className="icon">
                 <i className="fab fa-behance"></i>
+              </a>
+              <a href="#0" className="icon">
+                <i className="fab fa-dribbble"></i>
               </a>
             </div>
           </div>

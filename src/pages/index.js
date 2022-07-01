@@ -93,8 +93,8 @@ export default function Home(props) {
 
   return (
     <DarkTheme>
-      <div className={`layout-primary-style ${activeSection === 6 && 'blog-active blog-nav-active'} ${props.className}`}>
-        <div className={`sidebar`} id="sidebarSection">
+      <div className={`layout-primary-style ${activeSection === 6 && 'blog-nav-active'} ${props.className}`}>
+        <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
           <div className="logo">
             <img src='img/logo-dark.svg' alt="" />
           </div>
@@ -117,7 +117,7 @@ export default function Home(props) {
 
         {/* Main Section start */}
         <div className="main-wrapper">
-          <Navbar nr={navbarRef} lr={logoRef} />
+          <Navbar nr={navbarRef} lr={logoRef} navClass={activeSection === 6 && 'blog-navigation-active'} />
           <div ref={sectionRefs[0]} >
             <HeroSection />
           </div>

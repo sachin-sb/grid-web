@@ -442,6 +442,10 @@ section.team.section-padding {
 
       .logo {
         filter: none;
+
+        img {
+          filter: none;
+        }
       }
 
       .img-style {
@@ -1637,7 +1641,7 @@ section.team.section-padding {
 // Footer Section Style
 .footer-section {
   min-height: 100vh;
-  padding: 120px 70px 0;
+  padding: 150px 70px 0;
 
   @include mobile {
     padding: 80px 25px 0;
@@ -3084,6 +3088,11 @@ section.team.section-padding {
 .blog-nav-active {
 
   .mobile-top-nav {
+    background: $gray-f8;
+    border-color: rgba($gray-bc, 0.05);
+  }
+
+  .blog-navigation-active {
     background: $gray-f8;
     border-color: rgba($gray-bc, 0.05);
   }
