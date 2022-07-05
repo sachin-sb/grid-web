@@ -168,8 +168,9 @@ button {
     cursor: pointer;
 
     @include mobile {
-      font-size: 12px;
-      padding: 0 7px;
+      font-size: 14px;
+      padding: 0 10px;
+      height: 30px;
     }
   }
 }
@@ -249,37 +250,38 @@ body .slick-dots li button {
 
 
 // Read More
-.button-read-more {}
+.button-read-more {
+  display: flex;
+}
 
 .read-more {
   color: #FF5531;
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
-  display: table;
+  font-weight: 300;
+  font-size: 17px;
 
-  span {
-    display: block;
-    position: relative;
-    z-index: 1;
-    padding: 0 8px 0 0;
-    font-weight: 300;
-    font-size: 17px;
-  }
-
-  img {
-    width: 45px;
-    margin-left: 10px;
-    right: -14px;
-    top: 8px;
+  .img-style {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    right: -45px;
+    top: -3px;
     position: absolute;
-    transition: all 0.5s ease-in-out;
+    margin-left: 10px;
+
+    img {
+      width: 100%;
+      right: 50%;
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   &:hover {
 
     img {
-      right: -30px;
+      right: 30%;
     }
   }
 }
@@ -356,7 +358,7 @@ section.team.section-padding {
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: rgba($gray-f8, 1);
+    color: $theme-primary;
   }
 }
 
@@ -377,8 +379,8 @@ section.team.section-padding {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 49px 0;
-    z-index: 1;
+    padding: 35px 0;
+    z-index: 99999;
     transition: all 0.5s ease-in-out;
 
     @include mobile {
@@ -389,8 +391,7 @@ section.team.section-padding {
     }
 
     .logo {
-      width: 70px;
-      height: 70px;
+      width: 80px;
       margin: 0 auto;
       filter: contrast(0) brightness(100);
     }
@@ -412,7 +413,7 @@ section.team.section-padding {
         opacity: 0;
         transition: all 0.5s ease-in-out;
         position: absolute;
-        font-weight: 500;
+        font-weight: 300;
         letter-spacing: 1.2;
 
         &.App-navigation-item--active {
@@ -632,6 +633,7 @@ section.team.section-padding {
       width: 100%;
       height: 100px;
       z-index: 99;
+      cursor: pointer;
 
       @include mobile {
         left: 60px;
@@ -646,8 +648,6 @@ section.team.section-padding {
         z-index: 99;
         height: 100px;
         width: 100px;
-        // background: url('../../public/img/play-outline.svg') no-repeat;
-        // background-size: contain;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -675,14 +675,7 @@ section.team.section-padding {
             width: 70px;
           }
         }
-    
 
-        &:hover {
-
-          &::after {
-            opacity: 1;
-          }
-        }
 
         @include mobile {
           height: 70px;
@@ -710,14 +703,23 @@ section.team.section-padding {
         transition: all 0.5s ease-in-out;
         filter: contrast(0) brightness(100);
       }
+    }
 
-      &:hover {
 
-        .img-icon {
-          filter: none;
-          transform: scale(1.3);
+    &:hover {
+
+      .img-icon {
+        filter: none;
+        transform: scale(1.3);
+      }
+
+      .btn-showreel {
+
+        &::after {
+          opacity: 1;
         }
       }
+
     }
   }
 
@@ -965,6 +967,9 @@ section.team.section-padding {
     margin-left: 0;
     padding-bottom: 0px;
     margin-bottom: 100px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    display: inline-flex;
   }
 
   .logo-box {
@@ -978,7 +983,7 @@ section.team.section-padding {
     gap: 50px;
 
     @include mobile {
-      gap: 20px;
+      gap: 24px;
     }
 
     &:nth-child(1) {
@@ -1050,7 +1055,7 @@ section.team.section-padding {
     min-width: 290px;
 
     @include mobile {
-      min-width: 230px;
+      min-width: auto;
     }
 
     .title4 {
@@ -1104,7 +1109,7 @@ section.team.section-padding {
     padding: 50px 30px 30px;
 
     @include mobile {
-      min-width: auto;
+      max-width: 200px;
       height: 300px;
     }
 
@@ -1147,8 +1152,12 @@ section.team.section-padding {
     font-weight: 300;
     margin-top: 15px;
     color: #939393;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 27px;
+
+    @include mobile {
+      letter-spacing: 1px;
+    }
   }
 
   .title4 {
@@ -1294,6 +1303,10 @@ section.team.section-padding {
   }
 
 
+  .read-more {
+    margin-top: 25px;
+  }
+
   .blog-col {
 
     &:nth-child(2) {
@@ -1419,7 +1432,6 @@ section.team.section-padding {
     .read-more {
 
       span {
-        background-color: $theme-secondary;
         font-size: 17px;
       }
 
@@ -1431,6 +1443,12 @@ section.team.section-padding {
     .date {
       .num {
         color: $gray-f8;
+        font-size: 16px;
+
+        @include mobile {
+          margin-top: 10px;
+          font-size: 15px;
+        }
       }
     }
 
@@ -1489,10 +1507,6 @@ section.team.section-padding {
 
     .read-more {
 
-      span {
-        background-color: $gray-f8;
-      }
-
       &:hover {
         color: $theme-primary;
       }
@@ -1502,7 +1516,7 @@ section.team.section-padding {
 
 // who-we-are-style
 .who-we-are-style {
-  background: url('../../public/img/line-state-black.svg');
+  // background: url('../../public/img/line-state-black.svg');
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1516,6 +1530,7 @@ section.team.section-padding {
     background-size: cover;
     height: auto;
     background-position: center;
+    height: 100vh;
   }
 
   .box-outline {
@@ -1742,7 +1757,7 @@ section.team.section-padding {
       border: 0.5px solid rgba($gray-f8, 0.5);
       height: 100px;
       width: 80%;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       background: none;
       color: white;
       font-size: 45px;
@@ -1808,7 +1823,7 @@ section.team.section-padding {
   .link-section {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding-right: 70px;
 
     @include mobile {
@@ -1826,6 +1841,7 @@ section.team.section-padding {
       .links {
         display: flex;
         flex-direction: column;
+        margin-right: 40px;
 
         @include mobile {
           gap: 20px;
@@ -1902,6 +1918,7 @@ section.team.section-padding {
       .links {
         display: flex;
         flex-direction: column;
+        margin-right: 40px;
 
         @include mobile {
           flex-wrap: wrap;
@@ -2365,10 +2382,6 @@ section.team.section-padding {
         font-size: 20px;
         max-width: 80%;
         width: 100%;
-
-        br {
-          display: none;
-        }
       }
     }
 
@@ -2772,6 +2785,10 @@ section.team.section-padding {
     margin-top: 50px;
     padding-right: 50px;
 
+    @include mobile {
+      align-items: flex-start;
+    }
+
     .title4 {
       color: $gray-f8;
       font-weight: 200;
@@ -2789,6 +2806,11 @@ section.team.section-padding {
       border: 1px solid rgba($gray-f8, 0.5);
       color: rgba($gray-f8, 0.5);
       background: none;
+
+      @include mobile {
+        border: 1px solid $theme-primary;
+        color: rgba($gray-f8, 1);
+      }
 
       &:hover {
         border: 1px solid $theme-primary;
@@ -2920,10 +2942,6 @@ section.team.section-padding {
   .read-more {
     margin-top: 10px;
 
-    span {
-      background-color: #191919;
-    }
-
     &:hover {
       span {
         color: $theme-primary;
@@ -3033,7 +3051,7 @@ section.team.section-padding {
 
   .animation-block {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     align-items: center;
     z-index: 1;

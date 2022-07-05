@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import ButtonOutline from "../../common/buttonOutline";
 import gsap from "gsap";
+import ButtonReadmore from "../../common/buttonReadmore";
 
 
 const blogCards = [
@@ -48,37 +49,34 @@ const BlogStanderd = () => {
   }, [])
   return (
     <>
-    <section className="blog-section">
-      {blogCards.map((item, index) => (
-        <div className="item" key={index}>
-          <div className="img">
-            <img src={item.imgUrl} className="wow imago" data-wow-delay=".3s" alt="" />
-          </div>
-          <div className="content">
-            <div className="date">
-              <span className="num">25.04.22</span>
+      <section className="blog-section">
+        {blogCards.map((item, index) => (
+          <div className="item" key={index}>
+            <div className="img">
+              <img src={item.imgUrl} className="wow imago" data-wow-delay=".3s" alt="" />
             </div>
-            <h4 className="title">
-              Bored of Apes? Here’s an artist’s guide to  NFTs that won’t drive you bananas.
-            </h4>
-            <p className="description">
-              Through our print magazine Wrap, the products we make, and the online content we publish…
-            </p>
-            <Link href="/blog-details/blog-details-dark">
-              <a className="read-more mt-20"> <span>Read More</span>
-                <img src="img/long-right-arrow.svg" className="img-style" alt="" /></a>
-            </Link>
+            <div className="content">
+              <div className="date">
+                <span className="num">25.04.22</span>
+              </div>
+              <h4 className="title">
+                Bored of Apes? Here’s an artist’s guide to  NFTs that won’t drive you bananas.
+              </h4>
+              <p className="description">
+                Through our print magazine Wrap, the products we make, and the online content we publish…
+              </p>
+              <ButtonReadmore text="Read More" href="/blog-details/blog-details-dark" />
+            </div>
           </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </section>
 
-    <div id="animationActive"></div>
+      <div id="animationActive"></div>
       <div className="animation-card">
         <div className="right-flex ani-sec">
           <div className="info-msg">
             <h4 className="title4">
-              Love reading? <br /> We’ve got more.
+              want to know more? <br /> lets dive deep!
             </h4>
 
             <ButtonOutline buttonText="View all blogs" />

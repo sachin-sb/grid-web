@@ -20,7 +20,7 @@ const Footer = () => {
                 onMouseEnter={textButtonToggle}
                 onMouseLeave={textButtonToggle}
               >
-                {textChange ?
+                {!textChange ?
                   <div className="text-style">
                     <span>I</span>
                     <span>N</span>
@@ -51,7 +51,7 @@ const Footer = () => {
               </button>
               <p className="text-gray-light">Let’s create a Kick-ass digital experience together!</p>
 
-              <ButtonPrimary buttonText="Connect with us" />
+              <ButtonPrimary buttonText="Get in touch" />
             </div>
           </div>
         </div>
@@ -60,6 +60,11 @@ const Footer = () => {
           <div className="col-sm-3">
             <div className="link-section first">
               <ul className="links">
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+                </li>
                 <li>
                 <Link href="/">
                   <a>About</a>
@@ -68,11 +73,6 @@ const Footer = () => {
                 <li>
                 <Link href="/">
                   <a>Services</a>
-                </Link>
-                </li>
-                <li>
-                <Link href="/">
-                  <a>Blogs</a>
                 </Link>
                 </li>
               </ul>
@@ -140,7 +140,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative studio by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>
+                A creative agency by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>.
               </div>
               <div className="address">
                 <a href="tel:+91-1235678901" className="address-text"> +91-1235678901 </a>

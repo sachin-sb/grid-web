@@ -1525,7 +1525,7 @@ body {
   background: transparent;
   border-bottom: 2px solid transparent;
   z-index: 999;
-  min-height: 80px;
+  min-height: 110px;
 }
 .navbar .icon-bar {
   color: #fff;

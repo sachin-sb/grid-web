@@ -43,7 +43,7 @@ const WhoWeAre = () => {
 
           <div className="animation-sec">
             <div className="revel-style">
-              <ButtonPrimary buttonText="Connect with us" />
+              <ButtonPrimary buttonText="Get in touch" />
             </div>
           </div>
         </div>

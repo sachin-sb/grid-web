@@ -98,7 +98,7 @@ export default function Home(props) {
         <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
           <Link href="/">
             <a className="logo">
-            <img src='img/logo-dark.svg' alt="" />
+              <img src='img/logo-dark.svg' alt="" />
             </a>
           </Link>
           <div className="intro">

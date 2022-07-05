@@ -56,8 +56,12 @@ const HomeProjects = () => {
       <div id="slideContainer">
         <section className="panel first">
           <div className="content-sec">
-            <h3 className="title3 animation-text">
+            <h3 className="title3 animation-text d-none d-sm-block">
               Here is some <br /> work for our <br /> clients who <br /> trusted us with <br /> design <br /> transformation <span className="text-theme"></span>
+            </h3>
+
+            <h3 className="title3 animation-text d-sm-none">
+              Here is some work for <br /> our clients who <br /> trusted us with design <br /> transformation <span className="text-theme"></span>
             </h3>
           </div>
         </section>

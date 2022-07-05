@@ -303,6 +303,15 @@ const OurServicesComponent = (props) => {
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
+
+          <div className="info-msg animation-block">
+                <div className="animate-text">
+                  <h4 className="title4">
+                    Want to know more? <br /> Let’s dive deep!
+                  </h4>
+                  <ButtonOutline buttonText="View our services" />
+                </div>
+              </div>
         </div>
       </div>
     </section>
