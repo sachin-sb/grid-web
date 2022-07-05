@@ -88,11 +88,22 @@ const HeroSection = (props) => {
             </div>
 
             <div className="col-sm-6">
-              <div className="slider-section">
-                <div id="videoPlayOverlay" className="videoHover"> </div>
+              <div className="slider-section" onClick={handleClick}>
+                <img
+                  src="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
+                  alt=""
+                  className="d-sm-none"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+
+                <div id="videoPlayOverlay" className="videoHover d-none d-sm-block"> </div>
                 <HoverVideoPlayer
                   videoSrc="video/project-fi.mp4"
-                  className="video-player-custom"
+                  className="video-player-custom d-none d-sm-block"
                   hoverTarget={() => document.getElementById("videoPlayOverlay")}
                   muted={false}
                   pausedOverlay={
@@ -100,20 +111,14 @@ const HeroSection = (props) => {
                       src="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
                       alt=""
                       style={{
-                        // Make the image expand to cover the video's dimensions
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
                       }}
                     />
                   }
-                  // loadingOverlay={
-                  //   <div className="loading-overlay">
-                  //     <div className="loading-spinner" />
-                  //   </div>
-                  // }
                 />
- 
+
 
                 <div className="button-box">
                   <button className="btn-showreel"

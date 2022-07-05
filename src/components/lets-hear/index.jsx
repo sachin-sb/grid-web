@@ -25,7 +25,7 @@ const LetsHearCard = (props) => {
 
   return (
     <section className="lets-hear-section" id="pinLets">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12">
             <div className="head">

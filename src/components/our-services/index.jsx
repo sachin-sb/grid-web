@@ -93,19 +93,22 @@ const OurServicesComponent = (props) => {
           </div>
         </div>
 
-        <div className="desktop-version">
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="typo-grid">
-                <div className="images">
-                  <img className="img-hover-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" data-image="heading1" />
-                  <img className="img-hover-style" src="./img/portfolio/sb/img-2.jpg" alt="heading2" data-image="heading2" />
-                  <img className="img-hover-style" src="./img/portfolio/sb/img-3.jpg" alt="heading3" data-image="heading3" />
-                  <img className="img-hover-style" src="./img/portfolio/sb/img-4.jpg" alt="heading4" data-image="heading4" />
-                </div>
-
-                <div className="contents">
-                  <div className="content-right" data-content="heading1">
+        <div>
+          <div className="typo-grid">
+            <Accordion allowZeroExpanded>
+              <AccordionItem uuid="a">
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <div className="item">
+                      <div className="animation-block">
+                        <h1 className="h1 animation-style" data-label="heading1">UX RESEARCH</h1>
+                      </div>
+                      <img className="img-card-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" />
+                    </div>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <a herf="#" className="tag">Design Audit</a>
                       <a herf="#" className="tag">User Interviews</a>
@@ -117,8 +120,21 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
-
-                  <div className="content-right" data-content="heading2">
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem uuid="b">
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <div className="item">
+                      <div className="animation-block">
+                        <h1 className="h1 animation-style" data-label="heading2">UX/UI DESIGN</h1>
+                      </div>
+                      <img className="img-card-style" src="./img/portfolio/sb/img-2.jpg" alt="heading1" />
+                    </div>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <a herf="#" className="tag">Mobile app design</a>
                       <a herf="#" className="tag">Responsive Website</a>
@@ -130,8 +146,22 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
+                </AccordionItemPanel>
+              </AccordionItem>
 
-                  <div className="content-right" data-content="heading3">
+              <AccordionItem uuid="c">
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <div className="item">
+                      <div className="animation-block">
+                        <h1 className="h1 arrow-2x animation-style" data-label="heading3">BRANDING</h1>
+                      </div>
+                      <img className="img-card-style" src="./img/portfolio/sb/img-3.jpg" alt="heading1" />
+                    </div>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
                     <div className="tag-section">
                       <a herf="#" className="tag">Logo</a>
                       <a herf="#" className="tag">Brand Guidelines</a>
@@ -142,56 +172,39 @@ const OurServicesComponent = (props) => {
                     </p>
                     <ButtonReadmore href="/" text="Learn More" />
                   </div>
+                </AccordionItemPanel>
+              </AccordionItem>
 
-                  <div className="content-right" data-content="heading4">
-                    <img className="logo-img" src="img/sb-log.svg" alt="img1" />
-                    <p className="extra-description">
-                      Building beautiful and scalable web and mobile applications.
-                    </p>
-                    <div className="tag-section">
-                      <a herf="#" className="tag">Web development</a>
-                      <a herf="#" className="tag">App Development</a>
-                      <a herf="#" className="tag">Devops</a>
-                      <a herf="#" className="tag">QA/Testing</a>
-                    </div>
-                    <p className="description">
-                      Pixels converted seamlessly into adaptable & scalable piece of code. Our partners at Squareboat script the screens designed by us.
-                    </p>
-                    <ButtonReadmore href="/" text="Learn More" />
-                  </div>
-                </div>
-
-                <div className="categories-wrapper">
-                  <div className="categories">
-
-                    <div className="item">
-                      <div className="animation-block">
-                        <h1 className="h1 animation-style" data-label="heading1">UX RESEARCH</h1>
-                      </div>
-                    </div>
-
-                    <div className="item">
-                      <div className="animation-block">
-                        <h1 className="h1 animation-style" data-label="heading2">UX/UI DESIGN</h1>
-                      </div>
-                    </div>
-
-                    <div className="item">
-                      <div className="animation-block">
-                        <h1 className="h1 arrow-2x animation-style" data-label="heading3">BRANDING</h1>
-                      </div>
-                    </div>
-
+              <AccordionItem uuid="d">
+                <AccordionItemHeading>
+                  <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
                         <h1 className="h1 arrow-short animation-style" data-label="heading4">DEVELOPMENT</h1>
                       </div>
+                      <img className="img-card-style" src="./img/portfolio/sb/img-4.jpg" alt="heading1" />
                     </div>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div>
+                    <div className="tag-section">
+                      <a herf="#" className="tag">Logo</a>
+                      <a herf="#" className="tag">Brand Guidelines</a>
+                      <a herf="#" className="tag">Brand Assets</a>
+                    </div>
+                    <p className="description">
+                      We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
+                    </p>
+                    <ButtonReadmore href="/" text="Learn More" />
                   </div>
-                </div>
-              </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+            </Accordion>
 
-
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
               <div className="info-msg animation-block">
                 <div className="animate-text">
                   <h4 className="title4">
@@ -202,116 +215,6 @@ const OurServicesComponent = (props) => {
               </div>
             </div>
           </div>
-        </div>
-
-
-
-        {/* For Mobile */}
-        <div className="mobile-version services-style">
-          <Accordion preExpanded={['a']}>
-            <AccordionItem uuid="a">
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <div className="animation-block">
-                    <div className="animate-text">UX RESEARCH</div>
-                  </div>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <div>
-                  <div className="tag-section">
-                    <a herf="#" className="tag">Design Audit</a>
-                    <a herf="#" className="tag">User Interviews</a>
-                    <a herf="#" className="tag">Heuristic evaluation</a>
-                    <a herf="#" className="tag">Competitor analysis</a>
-                  </div>
-                  <p className="description">
-                    We provide end to end research services while discovering game-changing improvement opportunities.
-                  </p>
-                  <ButtonReadmore href="/" text="Learn More" />
-                </div>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem uuid="b">
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <div className="animation-block">
-                    <div className="animate-text">UX/UI DESIGN</div>
-                  </div>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <div>
-                  <div className="tag-section">
-                    <a herf="#" className="tag">Mobile app design</a>
-                    <a herf="#" className="tag">Responsive Website</a>
-                    <a herf="#" className="tag">Interface design</a>
-                    <a herf="#" className="tag">Design System</a>
-                  </div>
-                  <p className="description">
-                    Crafting digital experiences that are detailed yet easy to use. We leverage design strategies to create effective digital solutions.
-                  </p>
-                  <ButtonReadmore href="/" text="Learn More" />
-                </div>
-              </AccordionItemPanel>
-            </AccordionItem>
-
-            <AccordionItem uuid="c">
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <div className="animation-block">
-                    <div className="animate-text">BRANDING</div>
-                  </div>
-
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <div>
-                  <div className="tag-section">
-                    <a herf="#" className="tag">Logo</a>
-                    <a herf="#" className="tag">Brand Guidelines</a>
-                    <a herf="#" className="tag">Brand Assets</a>
-                  </div>
-                  <p className="description">
-                    We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                  </p>
-                  <ButtonReadmore href="/" text="Learn More" />
-                </div>
-              </AccordionItemPanel>
-            </AccordionItem>
-
-            <AccordionItem uuid="d">
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <div className="animation-block">
-                    <div className="animate-text">DEVELOPMENT</div>
-                  </div>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <div>
-                  <div className="tag-section">
-                    <a herf="#" className="tag">Logo</a>
-                    <a herf="#" className="tag">Brand Guidelines</a>
-                    <a herf="#" className="tag">Brand Assets</a>
-                  </div>
-                  <p className="description">
-                    We assist you in developing a voice for your brand that will gain consumer trust while also positioning it to your niche target audience.
-                  </p>
-                  <ButtonReadmore href="/" text="Learn More" />
-                </div>
-              </AccordionItemPanel>
-            </AccordionItem>
-          </Accordion>
-
-          <div className="info-msg animation-block">
-                <div className="animate-text">
-                  <h4 className="title4">
-                    Want to know more? <br /> Let’s dive deep!
-                  </h4>
-                  <ButtonOutline buttonText="View our services" />
-                </div>
-              </div>
         </div>
       </div>
     </section>

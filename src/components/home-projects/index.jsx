@@ -13,17 +13,17 @@ const HomeProjects = () => {
     if (mobileDevice) {
       var controller = new ScrollMagic.Controller();
       var wipeAnimation = new TimelineMax()
-        .to("#slideContainer", 1, { x: "-20%" }, { x: "0%", ease: Linear.easeNone })
-        .to("#slideContainer", 1, { x: "-40%" }, { x: "0%", ease: Linear.easeNone })
-        .to("#slideContainer", 1, { x: "-60%" }, { x: "0%", ease: Linear.easeNone })
-        .to("#slideContainer", 1, { x: "-80%" }, { x: "0%", ease: Linear.easeNone })
-        .to("#slideContainer", 1, { x: "-82%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: !LargeDevice ? "-20%" : "-15%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: !LargeDevice ? "-40%" : "-30%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: !LargeDevice ? "-60%": "-45%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: !LargeDevice ? "-80%" : "-60%" }, { x: "0%", ease: Linear.easeNone })
+        .to("#slideContainer", 1, { x: !LargeDevice ? "-82%" : "-76%" }, { x: "0%", ease: Linear.easeNone })
 
       // create scene to pin and link animation
       new ScrollMagic.Scene({
         triggerElement: "#pinContainerPortfolio",
         triggerHook: LargeDevice ? 0.17 : 0,
-        duration: LargeDevice ? "500%" : "800%"
+        duration: "500%"
       })
         .setPin("#pinContainerPortfolio")
         .setTween(wipeAnimation)
