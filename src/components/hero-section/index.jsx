@@ -8,7 +8,7 @@ import HoverVideoPlayer from 'react-hover-video-player';
 
 
 const HeroSection = (props) => {
-
+  const [audioPlay, setAudioPlay] = React.useState(false);
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     fadeWhenScroll();
@@ -32,6 +32,8 @@ const HeroSection = (props) => {
   const handleClick = () => {
     const div = document.getElementById('modal-container');
     div.classList.add("one");
+
+    setAudioPlay(!audioPlay)
   }
 
   const closeClick = () => {
@@ -45,18 +47,6 @@ const HeroSection = (props) => {
     }, 1000);
     return () => clearTimeout(timer);
   }
-
-  //  const stopMovie = (e) => {
-  //     e.target.pause();
-  //     console.log('off');
-  //   }
-
-  //   const playMovie = (e) => {
-  //     e.target.play();
-  //     console.log('on');
-  //   }
-
-  const wrapperLinkRef = useRef();
 
   return (
     <section className="slider slider-prlx home-hero-section" id={props.id}>
@@ -132,11 +122,11 @@ const HeroSection = (props) => {
                 <div id="modal-container">
                   <div className="modal-background">
                     <div className="modal">
-                      <video loop autoPlay muted className="video-style">
+                      <video loop autoPlay preload="auto" muted={audioPlay ? false : true} className="video-style">
                         <source type="video/mp4" src="video/project-fi.mp4" />
                       </video>
                     </div>
-                    <button onClick={closeClick} className="modal-close-button">
+                    <button onClick={closeClick} id="vidbutton" className="modal-close-button">
                       <img src="/img/close.svg" className="img-icon" alt="" />
                     </button>
                   </div>

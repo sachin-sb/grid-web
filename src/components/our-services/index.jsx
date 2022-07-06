@@ -88,7 +88,7 @@ const OurServicesComponent = (props) => {
                   Our Services <span className="text-theme" />
                 </h2>
               </div>
-              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.5s">Offering worthwhile experiences that help you go above & beyond the <Link href="/"><a className="text-primary-theme">grid.</a></Link></h6>
+              <h6 className="title6 wow flipInX center mt-3" data-wow-delay="0.5s">Offering worthwhile experiences that help you go above & beyond the <span className="text-primary-theme">grid.</span></h6>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 animation-style" data-label="heading1">UX RESEARCH</h1>
+                        <h1 className="h1 animation-style">UX RESEARCH</h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" />
                     </div>
@@ -127,7 +127,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 animation-style" data-label="heading2">UX/UI DESIGN</h1>
+                        <h1 className="h1 animation-style">UX/UI DESIGN</h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-2.jpg" alt="heading1" />
                     </div>
@@ -154,7 +154,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-2x animation-style" data-label="heading3">BRANDING</h1>
+                        <h1 className="h1 arrow-2x animation-style">BRANDING</h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-3.jpg" alt="heading1" />
                     </div>
@@ -180,7 +180,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-short animation-style" data-label="heading4">DEVELOPMENT</h1>
+                        <h1 className="h1 arrow-short animation-style">DEVELOPMENT</h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-4.jpg" alt="heading1" />
                     </div>
