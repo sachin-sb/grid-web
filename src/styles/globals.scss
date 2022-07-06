@@ -1126,7 +1126,8 @@ section.team.section-padding {
     padding: 50px 30px 30px;
 
     @include mobile {
-      max-width: 200px;
+      max-width: 240px;
+      min-width: 240px;
       height: 300px;
     }
 
@@ -1862,6 +1863,7 @@ section.team.section-padding {
     .links {
       list-style: none;
       padding: 0;
+      margin-bottom: 0;
     }
 
     &.first {
@@ -2122,19 +2124,21 @@ section.team.section-padding {
     flex-direction: column;
     float: right;
     width: 402px;
+    position: relative;
 
     @include mobile {
       width: 100%;
       float: left;
+      top: 0px;
     }
 
     .address {
-      margin-top: 35px;
       color: $theme-primary;
       font-size: 16px;
       display: flex;
       flex-direction: column;
       letter-spacing: 0.5px;
+      font-weight: 500;
 
       @include mobile {
         margin-top: 15px;
@@ -2146,6 +2150,7 @@ section.team.section-padding {
         display: flex;
         align-items: center;
         transition: all 0.5s ease-in-out;
+        margin-top: 20px;
 
         &:after {
           display: flex;
@@ -2173,7 +2178,6 @@ section.team.section-padding {
 
     .link-email {
       color: $theme-primary;
-      margin-top: 10px;
       font-size: 16px;
 
       @include mobile {

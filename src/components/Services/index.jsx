@@ -69,7 +69,7 @@ const Services = (props) => {
       var controller = new ScrollMagic.Controller();
 
       var horizontalSlide = new TimelineMax()
-        .to("#js-slideContainer", 1, { x: "-75%" })
+        .to("#js-slideContainer", 1, { x: "-70%" })
       new ScrollMagic.Scene({
         triggerElement: "#js-wrapper",
         triggerHook: "0.03",
