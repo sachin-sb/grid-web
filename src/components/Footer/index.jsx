@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ButtonPrimary from "../../common/buttonPrimary";
 import $ from 'jquery';
+import { useMediaQuery } from 'react-responsive'
 
 const Footer = () => {
+  const mobileDevice = useMediaQuery({ query: '(max-width: 767px)' })
+
   const [textChange, setTextChange] = useState(0);
 
   const textButtonToggle = () => {
@@ -11,18 +14,19 @@ const Footer = () => {
   }
 
   useEffect(() => {
-    var quotes = $(".fade-text");
-    var quoteIndex = -1;
-    function showNextQuote() {
-      ++quoteIndex;
-      quotes.eq(quoteIndex % quotes.length)
-        .fadeIn(2000)
-        .delay(2000)
-        .fadeOut(2000, showNextQuote);
+    if (mobileDevice) {
+      var quotes = $(".fade-text");
+      var quoteIndex = -1;
+      function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+          .fadeIn(2000)
+          .delay(2000)
+          .fadeOut(2000, showNextQuote);
+      }
+
+      showNextQuote();
     }
-
-    showNextQuote();
-
   }, [])
 
 
@@ -31,44 +35,75 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
-
             <div className="info-animation-sec">
-              <div className="alphabat">
+                <div
+                  className="alphabat hide-on-mobile"
+                  onMouseEnter={textButtonToggle}
+                  onMouseLeave={textButtonToggle}
+                >
+                  {!textChange ?
+                    <div className="text-style">
+                      <span>I</span>
+                      <span>N</span>
+                      <span>T</span>
+                      <span>R</span>
+                      <span>I</span>
+                      <span>G</span>
+                      <span>U</span>
+                      <span>E</span>
+                      <span>D</span>
+                      <span>?</span>
+                    </div>
 
-                <div className="fade-text">
-                  <div className="text-style" id="fadetext1">
-                    <span>I</span>
-                    <span>N</span>
-                    <span>T</span>
-                    <span>R</span>
-                    <span>I</span>
-                    <span>G</span>
-                    <span>U</span>
-                    <span>E</span>
-                    <span>D</span>
-                    <span>?</span>
-                  </div>
+                    :
+                    <div className="text-style with-bg">
+                      <span>C</span>
+                      <span>O</span>
+                      <span>N</span>
+                      <span>V</span>
+                      <span>I</span>
+                      <span>N</span>
+                      <span>C</span>
+                      <span>E</span>
+                      <span>D</span>
+                      <span>!</span>
+                    </div>
+                  }
                 </div>
 
-                <div className="fade-text">
-                  <div className="text-style with-bg fadeOut" id="fadetext2">
-                    <span>C</span>
-                    <span>O</span>
-                    <span>N</span>
-                    <span>V</span>
-                    <span>I</span>
-                    <span>N</span>
-                    <span>C</span>
-                    <span>E</span>
-                    <span>D</span>
-                    <span>!</span>
+                <div className="alphabat hide-on-desktop">
+                  <div className="fade-text">
+                    <div className="text-style" id="fadetext1">
+                      <span>I</span>
+                      <span>N</span>
+                      <span>T</span>
+                      <span>R</span>
+                      <span>I</span>
+                      <span>G</span>
+                      <span>U</span>
+                      <span>E</span>
+                      <span>D</span>
+                      <span>?</span>
+                    </div>
+                  </div>
+                  <div className="fade-text">
+                    <div className="text-style with-bg fadeOut" id="fadetext2">
+                      <span>C</span>
+                      <span>O</span>
+                      <span>N</span>
+                      <span>V</span>
+                      <span>I</span>
+                      <span>N</span>
+                      <span>C</span>
+                      <span>E</span>
+                      <span>D</span>
+                      <span>!</span>
+                    </div>
                   </div>
                 </div>
-                
-              </div>
               <p className="text-gray-light">Let’s create a Kick-ass digital experience together!</p>
 
-              <ButtonPrimary buttonText="Get in touch" />
+              <ButtonPrimary buttonText="Connect with us" />
             </div>
           </div>
         </div>

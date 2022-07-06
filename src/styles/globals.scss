@@ -1542,7 +1542,7 @@ section.team.section-padding {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 80vh;
 
   @include mobile {
     padding: 80px 20px;
@@ -1799,6 +1799,20 @@ section.team.section-padding {
         height: 40px;
       }
 
+      &.hide-on-mobile {
+        
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &.hide-on-desktop {
+
+        @include desktop {
+          display: none;
+        }
+      }
+
 
       .text-style {
         position: absolute;
@@ -2038,7 +2052,7 @@ section.team.section-padding {
     @include mobile {
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
       font-size: 11px;
     }
 
@@ -3009,6 +3023,7 @@ section.team.section-padding {
     left: 18vw;
     width: 354px;
     height: 586px;
+    z-index: -1;
 
     @include mobile {
       display: none;
@@ -3081,7 +3096,7 @@ section.team.section-padding {
     display: none;
   }
 
-  .accordion__button .item .animation-block:after {
+  .accordion__button .animation-block::after {
     margin-left: 10px;
     border: none;
     content: '+';
@@ -3094,7 +3109,7 @@ section.team.section-padding {
     top: -7px;
   }
 
-  .accordion__button[aria-expanded='true'] .item .animation-block::after {
+  .accordion__button[aria-expanded='true'] .animation-block::after {
     content: '-';
     transform: rotate(0);
     font-size: 40px;
