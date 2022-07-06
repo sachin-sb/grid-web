@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ButtonPrimary from "../../common/buttonPrimary";
+import $ from 'jquery'; 
 
 const Footer = () => {
   const [textChange, setTextChange] = useState(0);
@@ -9,46 +10,75 @@ const Footer = () => {
     setTextChange(!textChange)
   }
 
+  useEffect(() => {
+    // window.onload = function () {
+    //   var tl = new TimelineMax({
+    //     onComplete: function () {
+    //       this.restart();
+    //     }
+    //   });
+    //   tl
+    //     .from("#fadetext1", 2, { autoAlpha: 0 })
+    //     .to("#fadetext1", 0.5, { autoAlpha: 0 })
+    //     .from("#fadetext2", 2, { autoAlpha: 0 })
+    //     .to("#fadetext2", 0.5, { autoAlpha: 0 })
+    // };
+
+    var quotes = $(".fade-text");
+    var quoteIndex = -1;
+
+    function showNextQuote() {
+      ++quoteIndex;
+      quotes.eq(quoteIndex % quotes.length)
+        .fadeIn(2000)
+        .delay(2000)
+        .fadeOut(2000, showNextQuote);
+    }
+
+    showNextQuote();
+
+  }, [])
+
+
   return (
     <footer className="footer-section">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
-            <div className="info-animation-sec">
-              <button
-                className="alphabat"
-                onMouseEnter={textButtonToggle}
-                onMouseLeave={textButtonToggle}
-              >
-                {!textChange ?
-                  <div className="text-style">
-                    <span>I</span>
-                    <span>N</span>
-                    <span>T</span>
-                    <span>R</span>
-                    <span>I</span>
-                    <span>G</span>
-                    <span>U</span>
-                    <span>E</span>
-                    <span>D</span>
-                    <span>?</span>
-                  </div>
 
-                  :
-                  <div className="text-style with-bg">
-                    <span>C</span>
-                    <span>O</span>
-                    <span>N</span>
-                    <span>V</span>
-                    <span>I</span>
-                    <span>N</span>
-                    <span>C</span>
-                    <span>E</span>
-                    <span>D</span>
-                    <span>!</span>
-                  </div>
-                }
-              </button>
+            <div className="info-animation-sec">
+              <div className="alphabat">
+
+<div className="fade-text">
+                <div className="text-style" id="fadetext1">
+                  <span>I</span>
+                  <span>N</span>
+                  <span>T</span>
+                  <span>R</span>
+                  <span>I</span>
+                  <span>G</span>
+                  <span>U</span>
+                  <span>E</span>
+                  <span>D</span>
+                  <span>?</span>
+                </div>
+                </div>
+
+                <div className="fade-text">
+                <div className="text-style with-bg fadeOut" id="fadetext2">
+                  <span>C</span>
+                  <span>O</span>
+                  <span>N</span>
+                  <span>V</span>
+                  <span>I</span>
+                  <span>N</span>
+                  <span>C</span>
+                  <span>E</span>
+                  <span>D</span>
+                  <span>!</span>
+                </div>
+                </div>
+              </div>
               <p className="text-gray-light">Let’s create a Kick-ass digital experience together!</p>
 
               <ButtonPrimary buttonText="Get in touch" />
@@ -60,37 +90,37 @@ const Footer = () => {
           <div className="col-sm-3">
             <div className="link-section first">
               <ul className="links">
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
+                <li>
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
                 </li>
                 <li>
-                <Link href="/">
-                  <a>About</a>
-                </Link>
+                  <Link href="/">
+                    <a>About</a>
+                  </Link>
                 </li>
                 <li>
-                <Link href="/">
-                  <a>Services</a>
-                </Link>
+                  <Link href="/">
+                    <a>Services</a>
+                  </Link>
                 </li>
               </ul>
               <ul className="links">
-              <li>
-                <Link href="/">
-                  <a>Projects</a>
-                </Link>
+                <li>
+                  <Link href="/">
+                    <a>Projects</a>
+                  </Link>
                 </li>
                 <li>
-                <Link href="/">
-                  <a>Careers</a>
-                </Link>
+                  <Link href="/">
+                    <a>Careers</a>
+                  </Link>
                 </li>
                 <li>
-                <Link href="/">
-                  <a>Contact</a>
-                </Link>
+                  <Link href="/">
+                    <a>Contact</a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -101,37 +131,37 @@ const Footer = () => {
               <h5 className="title5">Industries</h5>
               <div className="link-section second">
                 <ul className="links">
-                <li>
-                  <Link href="/">
-                    <a>Blogging</a>
-                  </Link>
+                  <li>
+                    <Link href="/">
+                      <a>Blogging</a>
+                    </Link>
                   </li>
                   <li>
-                  <Link href="/">
-                    <a>Healthcare</a>
-                  </Link>
+                    <Link href="/">
+                      <a>Healthcare</a>
+                    </Link>
                   </li>
                   <li>
-                  <Link href="/">
-                    <a>Edtech</a>
-                  </Link>
+                    <Link href="/">
+                      <a>Edtech</a>
+                    </Link>
                   </li>
                 </ul>
                 <ul className="links">
-                <li>
-                  <Link href="/">
-                    <a>Real Estate</a>
-                  </Link>
+                  <li>
+                    <Link href="/">
+                      <a>Real Estate</a>
+                    </Link>
                   </li>
                   <li>
-                  <Link href="/">
-                    <a>Fintech</a>
-                  </Link>
+                    <Link href="/">
+                      <a>Fintech</a>
+                    </Link>
                   </li>
                   <li>
-                  <Link href="/">
-                    <a>Entertainment</a>
-                  </Link>
+                    <Link href="/">
+                      <a>Entertainment</a>
+                    </Link>
                   </li>
                 </ul>
               </div>

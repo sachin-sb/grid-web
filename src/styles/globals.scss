@@ -1767,8 +1767,11 @@ section.team.section-padding {
       }
     }
 
+    .fade-text {
+      display: none;
+    }
+
     .alphabat {
-      border: 0.5px solid rgba($gray-f8, 0.5);
       height: 100px;
       width: 80%;
       margin-bottom: 15px;
@@ -1781,12 +1784,14 @@ section.team.section-padding {
       position: relative;
       overflow: hidden;
       font-weight: 500;
+      border: none;
 
       @include mobile {
         width: 100%;
         font-size: 20px;
         height: 40px;
       }
+
 
       .text-style {
         position: absolute;
@@ -1798,6 +1803,7 @@ section.team.section-padding {
         justify-content: center;
         height: 100%;
         transition: all 0.5s ease-in-out;
+        border: 0.5px solid rgba($gray-f8, 0.5);
 
         span {
           border-left: 0.5px solid rgba($gray-f8, 0.5);
@@ -1816,6 +1822,7 @@ section.team.section-padding {
         }
       }
     }
+
 
     .with-bg {
       background-color: $theme-primary;
@@ -3096,7 +3103,8 @@ section.team.section-padding {
         opacity: 1;
       }
     }
-    .img-card-style { 
+
+    .img-card-style {
       opacity: 1;
     }
   }
@@ -3123,7 +3131,7 @@ section.team.section-padding {
 
   .animation-block {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     align-items: center;
     z-index: 1;
@@ -3143,6 +3151,10 @@ section.team.section-padding {
       @include mobile {
         display: block;
       }
+    }
+
+    &.scroll-auto {
+      overflow: visible !important;
     }
   }
 

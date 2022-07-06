@@ -43,8 +43,8 @@ const DesignAudit = (props) => {
             </div>
           </div>
           <div className="col-sm-4">
-            <div className="animation-block button-sec">
-              <ButtonOutline buttonText="Know more" className="ani-text" data-wow-delay=".4s" />
+            <div className="animation-block button-sec scroll-auto">
+              <ButtonOutline buttonText="Know more" className="ani-text" />
             </div>
           </div>
         </div>
