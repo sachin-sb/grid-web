@@ -76,7 +76,7 @@ const BlogStanderd = () => {
         <div className="right-flex ani-sec">
           <div className="info-msg">
             <h4 className="title4">
-              want to know more? <br /> lets dive deep!
+              Want to know more? <br /> lets dive deep!
             </h4>
 
             <ButtonOutline buttonText="View all blogs" />
