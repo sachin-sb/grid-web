@@ -1832,7 +1832,7 @@ section.team.section-padding {
           align-items: center;
           justify-content: center;
           height: 100px;
-          width: 100px;
+          width: 100%;
           text-align: center;
           margin: 0 auto;
           transition: all 0.5s ease-in-out;
@@ -3312,7 +3312,7 @@ section.team.section-padding {
   bottom: 30px;
   width: 1px;
   font-family: helvetica, sans-serif;
-  z-index: 999;
+  z-index: 99999;
 
   @include mobile {
     display: none;
