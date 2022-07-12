@@ -103,7 +103,7 @@ const Footer = () => {
                 </div>
               <p className="text-gray-light">Let’s create a Kick-ass digital experience together!</p>
 
-              <ButtonPrimary buttonText="Connect with us" />
+              <ButtonPrimary href="/" buttonText="Connect with us" />
             </div>
           </div>
         </div>
