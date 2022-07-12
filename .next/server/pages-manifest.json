@@ -1,10 +1,7 @@
 {
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/blog/blog-dark": "pages/blog/blog-dark.html",
-  "/blog/blog-light": "pages/blog/blog-light.html",
-  "/home/home": "pages/home/home.html",
-  "/": "pages/index.html",
-  "/_error": "pages/_error.js"
+  "/_error": "pages/_error.js",
+  "/": "pages/index.js",
+  "/404": "pages/404.js"
 }

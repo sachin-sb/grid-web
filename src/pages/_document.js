@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="Grid Design Studio - A global design agency crafting experiences using power of design that move businesses & people." />
           <meta property="og:image" content="https://grid-studio.netlify.app/og.png" />
           <meta property="og:image:url" content="https://grid-studio.netlify.app/og.png" />
-          <meta property="og:image:alt" content="Grid Design Studio : Creative agency based in Gurgaon, India." />
+          <meta property="og:image:alt" content="Image | Grid Design Studio" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:image:type" content="images/png" />
