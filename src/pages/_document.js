@@ -35,12 +35,25 @@ class MyDocument extends Document {
           <meta property="og:image:type" content="images/png" />
           <meta property="og:description" content="An in-person Designathon where design students and seasoned industry professionals are provided with a platform to experience design problems" />
 
-
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="Twitter @Grid_Design_Studio" />
           <meta name="twitter:title" content="Grid Design Studio - We are a bunch of creative folks using the power of design to create seamless product experiences." />
           <meta name="twitter:description" content="An in-person Designathon where design students and seasoned industry professionals are provided with a platform to experience design problems" />
           <meta name="twitter:image" content="https://grid-studio.netlify.app/og.png" />
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=undefined"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', undefined, {
+            page_path: window.location.pathname,
+            })
+              `,
+            }}
+          />
 
           {/* <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> */}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" />
