@@ -1141,7 +1141,7 @@ body {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .progress-wrap svg path {
@@ -1149,7 +1149,7 @@ body {
 }
 
 .progress-wrap:hover.active-progress {
-  mix-blend-mode:normal;
+  /* mix-blend-mode:normal; */
 }
 
 .progress-wrap:hover svg path {

@@ -14,6 +14,7 @@ import DesignAudit from "../components/designAudit";
 import $ from 'jquery';
 import Link from "next/link";
 import Head from "next/head";
+import ScrollToTop from "../components/Scroll-to-top";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -50,7 +51,6 @@ export default function Home(props) {
     sectionElementRefs: sectionRefs,
     offsetPx: -80,
   });
-
 
   // useEffect(() => {
   //   (function () {
@@ -92,6 +92,10 @@ export default function Home(props) {
 
   // }, [])
 
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
 
   return (
     <DarkTheme>
@@ -162,6 +166,8 @@ export default function Home(props) {
         <div id="scroll-indicator" className="scroll-indicator">
           <div id="indicator" className="indicator"></div>
         </div>
+
+        <ScrollToTop />
       </div>
     </DarkTheme>
   )

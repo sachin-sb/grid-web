@@ -3405,6 +3405,13 @@ section.team.section-padding {
     }
   }
 
+  .active-progress {
+
+    svg {
+      filter: brightness(0);
+    }
+  }
+
 }
 
 // Progress-wrap

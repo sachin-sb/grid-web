@@ -9,7 +9,6 @@ import HoverVideoPlayer from 'react-hover-video-player';
 
 const HeroSection = (props) => {
   const [audioPlay, setAudioPlay] = React.useState(false);
-  const [mutedActive, setMutedActive] = React.useState(false);
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     fadeWhenScroll();
@@ -33,9 +32,7 @@ const HeroSection = (props) => {
   const handleClick = () => {
     const div = document.getElementById('modal-container');
     div.classList.add("one");
-
     setAudioPlay(!audioPlay)
-    setMutedActive(true)
   }
 
   const closeClick = () => {
@@ -97,7 +94,7 @@ const HeroSection = (props) => {
                   videoSrc="video/project-fi.mp4"
                   className="video-player-custom d-none d-sm-block"
                   hoverTarget={() => document.getElementById("videoPlayOverlay")}
-                  muted={mutedActive ? true : true}
+                  muted={!audioPlay ? false : true}
                   pausedOverlay={
                     <img
                       src="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
