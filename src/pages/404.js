@@ -13,7 +13,7 @@ export default function FourOhFour() {
       height="100%">
       <source src="/video/error.mp4"
         type="video/mp4" />
-      Sorry, your browser doesn't support embedded videos.
+      Sorry, your browser doesn&apos;t support embedded videos.
     </video>
 
     <div className='content-sec'>
