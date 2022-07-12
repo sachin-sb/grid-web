@@ -13,6 +13,7 @@ import useScrollSpy from 'react-use-scrollspy';
 import DesignAudit from "../components/designAudit";
 import $ from 'jquery';
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home(props) {
   const navbarRef = React.useRef(null);
@@ -94,6 +95,9 @@ export default function Home(props) {
 
   return (
     <DarkTheme>
+      <Head>
+        <title>Home : Grid Design Studio</title>
+      </Head>
       <div className={`layout-primary-style ${activeSection === 6 && 'blog-nav-active'} ${props.className}`}>
         <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
           <Link href="/">

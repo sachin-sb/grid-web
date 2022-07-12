@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Grid Design</title>
+        <title>Grid Design Studio</title>
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
       {/* <Cursor /> */}
