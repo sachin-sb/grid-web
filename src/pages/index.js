@@ -100,7 +100,7 @@ export default function Home(props) {
   return (
     <DarkTheme>
       <Head>
-        <title>Home : Grid Design Studio</title>
+        <title>Home | Grid Design Studio | Design Agency</title>
       </Head>
       <div className={`layout-primary-style ${activeSection === 6 && 'blog-nav-active'} ${props.className}`}>
         <div className={`sidebar ${activeSection === 6 && 'blog-active'}`} id="sidebarSection">
