@@ -101,7 +101,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 animation-style">UX RESEARCH</h1>
+                        <h1 className="h1 animation-style"><span className="text">UX RESEARCH</span></h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-1.jpg" alt="heading1" />
                     </div>
@@ -127,7 +127,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 animation-style">UX/UI DESIGN</h1>
+                        <h1 className="h1 animation-style"><span className="text">UX/UI DESIGN</span></h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-2.jpg" alt="heading1" />
                     </div>
@@ -154,7 +154,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-2x animation-style">BRANDING</h1>
+                        <h1 className="h1 arrow-2x animation-style"><span className="text">BRANDING</span></h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-3.jpg" alt="heading1" />
                     </div>
@@ -180,7 +180,7 @@ const OurServicesComponent = (props) => {
                   <AccordionItemButton>
                     <div className="item">
                       <div className="animation-block">
-                        <h1 className="h1 arrow-short animation-style">DEVELOPMENT</h1>
+                        <h1 className="h1 arrow-short animation-style"><span className="text">DEVELOPMENT</span></h1>
                       </div>
                       <img className="img-card-style" src="./img/portfolio/sb/img-4.jpg" alt="heading1" />
                     </div>

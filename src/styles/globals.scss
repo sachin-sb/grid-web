@@ -3096,7 +3096,12 @@ section.team.section-padding {
     display: none;
   }
 
-  .accordion__button .animation-block::after {
+  .accordion__button .text {
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion__button .text::after {
     margin-left: 10px;
     border: none;
     content: '+';
@@ -3106,10 +3111,9 @@ section.team.section-padding {
     -webkit-text-stroke-width: 0;
     font-weight: 500;
     position: relative;
-    top: -7px;
   }
 
-  .accordion__button[aria-expanded='true'] .animation-block::after {
+  .accordion__button[aria-expanded='true'] .text::after {
     content: '-';
     transform: rotate(0);
     font-size: 40px;
