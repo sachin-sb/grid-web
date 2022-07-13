@@ -74,15 +74,6 @@ body {
   }
 }
 
-.navbar-hidden {
-  transform: translateY(-80px);
-  transition: all 0.3s ease-in-out;
-
-  @include mobile {
-    transform: translateY(-100px);
-  }
-}
-
 // mobile-top-nav
 .mobile-top-nav {
   position: fixed;
@@ -133,6 +124,20 @@ body {
 
 }
 
+.navbar-hidden {
+  transform: translateY(-80px);
+  transition: all 0.3s ease-in-out;
+
+  @include mobile {
+    transform: translateY(-100px);
+  }
+}
+
+.scroll-0 {
+  @include mobile {
+    transform: translateY(0);
+  }
+}
 
 // Titles style
 .title2 {

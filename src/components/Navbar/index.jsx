@@ -30,9 +30,17 @@ const Navbar = ({ lr, nr, theme, navClass }) => {
       };
     }
   }, [lastScrollY]);
+
+  const [scrollValue, setScrollValue] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollValue(window.scrollY > 0)
+    })
+  }, [])
+
   return (
     <>
-      <div className={`mobile-top-nav ${show ? 'navbar-hidden' : 'navbar-show'} ${navClass}`} >
+      <div className={`mobile-top-nav ${show ? 'navbar-hidden' : 'navbar-show'} ${!scrollValue ? 'scroll-0' : ''} ${navClass}`} >
         <div className="logo-section">
           <div className="logo">
             <img src='img/logo.svg' alt="" />
