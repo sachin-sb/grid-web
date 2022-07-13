@@ -20,7 +20,9 @@ export default function FourOhFour() {
       <h1 className='error-text'>404</h1>
       <div className='overtext'>
         <p className='description'>Seems like you have come off the grid.</p>
-        <ButtonPrimary href="/" className="btn-home" buttonText="Back to Homepage" />
+        <div className='button-section align-center-style'>
+          <a href="/" className="btn-link-red"><span>Back to Homepage</span></a>
+        </div>
       </div>
     </div>
   </div>

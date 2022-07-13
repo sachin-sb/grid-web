@@ -1613,6 +1613,65 @@ section.team.section-padding {
 }
 
 .button-section {
+  
+  &.align-center-style {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-link-red {
+    background: $theme-primary;
+    border: none;
+    height: 40px;
+    padding: 10px 40px;
+    color: white;
+    min-width: 206px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include mobile {
+      height: 30px;
+      min-width: auto;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: $white;
+      width: 0%;
+      height: 100%;
+      transition: all .3s ease-in-out;
+    }
+
+    span {
+      position: relative;
+    }
+
+    &:hover {
+      color: $theme-secondary !important;
+
+      &:before {
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 
   // btn-red
   .btn-red {
@@ -3494,9 +3553,10 @@ section.team.section-padding {
     }
   }
 
-  .btn-red {
+  .btn-link-red {
     @include mobile {
-     transform: scale(0.7);
+     transform: scale(0.9);
+     margin-top: 10px;
     }
   }
 }
