@@ -21,7 +21,10 @@ export default function FourOhFour() {
       <div className='overtext'>
         <p className='description'>Seems like you have come off the grid.</p>
         <div className='button-section align-center-style'>
-          <a href="/" className="btn-link-red"><span>Back to Homepage</span></a>
+          <a href="/" className="btn-link-red">
+            <span>Back to Homepage</span>
+            <img src="/img/long-right-arrow.svg" className="img-style" alt="" />
+          </a>
         </div>
       </div>
     </div>

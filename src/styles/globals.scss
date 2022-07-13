@@ -1630,7 +1630,7 @@ section.team.section-padding {
     height: 40px;
     padding: 10px 40px;
     color: white;
-    min-width: 206px;
+    max-width: 206px;
     position: relative;
     font-size: 16px;
     font-weight: 300;
@@ -1647,6 +1647,16 @@ section.team.section-padding {
       height: 30px;
       min-width: auto;
     }
+
+    .img-style {
+      position: absolute;
+      width: 60px;
+      right: -10px;
+      top: 24px;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+
 
     &:before {
       content: "";
@@ -1669,6 +1679,11 @@ section.team.section-padding {
 
       &:before {
         width: 100%;
+      }
+
+      .img-style {
+        right: -30px;
+        opacity: 1;
       }
     }
 
