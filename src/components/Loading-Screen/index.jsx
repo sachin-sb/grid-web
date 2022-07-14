@@ -2,6 +2,8 @@ import React from "react";
 import Script from "next/script";
 import loadingPace from "../../common/loadingPace.js";
 import appData from "../../data/app.json";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../../public/json/loader.json";
 
 const LoadingScreen = () => {
   React.useEffect(() => {
@@ -19,7 +21,9 @@ const LoadingScreen = () => {
   return (
     <>
       <div className={`${appData.showLoading === true ? "showX" : "hideX"}`}>
-        <div id="preloader"></div>
+        <div id="preloader">
+          <Lottie animationData={groovyWalkAnimation} style={{ width: 100, height: 100 }} loop={true} />
+        </div>
       </div>
       {appData.showLoading ? (
         <Script
