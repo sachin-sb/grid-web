@@ -2978,10 +2978,6 @@ section.team.section-padding {
     }
   }
 
-  .item {
-    // margin-bottom: 50px;
-  }
-
   .contents {
     z-index: 1;
 
@@ -3040,8 +3036,19 @@ section.team.section-padding {
       opacity: 0;
       margin-left: 10px;
       transition: all 0.5s ease-in-out;
-
       display: none;
+    }
+  }
+
+  .item {
+    // margin-bottom: 50px;
+
+
+    &:hover {
+
+      .h1 {
+        color: white;
+      }
     }
   }
 

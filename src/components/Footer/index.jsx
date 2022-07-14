@@ -192,7 +192,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <div className="information-section">
               <div className="sb-copyright">
-                A creative agency by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>.
+                A creative agency by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>
               </div>
               <div className="address">
                 <a href="tel:+91-1235678901" className="address-text"> +91-1235678901 </a>
