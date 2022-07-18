@@ -55,7 +55,7 @@ class MyDocument extends Document {
             }}
           />
 
-          <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+          {/* <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> */}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" />
           <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.min.js" />
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>

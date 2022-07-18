@@ -66,7 +66,7 @@ const Services = (props) => {
 
   useEffect(() => {
     if (mobileDevice) {
-      var controller = new ScrollMagic.Controller();
+      var controller111 = new ScrollMagic.Controller();
 
       var horizontalSlide = new TimelineMax()
         .to("#js-slideContainer", 1, { x: "-70%" })
@@ -77,7 +77,7 @@ const Services = (props) => {
       })
         .setPin("#js-wrapper")
         .setTween(horizontalSlide)
-        .addTo(controller);
+        .addTo(controller111);
     }
   }, [])
 

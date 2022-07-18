@@ -1859,7 +1859,7 @@ section.team.section-padding {
 
     .alphabat {
       height: 100px;
-      width: 80%;
+      width: 90%;
       margin-bottom: 15px;
       background: none;
       color: white;
@@ -1874,8 +1874,8 @@ section.team.section-padding {
 
       @include mobile {
         width: 100%;
-        font-size: 20px;
-        height: 40px;
+        font-size: 16px;
+        height: 30px;
       }
 
       &.hide-on-mobile {
@@ -1911,10 +1911,15 @@ section.team.section-padding {
           align-items: center;
           justify-content: center;
           height: 100px;
-          width: 100%;
+          width: 100px;
           text-align: center;
           margin: 0 auto;
           transition: all 0.5s ease-in-out;
+
+          @include mobile {
+            width: 30px;
+            height: 100%;
+          }
 
           &:nth-child(1) {
             border: none;
@@ -1957,6 +1962,10 @@ section.team.section-padding {
       list-style: none;
       padding: 0;
       margin-bottom: 0;
+
+      @include mobile {
+        min-width: 85px;
+      }
     }
 
     &.first {
@@ -3048,6 +3057,10 @@ section.team.section-padding {
 
       .h1 {
         color: white;
+
+        @include mobile {
+          color: transparent;
+        }
       }
     }
   }
@@ -3499,6 +3512,10 @@ section.team.section-padding {
 
     svg {
       filter: brightness(0);
+
+      &:hover {
+        filter: none;
+      }
     }
   }
 
