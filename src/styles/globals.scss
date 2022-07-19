@@ -2779,6 +2779,10 @@ section.team.section-padding {
         img {
           opacity: 1;
           filter: grayscale(1);
+
+          @include mobile {
+            filter: none;
+          }
         }
       }
     }

@@ -95,7 +95,7 @@ const Services = (props) => {
           trigger: container123,
           invalidateOnRefresh: true,
           pin: true,
-          scrub: 2,
+          scrub: 1,
           start: 'top 5%',
           end: () => "+=" + container123.offsetWidth,
           markers: false
