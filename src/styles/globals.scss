@@ -1864,7 +1864,7 @@ section.team.section-padding {
 
     .alphabat {
       height: 100px;
-      width: 90%;
+      width: 1000px;
       margin-bottom: 15px;
       background: none;
       color: white;
@@ -1876,6 +1876,10 @@ section.team.section-padding {
       overflow: hidden;
       font-weight: 500;
       border: none;
+
+      @include desktop-lg {
+        width: 60vw;
+      }
 
       @include mobile {
         width: 100%;
@@ -1920,6 +1924,11 @@ section.team.section-padding {
           text-align: center;
           margin: 0 auto;
           transition: all 0.5s ease-in-out;
+
+          @include desktop-lg {
+            height: 150px;
+            width: 100%;
+          }
 
           @include mobile {
             width: 30px;
