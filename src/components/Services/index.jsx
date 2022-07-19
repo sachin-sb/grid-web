@@ -62,7 +62,7 @@ const ShowcassesFullScreenData2 = [
 ]
 
 const Services = (props) => {
-   const mobileDevice = useMediaQuery({ query: '(max-width: 767px)' })
+   const mobileDevice = useMediaQuery({ query: '(max-width: 820px)' })
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
