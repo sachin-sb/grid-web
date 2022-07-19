@@ -26,12 +26,19 @@
 // ----------------------------------
 // Media Query Mixin
 // ----------------------------------
+$phone0-width: 320px;
 $iphone5-width: 360px;
 $iphone6-width: 375px;
 $tablet-width: 768px;
 $tablet-p-width: 991px;
 $desktop-width: 1024px;
 $desktop-width-lg: 1500px;
+
+@mixin phone0-width {
+  @media (max-width: #{$iphone5-width}) {
+    @content;
+  }
+}
 
 // iPhone5 Mixin
 @mixin iphone5 {

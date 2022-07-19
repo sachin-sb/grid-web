@@ -555,6 +555,10 @@ section.team.section-padding {
       font-size: 60px;
     }
 
+    @include phone0-width {
+      font-size: 52px;
+    }
+
     span {
       color: $theme-primary;
       position: relative;
@@ -580,6 +584,10 @@ section.team.section-padding {
       br {
         display: none;
       }
+    }
+
+    @include phone0-width {
+      font-size: 20px;
     }
   }
 
@@ -1777,6 +1785,10 @@ section.team.section-padding {
       min-width: auto;
     }
 
+    @include phone0-width {
+      padding: 10px 20px;
+    }
+
     .img-style {
       position: absolute;
       width: 60px;
@@ -2962,6 +2974,11 @@ section.team.section-padding {
         font-size: 20px;
         line-height: 30px;
       }
+
+      
+    @include phone0-width {
+      font-size: 18px;
+    }
     }
 
     .btn-outline {
@@ -3051,6 +3068,10 @@ section.team.section-padding {
 
     @include mobile {
       font-size: 30px;
+    }
+
+    @include phone0-width {
+      font-size: 24px;
     }
 
     &:after {
