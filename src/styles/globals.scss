@@ -517,7 +517,6 @@ section.team.section-padding {
 
   @include mobile {
     padding-left: 0px;
-    min-height: auto;
     padding-top: 0px;
   }
 
@@ -890,8 +889,9 @@ section.team.section-padding {
   padding-left: 50px;
 
   @include mobile {
-    padding-left: 20px;
     position: relative;
+    overflow: hidden;
+    padding-left: 20px;
     padding-top: 0px;
 
     &::before {
@@ -964,6 +964,7 @@ section.team.section-padding {
 
 .client-section-wrapper {
   overflow: hidden;
+  position: relative;
 }
 
 // Our Client Section
@@ -974,6 +975,10 @@ section.team.section-padding {
   flex-direction: column;
   flex-wrap: nowrap;
   overflow-x: scroll;
+
+  @include mobile {
+    overflow: hidden !important;
+  }
 
   &::-webkit-scrollbar {
     display: none;

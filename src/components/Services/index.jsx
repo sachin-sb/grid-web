@@ -65,23 +65,6 @@ const Services = (props) => {
    const mobileDevice = useMediaQuery({ query: '(max-width: 767px)' })
 
   useEffect(() => {
-    if (mobileDevice) {
-      var controller111 = new ScrollMagic.Controller();
-
-      var horizontalSlide = new TimelineMax()
-        .to("#js-slideContainer", 1, { x: "-70%" })
-      new ScrollMagic.Scene({
-        triggerElement: "#js-wrapper",
-        triggerHook: "0.03",
-        duration: "400%"
-      })
-        .setPin("#js-wrapper")
-        .setTween(horizontalSlide)
-        .addTo(controller111);
-    }
-  }, [])
-
-  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".animation-blc-block .revel-style", 1.5, {
       y: 100,
@@ -97,6 +80,29 @@ const Services = (props) => {
         markers: false
       },
     })
+  }, [])
+
+  
+  useEffect(() => {
+    if (mobileDevice) {
+      gsap.registerPlugin(ScrollTrigger)
+      let container123 = document.getElementById("js-slideContainer");
+      gsap.to(container123, {
+        x: () => -(container123.scrollWidth - document.documentElement.clientWidth) + "px",
+        ease: "none",
+        // ease: "power4.out",
+        scrollTrigger: {
+          trigger: container123,
+          invalidateOnRefresh: true,
+          pin: true,
+          scrub: 2,
+          start: 'top 5%',
+          end: () => "+=" + container123.offsetWidth,
+          markers: false
+        }
+      })
+
+    }
   }, [])
 
   return (
