@@ -28,7 +28,7 @@ const DesignAudit = (props) => {
       <div id="pinDesignAudit" className="trigger-style"></div>
       <div className="container-fluid">
         <div className="row align-items-center">
-          <div className="col-sm-8">
+          <div className="col-md-12 col-lg-8">
             <div className="title4 animation-block">
               <span className="ani-text"> Want help in recognising where your brand is positioned?</span>
             </div>
@@ -42,7 +42,7 @@ const DesignAudit = (props) => {
               <h2 className="title2 ani-text d-sm-none"><span className="ani-text"> Get <div className="text-orange">FREE Design Audit!</div></span></h2>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-md-12 col-lg-4">
             <div className="animation-block button-sec scroll-auto">
               <ButtonOutline buttonText="Know more" className="ani-text" />
             </div>

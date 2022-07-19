@@ -5,7 +5,7 @@ import $ from 'jquery';
 import { useMediaQuery } from 'react-responsive'
 
 const Footer = () => {
-  const mobileDevice = useMediaQuery({ query: '(max-width: 767px)' })
+  const mobileDevice = useMediaQuery({ query: '(max-width: 820px)' })
 
   const [textChange, setTextChange] = useState(0);
 
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="row align-items-end">
-          <div className="col-sm-3">
+          <div className="col-md-12 col-lg-3">
             <div className="link-section first">
               <ul className="links">
                 <li>
@@ -148,7 +148,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-sm-3">
+          <div className="col-md-12 col-lg-3">
             <div className="light-style">
               <h5 className="title5">Industries</h5>
               <div className="link-section second">
@@ -189,7 +189,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-md-12 col-lg-6">
             <div className="information-section">
               <div className="sb-copyright">
                 A creative agency by <a href="https://squareboat.com/" rel="noreferrer" target="_blank"><img src="img/sb-log.svg" className="logo-sb" alt="" /></a>
@@ -205,7 +205,7 @@ const Footer = () => {
         <div className="divider"></div>
 
         <div className="row row-column-style">
-          <div className="col-sm-7">
+          <div className="col-md-7">
             <div className="copyright-sec">
               <p className="text-gray">&copy; Copyright Grid Design. All rights reserved.</p>
               <div className="link-sec">
@@ -214,7 +214,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-5">
+          <div className="col-md-5">
             <div className="social">
               <a href="#0" className="icon">
                 <i className="fab fa-linkedin-in"></i>

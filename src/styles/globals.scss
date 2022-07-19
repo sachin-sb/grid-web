@@ -378,6 +378,10 @@ section.team.section-padding {
   min-height: 100vh;
   display: flex;
 
+  @include tablet {
+    flex-direction: column;
+  }
+
   @include mobile {
     flex-direction: column;
   }
@@ -393,6 +397,13 @@ section.team.section-padding {
     padding: 35px 0;
     z-index: 99999;
     transition: all 0.5s ease-in-out;
+
+    @include tablet {
+      position: relative;
+      flex-direction: row;
+      height: auto;
+      display: none;
+    }
 
     @include mobile {
       position: relative;
@@ -487,6 +498,11 @@ section.team.section-padding {
     margin-left: 140px;
     overflow: hidden;
 
+    @include tablet {
+      margin-left: 0px;
+      overflow-x: hidden;
+    }
+
     @include mobile {
       margin-left: 0px;
       overflow-x: hidden;
@@ -498,6 +514,9 @@ section.team.section-padding {
   }
 
   .navbar-expand-lg {
+    @include tablet {
+      display: none;
+    }
 
     @include mobile {
       display: none;
@@ -514,6 +533,11 @@ section.team.section-padding {
   justify-content: center;
   padding-left: 136px;
   padding-top: 50px;
+
+  @include tablet {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
 
   @include mobile {
     padding-left: 0px;
@@ -534,6 +558,9 @@ section.team.section-padding {
     line-height: 40px;
     color: $gray-f8 !important;
 
+    @include tablet {
+      font-size: 20px;
+    }
 
     @include mobile {
       font-size: 20px;
@@ -592,6 +619,12 @@ section.team.section-padding {
   }
 
   .content-sec {
+
+    @include tablet {
+      padding: 20px 45px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
 
     @include mobile {
       padding: 20px 45px;
@@ -657,6 +690,10 @@ section.team.section-padding {
       height: 100px;
       z-index: 99;
       cursor: pointer;
+
+      @include tablet {
+        left: 90px;
+      }
 
       @include mobile {
         left: 60px;
@@ -877,6 +914,10 @@ section.team.section-padding {
 
   .row-section-style {
 
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+
     @include mobile {
       flex-direction: column-reverse;
     }
@@ -895,6 +936,22 @@ section.team.section-padding {
 
 .blc-sec {
   padding-left: 50px;
+
+  @include tablet {
+    position: relative;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 0px;
+
+    &::before {
+      border-top: 1px solid rgba($gray-f8, 0.3);
+      padding-top: 60px;
+      display: flex;
+      content: '';
+      width: 93%;
+    }
+  }
+  
 
   @include mobile {
     position: relative;
@@ -917,6 +974,10 @@ section.team.section-padding {
 
   .sub-title {
 
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
     @include mobile {
       margin-bottom: 40px;
     }
@@ -926,6 +987,12 @@ section.team.section-padding {
       font-size: 22px;
       line-height: 1.6;
 
+      @include tablet {
+        font-size: 16px;
+        max-width: 95%;
+        flex-direction: column;
+      }
+
       @include mobile {
         font-size: 16px;
         max-width: 95%;
@@ -934,6 +1001,10 @@ section.team.section-padding {
 
       div {
         margin-left: 5px;
+
+        @include tablet {
+          margin-left: 0px;
+        }
 
         @include mobile {
           margin-left: 0px;
@@ -997,6 +1068,17 @@ section.team.section-padding {
     scrollbar-width: none;
   }
 
+  @include tablet {
+    padding-left: 20px;
+    margin-left: 0;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    display: inline-flex;
+  }
+
+
   @include mobile {
     padding-left: 20px;
     margin-left: 0;
@@ -1016,6 +1098,10 @@ section.team.section-padding {
     display: flex;
     align-items: center;
     gap: 50px;
+
+    @include tablet {
+      gap: 24px;
+    }
 
     @include mobile {
       gap: 24px;
@@ -1089,6 +1175,10 @@ section.team.section-padding {
   .slide-item {
     min-width: 290px;
 
+    @include tablet {
+      min-width: auto;
+    }
+
     @include mobile {
       min-width: auto;
     }
@@ -1142,6 +1232,12 @@ section.team.section-padding {
     justify-content: space-between;
     margin: 0;
     padding: 50px 30px 30px;
+
+    @include tablet {
+      max-width: 320px;
+      min-width: 320px;
+      height: 340px;
+    }
 
     @include mobile {
       max-width: 240px;
@@ -1281,6 +1377,13 @@ section.team.section-padding {
     @include desktop-lg {
       grid-template-columns: repeat(3, 1fr);
       margin-top: 60px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: 30px;
     }
 
     @include mobile {
@@ -1846,6 +1949,10 @@ section.team.section-padding {
   display: flex;
   align-items: flex-end;
 
+  @include tablet {
+    padding: 80px 25px 0;
+  }
+
   @include mobile {
     padding: 80px 25px 0;
   }
@@ -1857,12 +1964,22 @@ section.team.section-padding {
     flex-direction: column;
     margin-bottom: 100px;
 
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
     @include mobile {
       margin-bottom: 50px;
     }
 
     .btn-red {
       margin-top: 40px;
+
+      @include tablet {
+        padding: 10px 10px;
+        min-width: 170px
+      }
 
       @include mobile {
         padding: 10px 10px;
@@ -1889,8 +2006,10 @@ section.team.section-padding {
       font-weight: 500;
       border: none;
 
-      @include desktop-lg {
-        width: 60vw;
+      @include tablet {
+        width: 100%;
+        font-size: 30px;
+        height: 70px;
       }
 
       @include mobile {
@@ -1900,6 +2019,10 @@ section.team.section-padding {
       }
 
       &.hide-on-mobile {
+
+        @include tablet {
+          display: none;
+        }
 
         @include mobile {
           display: none;
@@ -1942,6 +2065,11 @@ section.team.section-padding {
             width: 100%;
           }
 
+          @include tablet {
+            width: 100%;
+            height: 100%;
+          }
+
           @include mobile {
             width: 30px;
             height: 100%;
@@ -1965,6 +2093,12 @@ section.team.section-padding {
     color: $gray-bc;
     font-size: 20px;
 
+    @include tablet {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
     @include mobile {
       font-size: 16px;
       text-align: center;
@@ -1978,6 +2112,12 @@ section.team.section-padding {
     // justify-content: space-between;
     padding-right: 70px;
 
+    @include tablet {
+      padding-right: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
     @include mobile {
       padding-right: 0px;
       align-items: flex-start;
@@ -1989,6 +2129,10 @@ section.team.section-padding {
       padding: 0;
       margin-bottom: 0;
 
+      @include tablet {
+        min-width: 85px;
+      }
+
       @include mobile {
         min-width: 85px;
       }
@@ -1999,6 +2143,16 @@ section.team.section-padding {
         display: flex;
         flex-direction: column;
         margin-right: 40px;
+
+        
+        @include tablet {
+          gap: 20px;
+          flex-wrap: wrap;
+
+          &:first-child {
+            margin-right: 80px;
+          }
+        }
 
         @include mobile {
           gap: 20px;
@@ -2018,6 +2172,12 @@ section.team.section-padding {
           position: relative;
           display: table;
 
+          @include tablet {
+            display: flex;
+            align-items: center;
+          }
+
+
           @include mobile {
             display: flex;
             align-items: center;
@@ -2032,6 +2192,25 @@ section.team.section-padding {
             transition: all 0.3s ease-in-out;
             bottom: -2px;
             background: $theme-primary;
+          }
+
+          @include tablet {
+            margin-top: 0px;
+            letter-spacing: 1.2px;
+
+            &:after {
+              display: flex;
+              content: '';
+              width: 13px;
+              height: 7.8px;
+              background: url('../../public/img/short-arrow.svg') no-repeat;
+              background-size: contain;
+              background-position: center;
+              margin-left: 5px;
+              transition: all 0.5s ease-in-out;
+              position: relative;
+              top: 2px;
+            }
           }
 
           @include mobile {
@@ -2065,6 +2244,14 @@ section.team.section-padding {
     }
 
     &.second {
+
+      @include tablet {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
       @include mobile {
         margin-top: 10px;
         display: flex;
@@ -2076,6 +2263,15 @@ section.team.section-padding {
         display: flex;
         flex-direction: column;
         margin-right: 40px;
+
+        @include tablet {
+          flex-wrap: wrap;
+          gap: 20px;
+
+          &:first-child {
+            margin-right: 80px;
+          }
+        }
 
         @include mobile {
           flex-wrap: wrap;
@@ -2093,6 +2289,11 @@ section.team.section-padding {
           transition: all 0.5s ease-in-out;
           letter-spacing: 1px;
           display: table;
+
+          @include tablet {
+            margin: 0;
+            letter-spacing: 1.2px;
+          }
 
           @include mobile {
             margin: 0;
@@ -2113,6 +2314,11 @@ section.team.section-padding {
     color: #6A6A6A;
     letter-spacing: 0.5px;
 
+    @include tablet {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
     @include mobile {
       text-transform: uppercase;
       font-weight: 500;
@@ -2120,6 +2326,15 @@ section.team.section-padding {
   }
 
   .light-style {
+
+    @include tablet {
+      border-top: 1px solid #707070;
+      border-bottom: 1px solid #707070;
+      padding-top: 20px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
 
     @include mobile {
       border-top: 1px solid #707070;
@@ -2151,6 +2366,10 @@ section.team.section-padding {
     margin: 40px 0;
     opacity: 0.2;
 
+    @include tablet {
+      display: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -2162,6 +2381,13 @@ section.team.section-padding {
     color: $gray-bc;
     font-size: 14px;
     letter-spacing: 0.5px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      font-size: 11px;
+    }
 
     @include mobile {
       flex-direction: column;
@@ -2193,12 +2419,23 @@ section.team.section-padding {
       line-height: 1;
       transition: all 0.5s ease-in-out;
 
+      @include tablet {
+        padding-left: 10px;
+        margin-left: 10px;
+      }
+
       @include mobile {
         padding-left: 10px;
         margin-left: 10px;
       }
 
       &:nth-child(1) {
+
+        @include tablet {
+          border-left: none;
+          padding-left: 0px;
+          margin-left: 5px;
+        }
 
         @include mobile {
           border-left: none;
@@ -2220,7 +2457,27 @@ section.team.section-padding {
     font-weight: 300;
     letter-spacing: 0.5px;
 
+    @include tablet {
+      font-size: 14px;
+      float: none;
+      max-width: 95%;
+
+      br {
+        display: none;
+      }
+    }
+
     @include mobile {
+      font-size: 14px;
+      float: none;
+      max-width: 95%;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include tablet {
       font-size: 14px;
       float: none;
       max-width: 95%;
@@ -2235,6 +2492,11 @@ section.team.section-padding {
       position: relative;
       top: -5px;
       transition: all 0.3s ease-in-out;
+
+      @include tablet {
+        width: 100px;
+        top: -3px;
+      }
 
       @include mobile {
         width: 100px;
@@ -2254,6 +2516,13 @@ section.team.section-padding {
     width: 402px;
     position: relative;
 
+    @include tablet {
+      width: 100%;
+      float: left;
+      top: 0px;
+    }
+
+
     @include mobile {
       width: 100%;
       float: left;
@@ -2267,6 +2536,10 @@ section.team.section-padding {
       flex-direction: column;
       letter-spacing: 0.5px;
       font-weight: 500;
+
+      @include tablet {
+        margin-top: 15px;
+      }
 
       @include mobile {
         margin-top: 15px;
@@ -2308,6 +2581,11 @@ section.team.section-padding {
       color: $theme-primary;
       font-size: 16px;
 
+      
+      @include tablet {
+        text-decoration: underline;
+      }
+
       @include mobile {
         text-decoration: underline;
       }
@@ -2322,6 +2600,12 @@ section.team.section-padding {
     width: 402px;
     margin-left: auto;
     margin-right: 0;
+
+    @include tablet {
+      padding-left: 0px;
+      margin-top: 30px;
+      justify-content: space-between;
+    }
 
     @include mobile {
       padding-left: 0px;
@@ -2346,12 +2630,20 @@ section.team.section-padding {
   }
 
   .row-column-style {
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
     @include mobile {
       flex-direction: column-reverse;
     }
   }
 
   .hide-mobile {
+
+    @include tablet {
+      display: none;
+    }
 
     @include mobile {
       display: none;
@@ -2380,6 +2672,10 @@ section.team.section-padding {
   @include desktop-lg {
     padding-top: 0;
     min-height: auto;
+  }
+
+  @include tablet {
+    padding-top: 0;
   }
 
   @include mobile {
@@ -2414,6 +2710,12 @@ section.team.section-padding {
       width: 400%;
     }
 
+    @include tablet {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+
     @include mobile {
       flex-direction: column;
       width: 100%;
@@ -2423,6 +2725,10 @@ section.team.section-padding {
 
   .text-theme {
     margin-left: -4px;
+
+    @include tablet {
+      margin-left: 0px;
+    }
 
     @include mobile {
       margin-left: 0px;
@@ -2435,6 +2741,11 @@ section.team.section-padding {
     justify-content: flex-end;
     flex-direction: column;
 
+    @include tablet {
+      margin-top: 20px;
+    }
+
+
     @include mobile {
       margin-top: 20px;
     }
@@ -2446,6 +2757,11 @@ section.team.section-padding {
       line-height: 40px;
       margin-bottom: 20px;
 
+      @include tablet {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
       @include mobile {
         font-size: 20px;
         line-height: 30px;
@@ -2456,6 +2772,12 @@ section.team.section-padding {
       border: 1px solid rgba($gray-f8, 0.5);
       color: rgba($gray-f8, 0.5);
       background: none;
+
+      @include tablet {
+        border: 1px solid $theme-primary;
+        opacity: 1;
+        color: rgba($gray-f8, 1);
+      }
 
       @include mobile {
         border: 1px solid $theme-primary;
@@ -2484,6 +2806,13 @@ section.team.section-padding {
     padding: 0 30px;
     overflow: hidden;
 
+    @include tablet {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      padding: 0 20px;
+    }
+
     @include mobile {
       width: 100%;
       flex-direction: column;
@@ -2498,6 +2827,11 @@ section.team.section-padding {
       align-items: center;
       justify-content: center;
 
+      @include tablet {
+        padding: 20px;
+        width: 100%;
+      }
+
       @include mobile {
         padding: 20px;
         width: 100%;
@@ -2511,6 +2845,11 @@ section.team.section-padding {
       align-items: center;
       justify-content: center;
 
+      @include tablet {
+        padding: 20px;
+        width: 100%;
+      }
+
       @include mobile {
         padding: 20px;
         width: 100%;
@@ -2521,6 +2860,13 @@ section.team.section-padding {
         align-items: center;
         justify-content: center;
         padding-right: 30px;
+
+        @include tablet {
+          padding: 0 0 20px;
+          width: 100%;
+          align-items: flex-end;
+          justify-content: flex-start;
+        }
 
         @include mobile {
           padding: 0 0 20px;
@@ -2537,6 +2883,12 @@ section.team.section-padding {
       font-size: 34px;
       color: $gray-bc;
 
+      @include tablet {
+        font-size: 30px;
+        max-width: 100%;
+        width: 100%;
+      }
+
       @include mobile {
         font-size: 20px;
         max-width: 80%;
@@ -2551,6 +2903,12 @@ section.team.section-padding {
       width: 100%;
       height: 100px;
       margin-top: 30px;
+
+      @include tablet {
+        margin-top: 20px;
+        height: auto;
+        margin-bottom: 40px;
+      }
 
       @include mobile {
         margin-top: 20px;
@@ -2633,6 +2991,11 @@ section.team.section-padding {
 
       @include desktop-lg {
         min-height: 57.9vh;
+      }
+
+      @include tablet {
+        min-height: 410px;
+        width: 100%;
       }
 
       @include mobile {
@@ -2862,6 +3225,11 @@ section.team.section-padding {
   min-height: 100vh;
   padding: 50px 20px 100px 136px;
 
+  @include tablet {
+    padding: 0px 45px;
+    min-height: auto;
+  }
+  
   @include mobile {
     padding: 0px 45px;
     min-height: auto;
@@ -3295,6 +3663,10 @@ section.team.section-padding {
   padding: 50px 70px;
   position: relative;
 
+  @include tablet {
+    padding: 50px 20px;
+  }
+
   @include mobile {
     padding: 50px 20px;
   }
@@ -3309,6 +3681,10 @@ section.team.section-padding {
     &.button-sec {
       justify-content: flex-end;
 
+      @include tablet {
+        justify-content: flex-start;
+      }
+
       @include mobile {
         justify-content: flex-start;
       }
@@ -3318,6 +3694,10 @@ section.team.section-padding {
       display: flex;
       align-items: center;
 
+      @include tablet {
+        display: block;
+      }
+
       @include mobile {
         display: block;
       }
@@ -3325,6 +3705,10 @@ section.team.section-padding {
 
     &.scroll-auto {
       overflow: visible !important;
+
+      @include tablet {
+        margin-top: 50px;
+      }
     }
   }
 
@@ -3334,6 +3718,11 @@ section.team.section-padding {
     color: $theme-secondary;
     font-weight: 500;
     max-width: 70%;
+
+    @include tablet {
+      font-weight: 500;
+      max-width: 100%;
+    }
 
     @include mobile {
       font-size: 20px;
@@ -3455,6 +3844,10 @@ section.team.section-padding {
   width: 1px;
   font-family: helvetica, sans-serif;
   z-index: 99999;
+
+  @include tablet{
+    display: none;
+  }
 
   @include mobile {
     display: none;

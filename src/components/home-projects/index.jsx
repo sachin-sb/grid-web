@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import gsap from "gsap";
 
 const HomeProjects = () => {
-  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
+  const mobileDevice = useMediaQuery({ query: '(min-width: 821px)' })
 
   const LargeDevice = useMediaQuery({ query: '(min-width: 1500px)' })
 

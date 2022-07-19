@@ -52,7 +52,7 @@ const HeroSection = (props) => {
       {!load ? (
         <div className="container-fluid">
           <div className="row align-items-center row-section-style">
-            <div className="col-sm-6">
+            <div className="col-md-12 col-lg-6">
               <div className="content-sec">
                 <div className="animation-block">
                   <p className="text-1 animation-text">
@@ -76,7 +76,7 @@ const HeroSection = (props) => {
               </div>
             </div>
 
-            <div className="col-sm-6">
+            <div className="col-md-12 col-lg-6">
               <div className="slider-section" onClick={handleClick}>
                 <img
                   src="https://carleton.ca/panl/wp-content/uploads/Photo-of-mural-in-Montreal-is-courtesy-of-Mr-TT-and-Unsplash-1600.jpg"
