@@ -4,7 +4,7 @@ import BlogStanderd from "../../components/Blog-standerd";
 import { useMediaQuery } from 'react-responsive'
 
 const BlogLight = () => {
-  const mobileDevice = useMediaQuery({ query: '(min-width: 767px)' })
+  const mobileDevice = useMediaQuery({ query: '(min-width: 820px)' })
 
   useEffect(() => {
     var controller3 = new ScrollMagic.Controller()

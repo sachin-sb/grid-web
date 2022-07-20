@@ -537,6 +537,7 @@ section.team.section-padding {
   @include tablet {
     padding-left: 0px;
     padding-top: 0px;
+    height: 1524px;
   }
 
   @include mobile {
@@ -551,6 +552,10 @@ section.team.section-padding {
     font-size: 18px;
     font-weight: 300;
     color: $gray-f8;
+
+    @include tablet {
+      font-size: 22px;
+    }
   }
 
   .text-1 {
@@ -951,7 +956,7 @@ section.team.section-padding {
       width: 93%;
     }
   }
-  
+
 
   @include mobile {
     position: relative;
@@ -1352,6 +1357,10 @@ section.team.section-padding {
   padding: 100px 70px 150px;
   transition: all 0.6s ease-in-out;
 
+  @include tablet {
+    padding: 100px 30px 150px;
+  }
+
   @include mobile {
     padding: 50px 20px 30px;
   }
@@ -1666,11 +1675,11 @@ section.team.section-padding {
   height: 80vh;
 
   @include tablet {
-    padding: 80px 20px;
+    padding: 150px 20px;
     background-size: cover;
     height: auto;
     background-position: center;
-    height: 100vh;
+    height: auto;
   }
 
   @include mobile {
@@ -1730,6 +1739,15 @@ section.team.section-padding {
     font-size: 30px;
     margin: 22px 0 50px;
 
+    @include tablet {
+      font-size: 22px;
+      text-align: center;
+      line-height: 1.5;
+      font-weight: 500;
+      max-width: 85%;
+      margin: 34px auto 50px;
+    }
+
     @include mobile {
       font-size: 16px;
       text-align: center;
@@ -1742,7 +1760,7 @@ section.team.section-padding {
 }
 
 .button-section {
-  
+
   &.align-center-style {
     display: flex;
     align-items: center;
@@ -1974,7 +1992,7 @@ section.team.section-padding {
 
 
     @include tablet {
-      margin-bottom: 50px;
+      margin-bottom: 130px;
     }
 
     @include mobile {
@@ -1986,7 +2004,7 @@ section.team.section-padding {
 
       @include tablet {
         padding: 10px 10px;
-        min-width: 170px
+        min-width: 200px
       }
 
       @include mobile {
@@ -2138,7 +2156,7 @@ section.team.section-padding {
       margin-bottom: 0;
 
       @include tablet {
-        min-width: 85px;
+        min-width: 120px;
       }
 
       @include mobile {
@@ -2152,7 +2170,7 @@ section.team.section-padding {
         flex-direction: column;
         margin-right: 40px;
 
-        
+
         @include tablet {
           gap: 20px;
           flex-wrap: wrap;
@@ -2581,7 +2599,7 @@ section.team.section-padding {
       color: $theme-primary;
       font-size: 16px;
 
-      
+
       @include tablet {
         text-decoration: underline;
       }
@@ -2634,6 +2652,7 @@ section.team.section-padding {
     @include tablet {
       flex-direction: column-reverse;
     }
+
     @include mobile {
       flex-direction: column-reverse;
     }
@@ -3229,7 +3248,7 @@ section.team.section-padding {
     padding: 0px 45px;
     min-height: auto;
   }
-  
+
   @include mobile {
     padding: 0px 45px;
     min-height: auto;
@@ -3343,10 +3362,10 @@ section.team.section-padding {
         line-height: 30px;
       }
 
-      
-    @include phone0-width {
-      font-size: 18px;
-    }
+
+      @include phone0-width {
+        font-size: 18px;
+      }
     }
 
     .btn-outline {
@@ -3845,7 +3864,7 @@ section.team.section-padding {
   font-family: helvetica, sans-serif;
   z-index: 99999;
 
-  @include tablet{
+  @include tablet {
     display: none;
   }
 
@@ -4025,14 +4044,14 @@ section.team.section-padding {
 
     @include mobile {
       font-size: 16px;
-      margin-bottom:10px;
+      margin-bottom: 10px;
     }
   }
 
   .btn-link-red {
     @include mobile {
-     transform: scale(0.9);
-     margin-top: 10px;
+      transform: scale(0.9);
+      margin-top: 10px;
     }
   }
 }
